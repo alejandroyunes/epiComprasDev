@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HeaderV from './components/header/HeaderV.vue'
+import HeaderV from '../src/components/header/HeaderV.vue'
 
 </script>
 

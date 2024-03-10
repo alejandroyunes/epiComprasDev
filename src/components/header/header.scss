@@ -1,0 +1,30 @@
+.outer {
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: space-between;
+}
+
+.nav-one,
+.nav-two {
+  display: flex;
+}
+
+.nav-one {
+  .logo {
+    flex: 0;
+  }
+}
+
+.nav-two {
+  .icons {
+  }
+
+  .button {
+  }
+}

@@ -1,9 +1,10 @@
-@import './base.css';
+@import './base.scss';
 
 #app {
-  max-width: 1280px;
+  background-color: rgb(33, 149, 110);
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
   font-weight: normal;
 }
 
