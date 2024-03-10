@@ -1,0 +1,40 @@
+.form {
+  position: relative;
+  width: 100%;
+  margin-right: 8px;
+  height: 32px;
+}
+
+.search {
+  position: absolute;
+  top: 50%;
+  left: 8;
+  transform: translateY(-50%);
+  margin: 0 8px;
+}
+
+.input {
+  height: 32px;
+  border-radius: 12px;
+  padding: 8px 0px 8px 36px;
+  outline: 1px solid rgb(0, 134, 0);
+  min-width: 200px;
+  width: 100%;
+  background-color: #f2ebeb;
+  border: none;
+  @media (max-width: 1080px) { 
+    min-width: 0;
+  }
+  :focus {
+    outline: 1px solid green;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  margin-right: 8px;
+  transform: translateY(-50%);
+}
