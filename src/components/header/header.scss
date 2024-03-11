@@ -37,11 +37,13 @@
 .nav-two {
   display: flex;
   flex: 1;
-  justify-content: space-between;
   align-items: center;
 
   .left {
     display: flex;
+    flex: 1;
+    justify-content: space-between;
+
     .logo-mobile {
       display: none;
       @media (max-width: 1024px) {
@@ -52,23 +54,26 @@
     .location {
       display: flex;
       align-items: center;
-      padding-right: 8px;
       .icon {
+        margin: 0 8px;
         #path-2 {
           stroke: var(--color-background-oposite);
         }
+        @media (max-width: 1024px) {
+          order: 1;
+        }
       }
-      .city  {
+      .city {
         font-size: 16px;
         color: var(--color-heading);
-        margin-left: 8px;
       }
     }
   }
   .right {
     display: flex;
     align-items: center;
-    .sun, .moon {
+    .sun,
+    .moon {
       margin-right: 10px;
       #path-2 {
         stroke: var(--color-background-oposite);
@@ -78,14 +83,10 @@
     button {
       padding: 8px 16px;
       border-radius: 12px;
-      background-color:  var(--primary);
+      background-color: var(--primary);
       color: var(--black-soft);
       border: none;
       cursor: pointer;
-
-      &:hover {
-
-      }
     }
   }
 }
