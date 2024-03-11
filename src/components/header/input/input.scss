@@ -3,6 +3,9 @@
   width: 100%;
   margin-right: 8px;
   height: 40px;
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
 }
 
 .search {
@@ -12,7 +15,7 @@
   transform: translateY(-50%);
   margin: 0 8px;
   #path-1 {
-    stroke: var(--color-background-oposite);
+    stroke: var(--color-background-soft-oposite);
   }
   #path-2 {
     fill: var(--color-background-oposite);
@@ -30,7 +33,7 @@
   outline: 1px solid var(--color-border-hover);
   background-color: var(--color-background);
   color: var(--color-heading);
-  @media (max-width: 1080px) {
+  @media (max-width: 1024px) {
     min-width: 0;
   }
   &:focus {
