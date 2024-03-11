@@ -1,4 +1,3 @@
-// --border: rgba(108, 108, 108, 0.3);
 :root {
   --primary: #fdae4b;
   --indigo: #2c3e50;
@@ -26,7 +25,7 @@
   --text-dark-2: rgba(235, 235, 235, 0.64);
 }
 
-:root {
+:root[data-color-scheme='light'] {
   --color-background: var(--white-soft);
   --color-background-soft: var(--white-soft);
   --color-background-mute: var(--white-mute);
@@ -42,27 +41,23 @@
   //Oposite
   --color-background-oposite: var(--text-light-1);
   --color-background-soft-oposite: var(--text-light-2);
-
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--gray-dark);
-    --color-background-oposite: var(--white-soft);
-    --color-background-soft: var(--black-soft);
-    --color-background-mute: var(--black-mute);
+:root[data-color-scheme='dark'] {
+  --color-background: var(--gray-dark);
+  --color-background-oposite: var(--white-soft);
+  --color-background-soft: var(--black-soft);
+  --color-background-mute: var(--black-mute);
 
-    --color-border: var(--divider-dark-2);
-    --color-border-hover: var(--divider-dark-1);
+  --color-border: var(--divider-dark-2);
+  --color-border-hover: var(--divider-dark-1);
 
-    --color-heading: var(--text-dark-1);
-    --color-text: var(--text-dark-2);
+  --color-heading: var(--text-dark-1);
+  --color-text: var(--text-dark-2);
 
-    //Oposite
-    --color-background-oposite: var(--text-dark-1);
-    --color-background-soft-oposite: var(--text-dark-2);
-
-  }
+  //Oposite
+  --color-background-oposite: var(--text-dark-1);
+  --color-background-soft-oposite: var(--text-dark-2);
 }
 
 *,

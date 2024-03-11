@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HeaderV from '@/components/header/HeaderV.vue'
 
+
 </script>
 
 <template>
@@ -9,4 +10,3 @@ import HeaderV from '@/components/header/HeaderV.vue'
 
   <RouterView />
 </template>
-

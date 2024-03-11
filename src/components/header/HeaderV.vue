@@ -1,9 +1,29 @@
 <script setup lang="ts">
 import './header.scss'
+import { ref } from 'vue'
+
 import InputV from '@/components/header/input/InputV.vue'
 import LocationSvg from '../../components/icons/LocationSvg.vue'
 import SunSvg from '../../components/icons/SunSvg.vue'
 import MoonSvg from '../../components/icons/MoonS.vue'
+
+const isDarkMode = ref(true)
+localStorage.setItem('isDarkMode', isDarkMode.value)
+
+const newColorScheme = isDarkMode.value ? 'dark' : 'light'
+document.documentElement.setAttribute('data-color-scheme', newColorScheme)
+
+// if(isDarkMode.value) {
+//   document.documentElement.setAttribute('data-color-scheme', 'dark')
+// } else {
+//   document.documentElement.setAttribute('data-color-scheme', 'light')
+// }
+
+const handleTheme = () => {
+  isDarkMode.value = !isDarkMode.value
+  localStorage.setItem('isDarkMode', isDarkMode.value)
+}
+
 
 </script>
 
@@ -31,8 +51,8 @@ import MoonSvg from '../../components/icons/MoonS.vue'
         </div>
 
         <div class="right">
-          <SunSvg class="sun" />
-          <MoonSvg class="moon" />
+          <SunSvg v-show="!isDarkMode" @click="handleTheme" class="sun" />
+          <MoonSvg v-show="isDarkMode" @click="handleTheme" class="moon" />
           <button>enter</button>
         </div>
 
