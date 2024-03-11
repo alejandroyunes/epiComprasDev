@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import './header.scss'
 import InputV from '@/components/header/input/InputV.vue'
+import LocationSvg from '../../components/icons/LocationSvg.vue'
+import SunSvg from '../../components/icons/SunSvg.vue'
+import MoonSvg from '../../components/icons/MoonSvg.vue'
 
 </script>
 
@@ -19,11 +22,17 @@ import InputV from '@/components/header/input/InputV.vue'
           <div class="logo-mobile">
             <img alt="" class="logo" src="@/assets/logo.svg" width="30" height="28" />
           </div>
-          <div>city</div>
+          <div class="location">
+            <LocationSvg class="icon" />
+            <div>
+              <p>Medellín</p>
+            </div>
+          </div>
         </div>
 
         <div class="right">
-          <div>icon</div>
+          <SunSvg class="sun" />
+          <MoonSvg class="moon" />
           <button>enter</button>
         </div>
 

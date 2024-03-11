@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   margin-right: 8px;
-  height: 32px;
+  height: 40px;
 }
 
 .search {
@@ -11,22 +11,33 @@
   left: 8;
   transform: translateY(-50%);
   margin: 0 8px;
+  #path-1 {
+    stroke: var(--color-background-oposite);
+  }
+  #path-2 {
+    fill: var(--color-background-oposite);
+  }
 }
 
 .input {
-  height: 32px;
+  height: 40px;
   border-radius: 12px;
   padding: 8px 0px 8px 36px;
-  outline: 1px solid rgb(0, 134, 0);
   min-width: 200px;
   width: 100%;
-  background-color: #f2ebeb;
   border: none;
-  @media (max-width: 1080px) { 
+  font-size: 16px;
+  outline: 1px solid var(--color-border-hover);
+  background-color: var(--color-background);
+  color: var(--color-heading);
+  @media (max-width: 1080px) {
     min-width: 0;
   }
-  :focus {
-    outline: 1px solid green;
+  &:focus {
+    outline: 1px solid var(--primary);
+  }
+  ::placeholder {
+    color: red;
   }
 }
 
@@ -37,4 +48,7 @@
   right: 2px;
   margin-right: 8px;
   transform: translateY(-50%);
+  #path-1 {
+    stroke: var(--color-background-oposite);
+  }
 }
