@@ -3,7 +3,7 @@ import './header.scss'
 import InputV from '@/components/header/input/InputV.vue'
 import LocationSvg from '../../components/icons/LocationSvg.vue'
 import SunSvg from '../../components/icons/SunSvg.vue'
-import MoonSvg from '../../components/icons/MoonSvg.vue'
+import MoonSvg from '../../components/icons/MoonS.vue'
 
 </script>
 
@@ -24,7 +24,7 @@ import MoonSvg from '../../components/icons/MoonSvg.vue'
           </div>
           <div class="location">
             <LocationSvg class="icon" />
-            <div>
+            <div class="city">
               <p>Medellín</p>
             </div>
           </div>

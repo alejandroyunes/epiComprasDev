@@ -58,21 +58,33 @@
           stroke: var(--color-background-oposite);
         }
       }
+      .city  {
+        font-size: 16px;
+        color: var(--color-text);
+        margin-left: 8px;
+      }
     }
   }
   .right {
     display: flex;
-
-    .sun {
+    align-items: center;
+    .sun, .moon {
       margin-right: 10px;
       #path-2 {
         stroke: var(--color-background-oposite);
       }
     }
-    .moon {
-      margin-right: 10px;
-      #path-1 {
-        fill: var(--color-background-oposite);;
+
+    button {
+      padding: 8px 16px;
+      border-radius: 12px;
+      background-color: var(--primary);
+      color: var(--color-heading);
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-background-hover);
       }
     }
   }
