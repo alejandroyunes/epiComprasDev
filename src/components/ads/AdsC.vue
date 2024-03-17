@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import './ads.scss'
 import { ref } from 'vue'
 import { ads } from './data'
@@ -51,4 +51,54 @@ const handleFavorite = (adId: number) => {
     </ul>
 
   </section>
+</template> -->
+
+
+<template>
+  <section>
+    <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
+
+    <ul class="ads-item">
+      <li v-for="ad in ads" :key="ad.id">
+        <RouterLink :to="ad.url">
+          <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
+        </RouterLink>
+        <div class="ad-info">
+          <div class="ad-title">
+            <h3>{{ ad.title }}</h3>
+            <HeartSvg v-show="!favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart" />
+            <HeartFillSvg v-show="favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+          </div>
+          <p>{{ ad.description }}</p>
+          <p>{{ ad.price }}</p>
+          <p>{{ ad.location }}</p>
+          <p>{{ ad.date }}</p>
+        </div>
+      </li>
+    </ul>
+  </section>
 </template>
+
+<script setup lang="ts">
+import './ads.scss'
+import { ref } from 'vue'
+import { ads } from './data'
+import { RouterLink } from 'vue-router'
+import TitleC from '@/components/title/TitleC.vue'
+import HeartSvg from '@/components/icons/HeartSvg.vue'
+import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
+
+const favorites = ref<string[]>([])
+const showFavorites = ref<boolean>(false)
+
+const handleFavorite = (adId: number) => {
+  showFavorites.value = !showFavorites.value
+
+  const adIdString = String(adId)
+  if (!favorites.value.includes(adIdString)) {
+    favorites.value.push(adIdString)
+  } else {
+    favorites.value = favorites.value.filter(id => id !== adIdString)
+  }
+}
+</script>
