@@ -6,7 +6,8 @@ export const ads = [
     image: '/ads/carro.jpg',
     price: 100,
     location: 'New York, NY',
-    date: '2021-01-01'
+    date: '2021-01-01',
+    url: '/ads/car-for-sale'
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const ads = [
     image: '/ads/casa.jpg',
     price: 200,
     location: 'Los Angeles, CA',
-    date: '2021-01-02'
+    date: '2021-01-02',
+    url: '/ads/spacious-house-for-rent'
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ export const ads = [
     image: '/ads/estufa.jpg',
     price: 300,
     location: 'Chicago, IL',
-    date: '2021-01-03'
+    date: '2021-01-03',
+    url: '/ads/kitchen-stove-for-sale'
   },
   {
     id: 4,
@@ -34,7 +37,8 @@ export const ads = [
     image: '/ads/laptop.jpg',
     price: 400,
     location: 'Houston, TX',
-    date: '2021-01-04'
+    date: '2021-01-04',
+    url: '/ads/refurbished-laptop'
   },
   {
     id: 5,
@@ -43,7 +47,8 @@ export const ads = [
     image: '/ads/estufa.jpg',
     price: 500,
     location: 'Phoenix, AZ',
-    date: '2021-01-05'
+    date: '2021-01-05',
+    url: '/ads/electric-stove-for-sale'
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ export const ads = [
     image: '/ads/laptop.jpg',
     price: 600,
     location: 'Philadelphia, PA',
-    date: '2021-01-06'
+    date: '2021-01-06',
+    url: '/ads/gaming-laptop'
   }
 ]

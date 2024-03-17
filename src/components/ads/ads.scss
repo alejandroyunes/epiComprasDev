@@ -1,4 +1,4 @@
-.ads-inner {
+.ads-item {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -36,6 +36,7 @@
         font-size: 1.25rem;
         color: var(--color-heading);
         margin-bottom: 8px;
+        margin-right: 8px;
       }
       p {
         font-size: 1rem;
@@ -47,11 +48,16 @@
       display: flex;
       justify-content: space-between;
       .ad-heart {
+        cursor: pointer;
+        z-index: 1000;
         #path-1 {
           stroke: var(--color-background-oposite);
         }
       }
       .ad-heart-fill {
+        cursor: pointer;
+        z-index: 1000;
+
         #path-1 {
           stroke: var(--primary);
           fill: var(--primary);

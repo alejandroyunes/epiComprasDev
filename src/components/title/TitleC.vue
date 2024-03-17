@@ -1,22 +1,37 @@
 <script setup lang="ts">
+
+type Props = {
+  view: string
+  title: string
+  border: boolean
+}
+
+const { view, title, border } = defineProps<Props>()
+
 </script>
 
 <template>
-  <section class="title-ads-inner">
+  <section class="title-inner" :class="{ 'border': border }">
     <div>
-      <h2>Anuncios recientes</h2>
+      <h2>{{ title }}</h2>
+    </div>
+    <div>
+      <p>{{ view }}</p>
     </div>
   </section>
 </template>
 
 <style lang="scss">
-.title-ads-inner {
+.title-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  margin-bottom: 24px;
-  margin-top: 24px;
   color: var(--color-heading);
+  margin-top: 24px;
+}
+
+.border {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
 }
 </style>

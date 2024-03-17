@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import CategoriesTitle from '@/components/categories/CategoriesTitle.vue'
+import TitleC from '@/components/title/TitleC.vue'
 import CategoriesList from '@/components/categories/CategoriesList.vue'
 </script>
 
 <template>
   <section>
-    <CategoriesTitle />
+    <TitleC :view="'vermás'" :title="'Categorías'" :border="true" />
     <CategoriesList />
   </section>
 </template>
