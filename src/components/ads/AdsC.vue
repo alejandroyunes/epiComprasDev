@@ -31,7 +31,7 @@ const handleFavorite = (adId: string) => {
     <ul class="ads-item">
       <li v-for="ad in ads" :key="ad.id">
         <RouterLink :to="ad.url">
-          <img class="ad-image" :src="ad.image" alt="">
+          <img class="ad-image" :src="ad.image" alt=""  width="300px" height="165px">
         </RouterLink>
         <div class="ad-info">
           <div class="ad-title">
