@@ -28,6 +28,10 @@
   background-color: var(--color-background-mute);
   transition: transform 0.5s ease;
   z-index: 1000;
+  @media (max-width: 1024px) {
+    right: -70vw;
+    width: 70vw;
+  }
 }
 
 .slider-container.open {

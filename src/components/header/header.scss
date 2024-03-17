@@ -11,9 +11,9 @@
   max-width: 1280px;
   @media (max-width: 1024px) {
     flex-direction: column;
+    gap: 20px;
     .nav-one {
       order: 1;
-      margin-top: 10px;
     }
     .nav-two {
       display: flex;
@@ -44,7 +44,7 @@
     display: flex;
     flex: 1;
     justify-content: space-between;
-
+    align-items: center;
     .nav-logo-mobile {
       display: none;
       @media (max-width: 1024px) {
@@ -66,10 +66,11 @@
     }
 
     button {
-      padding: 8px 16px;
+      padding: 12px 16px;
       border-radius: 12px;
       background-color: var(--primary);
       color: var(--black-soft);
+      font-size: large;
       border: none;
       cursor: pointer;
     }

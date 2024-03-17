@@ -10,7 +10,7 @@ import { categories } from './categoriesData'
     <ul>
       <li v-for="category in categories" :key="category.name">
         <RouterLink :to="category.url">
-          <img :src="category.image" :alt="category.alt" width="100px" height="100px">
+          <img :src="category.image" :alt="category.alt" width="80px" height="80px">
           <h3>{{ category.name }}</h3>
         </RouterLink>
       </li>
