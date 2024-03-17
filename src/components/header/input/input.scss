@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   margin-right: 8px;
-  // height: 40px;
   @media (max-width: 1024px) {
     margin-right: 0;
   }
@@ -46,30 +45,18 @@
       min-width: 250px;
     }
   }
-  @keyframes shorternWidth {
-    0% {
-      min-width: 250px;
-    }
-    100% {
-      min-width: 200px;
-    }
-  }
+  
   &:focus {
     outline: 1px solid var(--primary);
-    // animation: expandWidth 0.2s linear forwards;
+    animation: expandWidth 0.2s linear forwards;  
   }
 
-  // &:not(:focus) {
-  //   animation: shorternWidth 0.2s linear backwards;
-  //   animation-delay: 0.2s;
-  // }
-  .hide {
-    width: 200px;
+  @media (max-width: 1024px) {
+    &:focus {
+      animation: 'none' 
+    }
   }
 
-  ::placeholder {
-    color: red;
-  }
 }
 
 .arrow {
@@ -79,6 +66,7 @@
   right: 2px;
   margin-right: 8px;
   transform: translateY(-50%);
+  outline: 1px solid red;
   #path-1 {
     stroke: var(--color-background-oposite);
   }

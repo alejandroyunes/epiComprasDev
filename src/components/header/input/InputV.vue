@@ -12,7 +12,7 @@ const input = ref(undefined)
 
   <form class="form">
     <SearchSvg class="search" />
-    <input class="input" type="text" placeholder="Buscar" :class="{ 'hide': input === undefined }" />
+    <input class="input" type="text" placeholder="Buscar" />
     <ArrowRightSvg class="arrow" />
   </form>
 
