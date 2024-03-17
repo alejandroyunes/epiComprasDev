@@ -3,9 +3,9 @@ import './header.scss'
 import { ref } from 'vue'
 import { setDarkMode } from '../../utils/utils'
 import InputV from '@/components/header/input/InputV.vue'
-import LocationSvg from '../../components/icons/LocationSvg.vue'
-import SunSvg from '../../components/icons/SunSvg.vue'
-import MoonSvg from '../../components/icons/MoonS.vue'
+import SunSvg from '@/components/icons/SunSvg.vue'
+import MoonSvg from '@/components/icons/MoonS.vue'
+import RightSlider from '@/components/right-slider/RightSlider.vue'
 
 const isDarkMode = ref<boolean>(localStorage.getItem('isDarkMode') === 'true')
 
@@ -33,11 +33,8 @@ const handleTheme = () => {
           <div class="nav-logo-mobile">
             <img alt="" src="@/assets/logo.svg" width="35" height="30" />
           </div>
-          <div class="nav-location">
-            <LocationSvg class="icon" />
-            <div class="city">
-              <p>Medellín</p>
-            </div>
+          <div>
+            <RightSlider/>
           </div>
         </div>
 

@@ -27,6 +27,7 @@
     background-color: var(--color-background-mute);
     .ad-image {
       width: 100%;
+      height: auto;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
     }
@@ -49,15 +50,12 @@
       justify-content: space-between;
       .ad-heart {
         cursor: pointer;
-        z-index: 1000;
         #path-1 {
           stroke: var(--color-background-oposite);
         }
       }
       .ad-heart-fill {
         cursor: pointer;
-        z-index: 1000;
-
         #path-1 {
           stroke: var(--primary);
           fill: var(--primary);

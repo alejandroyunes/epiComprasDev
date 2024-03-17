@@ -27,7 +27,6 @@ const handleFavorite = (adId: string) => {
 
     <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
 
-
     <ul class="ads-item">
       <li v-for="ad in ads" :key="ad.id">
         <RouterLink :to="ad.url">

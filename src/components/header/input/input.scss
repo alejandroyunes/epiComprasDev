@@ -37,9 +37,36 @@
   @media (max-width: 1024px) {
     min-width: 0;
   }
+
+  @keyframes expandWidth {
+    0% {
+      min-width: 200px;
+    }
+    100% {
+      min-width: 250px;
+    }
+  }
+  @keyframes shorternWidth {
+    0% {
+      min-width: 250px;
+    }
+    100% {
+      min-width: 200px;
+    }
+  }
   &:focus {
     outline: 1px solid var(--primary);
+    // animation: expandWidth 0.2s linear forwards;
   }
+
+  // &:not(:focus) {
+  //   animation: shorternWidth 0.2s linear backwards;
+  //   animation-delay: 0.2s;
+  // }
+  .hide {
+    width: 200px;
+  }
+
   ::placeholder {
     color: red;
   }

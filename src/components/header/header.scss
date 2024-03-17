@@ -52,23 +52,6 @@
         margin-right: 8px;
       }
     }
-    .nav-location {
-      display: flex;
-      align-items: center;
-      .icon {
-        margin: 0 10px;
-        #path-2 {
-          stroke: var(--color-background-oposite);
-        }
-        @media (max-width: 1024px) {
-          order: 1;
-        }
-      }
-      .city {
-        font-size: 16px;
-        color: var(--color-heading);
-      }
-    }
   }
   .nav-right {
     display: flex;
