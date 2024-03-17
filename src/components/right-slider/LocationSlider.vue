@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import './right-slider.scss'
+import './styles.scss'
 import { ref } from 'vue'
 
 import LocationSvg from '@/components/icons/LocationSvg.vue'
@@ -15,7 +15,7 @@ const toggleSlider = () => {
 </script>
 
 <template>
-  <div @click="toggleSlider" class="nav-location">
+  <div @click="toggleSlider" class="location-outer">
     <LocationSvg class="location-icon" />
 
     <div class="city">
@@ -29,7 +29,7 @@ const toggleSlider = () => {
         <NotificationBellSvg />
       </div>
       <div class="notifications">
-        <p>No hay notificaciones</p>
+        <p>No hay location</p>
       </div>
     </div>
     <div class="animation-exit" @click="toggleSlider()">

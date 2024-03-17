@@ -5,7 +5,8 @@ import { setDarkMode } from '../../utils/utils'
 import InputV from '@/components/header/input/InputV.vue'
 import SunSvg from '@/components/icons/SunSvg.vue'
 import MoonSvg from '@/components/icons/MoonS.vue'
-import RightSlider from '@/components/right-slider/RightSlider.vue'
+import LocationSlider from '@/components/right-slider/LocationSlider.vue'
+import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
 
 const isDarkMode = ref<boolean>(localStorage.getItem('isDarkMode') === 'true')
 
@@ -34,11 +35,12 @@ const handleTheme = () => {
             <img alt="" src="@/assets/logo.svg" width="35" height="30" />
           </div>
           <div>
-            <RightSlider/>
+            <LocationSlider/>
           </div>
         </div>
 
         <div class="nav-right">
+          <NotificationSlider/>
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="moon" />
           <button>enter</button>

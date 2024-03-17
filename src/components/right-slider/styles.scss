@@ -1,4 +1,4 @@
-.nav-location {
+.location-outer {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -15,6 +15,19 @@
   .city {
     font-size: 16px;
     color: var(--color-heading);
+  }
+}
+
+.notification-outer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .bell-icon {
+    margin: 0 10px 0 0;
+    #path-1 {
+      stroke: var(--color-background-oposite);
+    }
   }
 }
 
