@@ -16,15 +16,18 @@
 
   --divider-light-1: rgba(60, 60, 60, 0.29);
   --divider-light-2: rgba(60, 60, 60, 0.12);
+  
   --divider-dark-1: rgba(84, 84, 84, 0.65);
   --divider-dark-2: rgba(84, 84, 84, 0.48);
 
   --text-light-1: var(--indigo);
   --text-light-2: rgba(60, 60, 60, 0.66);
+
   --text-dark-1: var(--white);
   --text-dark-2: rgba(235, 235, 235, 0.64);
 
   --max-width: 1280px;
+  --tablet-width: 768px;
 }
 
 :root[data-color-scheme='light'] {
@@ -38,9 +41,6 @@
   --color-heading: var(--text-light-1);
   --color-text: var(--text-light-2);
 
-  --section-gap: 160px;
-
-  //Oposite
   --color-background-oposite: var(--text-light-1);
   --color-background-soft-oposite: var(--text-light-2);
 }
@@ -57,7 +57,6 @@
   --color-heading: var(--text-dark-1);
   --color-text: var(--text-dark-2);
 
-  //Oposite
   --color-background-oposite: var(--text-dark-1);
   --color-background-soft-oposite: var(--text-dark-2);
 }

@@ -5,54 +5,54 @@ export const categories = [
   },
   {
     name: 'Propiedades y Alquileres',
-    image: 'inmobiliario'
+    image: '/public/categories/inmobilario.webp'
   },
   {
     name: 'Teléfonos Inteligentes',
-    image: 'smartphones'
-  },
-  {
-    name: 'Electrodomésticos',
-    image: 'homeappliances'
+    image: '/public/categories/smartphones.webp'
   },
   {
     name: 'Artículos del Hogar',
-    image: 'home'
+    image: '/public/categories/home.webp'
   },
   {
     name: 'Portátiles',
-    image: 'laptop'
+    image: '/public/categories/laptop.webp'
   },
   {
     name: 'Deportes',
-    image: 'futbol'
+    image: '/public/categories/futbol.webp'
   },
   {
     name: 'Mascotas',
-    image: 'pets'
+    image: '/public/categories/pets.webp'
   },
   {
     name: 'Instrumentos',
-    image: 'guitar'
+    image: '/public/categories/guitar.webp'
   },
   {
     name: 'Servicios',
-    image: 'services'
+    image: '/public/categories/services.webp'
   },
   {
     name: 'Arte',
-    image: 'art'
+    image: '/public/categories/art.webp'
   },
   {
     name: 'Moda y Belleza',
-    image: 'vestido'
+    image: '/public/categories/vestido.webp'
   },
   {
     name: 'Herramientas',
-    image: 'tools'
+    image: '/public/categories/tools.webp'
   },
   {
     name: 'Otros',
-    image: 'other'
+    image: '/public/categories/other.webp'
+  },
+  {
+    name: 'Electrodomésticos',
+    image: '/public/categories/homeappliances.webp'
   }
 ]
