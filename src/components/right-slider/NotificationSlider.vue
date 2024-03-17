@@ -7,19 +7,25 @@ import NoNotificationBellSvg from '@/components/icons/NoNotificationBellSvg.vue'
 import ExitSvg from '@/components/icons/ExitSvg.vue'
 
 const showNotification = ref(false)
+const notifications = ref(false)
 
 const toggleSlider = () => {
   showNotification.value = !showNotification.value
 }
 
+const toggleIcon = () => {
+  notifications.value = !notifications.value
+}
+
+
 </script>
 
 <template>
   <div @click="toggleSlider" class="notification-outer">
-    <div class="notification-inner">
-      <NotificationBellSvg class="bell-icon" />
+    <div v-show="!notifications" class="notification-inner">
+      <NotificationBellSvg @click="toggleIcon" class="bell-icon" />
     </div>
-    <!-- <NoNotificationBellSvg class="bell-icon" /> -->
+    <NoNotificationBellSvg @click="toggleIcon" v-show="notifications" class="bell-icon" />
 
   </div>
 
