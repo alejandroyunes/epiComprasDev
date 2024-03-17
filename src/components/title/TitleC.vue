@@ -28,6 +28,15 @@ const { view, title, border } = defineProps<Props>()
   align-items: center;
   color: var(--color-heading);
   margin-top: 24px;
+
+  p {
+    cursor: pointer;
+  }
+
+  p:hover {
+    text-decoration: underline;
+    color: var(--color-text);
+  }
 }
 
 .border {
