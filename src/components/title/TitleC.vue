@@ -2,24 +2,21 @@
 </script>
 
 <template>
-  <section class="title-inner">
+  <section class="title-ads-inner">
     <div>
-      <h2>Categorias</h2>
-    </div>
-    <div>
-      <p>ver más</p>
+      <h2>Anuncios recientes</h2>
     </div>
   </section>
 </template>
 
 <style lang="scss">
-.title-inner {
+.title-ads-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
   margin-bottom: 24px;
-  border-bottom: 1px solid var(--color-border);
+  margin-top: 24px;
   color: var(--color-heading);
 }
 </style>

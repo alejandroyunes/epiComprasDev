@@ -4,18 +4,8 @@ import CategoriesList from '@/components/categories/CategoriesList.vue'
 </script>
 
 <template>
-  <section class="categories-inner">
+  <section>
     <CategoriesTitle />
     <CategoriesList />
   </section>
 </template>
-
-
-<style lang="scss">
-.categories-inner {
-  margin: 0 auto;
-  max-width: var(--max-width);
-  
-  @media (max-width: 1024px) {}
-}
-</style>
