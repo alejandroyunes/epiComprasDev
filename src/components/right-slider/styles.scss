@@ -19,12 +19,32 @@
 }
 
 .notification-outer {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
 
+  .notification-inner {
+    display: inline-flex;
+    position: relative;
+  }
+  .notification-inner::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+  }
+
   .bell-icon {
-    margin: 0 10px 0 0;
+    margin-right: 10px;
     #path-1 {
       stroke: var(--color-background-oposite);
     }
