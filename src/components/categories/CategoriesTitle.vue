@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   border-bottom: 1px solid var(--color-border);
 }
 </style>
