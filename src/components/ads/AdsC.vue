@@ -10,13 +10,15 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 const favorites = ref<string[]>([])
 const showFavorites = ref<boolean>(false)
 
-const handleFavorite = (adId: string) => {
+
+const handleFavorite = (adId: number) => {
   showFavorites.value = !showFavorites.value
 
-  if (!favorites.value.includes(adId)) {
-    favorites.value.push(adId)
+  const adIdString = adId.toString()
+  if (!favorites.value.includes(adIdString)) {
+    favorites.value.push(adIdString)
   } else {
-    favorites.value = favorites.value.filter(id => id !== adId)
+    favorites.value = favorites.value.filter(id => id !== adIdString)
   }
 }
 
@@ -30,13 +32,14 @@ const handleFavorite = (adId: string) => {
     <ul class="ads-item">
       <li v-for="ad in ads" :key="ad.id">
         <RouterLink :to="ad.url">
-          <img class="ad-image" :src="ad.image" alt=""  width="300px" height="165px">
+          <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink>
         <div class="ad-info">
           <div class="ad-title">
             <h3>{{ ad.title }}</h3>
-            <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart" />
-            <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+            <HeartSvg v-show="!favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart" />
+            <HeartFillSvg v-show="favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+          </div>
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>
