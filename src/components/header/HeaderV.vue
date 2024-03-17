@@ -7,6 +7,7 @@ import SunSvg from '@/components/icons/SunSvg.vue'
 import MoonSvg from '@/components/icons/MoonS.vue'
 import LocationSlider from '@/components/right-slider/LocationSlider.vue'
 import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
+import ProfileSvg from '@/components/icons/ProfileSvg.vue'
 
 const isDarkMode = ref<boolean>(localStorage.getItem('isDarkMode') === 'true')
 
@@ -41,6 +42,7 @@ const handleTheme = () => {
 
         <div class="nav-right">
           <NotificationSlider/>
+          <ProfileSvg class="profile" />
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="moon" />
           <button>enter</button>

@@ -57,10 +57,12 @@
     display: flex;
     align-items: center;
     .sun,
-    .moon {
+    .moon,
+    .profile
+     {
       cursor: pointer;
       margin-right: 10px;
-      #path-2 {
+      #path-1 {
         stroke: var(--color-background-oposite);
       }
     }
