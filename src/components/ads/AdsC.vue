@@ -2,6 +2,8 @@
 import './ads.scss'
 import { ads } from './data'
 import TitleC from '@/components/title/TitleC.vue'
+import HeartSvg from '@/components/icons/HeartSvg.vue'
+import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 
 </script>
 
@@ -12,9 +14,10 @@ import TitleC from '@/components/title/TitleC.vue'
       <li v-for="ad in ads" :key="ad.id">
         <img class="ad-image" :src="ad.image" alt="">
         <div class="ad-info">
-          <div>
+          <div class="ad-title">
             <h3>{{ ad.title }}</h3>
-            
+            <!-- <HeartSvg class="ad-heart" /> -->
+            <HeartFillSvg class="ad-heart-fill" />
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>

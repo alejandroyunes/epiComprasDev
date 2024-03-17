@@ -42,8 +42,8 @@ const handleTheme = () => {
         </div>
 
         <div class="nav-right">
-          <SunSvg v-show="!isDarkMode" @click="handleTheme" class="sun" />
-          <MoonSvg v-show="isDarkMode" @click="handleTheme" class="moon" />
+          <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="sun" />
+          <SunSvg v-show="isDarkMode" @click="handleTheme" class="moon" />
           <button>enter</button>
         </div>
 
