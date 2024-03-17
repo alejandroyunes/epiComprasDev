@@ -1,9 +1,9 @@
-.outer {
+.nav-outer {
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px 20px;
 }
 
-.inner {
+.nav-inner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,9 +24,10 @@
 .nav-one {
   display: flex;
   flex: 0;
-  .logo {
+  align-items: center;
+  .nav-logo {
     flex: 0;
-    padding-right: 8px;
+    margin-right: 8px;
     display: block;
     @media (max-width: 1024px) {
       display: none;
@@ -39,19 +40,19 @@
   flex: 1;
   align-items: center;
 
-  .left {
+  .nav-left {
     display: flex;
     flex: 1;
     justify-content: space-between;
 
-    .logo-mobile {
+    .nav-logo-mobile {
       display: none;
       @media (max-width: 1024px) {
         display: flex;
-        padding-right: 8px;
+        margin-right: 8px;
       }
     }
-    .location {
+    .nav-location {
       display: flex;
       align-items: center;
       .icon {
@@ -69,11 +70,12 @@
       }
     }
   }
-  .right {
+  .nav-right {
     display: flex;
     align-items: center;
     .sun,
     .moon {
+      cursor: pointer;
       margin-right: 10px;
       #path-2 {
         stroke: var(--color-background-oposite);

@@ -19,21 +19,21 @@ const handleTheme = () => {
 </script>
 
 <template>
-  <header class="outer">
-    <nav class="inner">
+  <header class="nav-outer">
+    <nav class="nav-inner">
 
       <div class="nav-one">
-        <img alt="" class="logo" src="@/assets/logo.svg" width="35" height="30" />
+        <img alt="" class="nav-logo" src="@/assets/logo.svg" width="35" height="30" />
         <InputV />
       </div>
 
       <div class="nav-two">
 
-        <div class="left">
-          <div class="logo-mobile">
-            <img alt="" class="logo" src="@/assets/logo.svg" width="30" height="28" />
+        <div class="nav-left">
+          <div class="nav-logo-mobile">
+            <img alt="" src="@/assets/logo.svg" width="35" height="30" />
           </div>
-          <div class="location">
+          <div class="nav-location">
             <LocationSvg class="icon" />
             <div class="city">
               <p>Medellín</p>
@@ -41,7 +41,7 @@ const handleTheme = () => {
           </div>
         </div>
 
-        <div class="right">
+        <div class="nav-right">
           <SunSvg v-show="!isDarkMode" @click="handleTheme" class="sun" />
           <MoonSvg v-show="isDarkMode" @click="handleTheme" class="moon" />
           <button>enter</button>

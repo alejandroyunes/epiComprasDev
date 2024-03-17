@@ -7,6 +7,5 @@ import HeaderV from '@/components/header/HeaderV.vue'
 
 <template>
   <HeaderV />
-
   <RouterView />
 </template>
