@@ -12,7 +12,6 @@
   </section>
 </template>
 
-
 <style lang="scss">
 .title-inner {
   display: flex;
