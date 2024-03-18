@@ -13,19 +13,18 @@ const toggleSlider = () => {
   showNotification.value = !showNotification.value
 }
 
-const toggleIcon = () => {
+const toggleNotification = () => {
   notifications.value = !notifications.value
 }
-
 
 </script>
 
 <template>
   <div @click="toggleSlider" class="notification-outer">
     <div v-show="!notifications" class="notification-inner">
-      <NotificationBellSvg @click="toggleIcon" class="bell-icon" />
+      <NotificationBellSvg @click="toggleNotification" class="bell-icon" />
     </div>
-    <NoNotificationBellSvg @click="toggleIcon" v-show="notifications" class="bell-icon" />
+    <NoNotificationBellSvg @click="toggleNotification" v-show="notifications" class="bell-icon" />
 
   </div>
 
