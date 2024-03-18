@@ -52,7 +52,7 @@ const toggleDropdown = () => {
         </span>
         Centro de ayuda
       </a>
-      <span @click="logout" class="a">
+      <span @click="toggleDropdown" class="a">
         <span class="iconDropdown">
           <LogoutSvg class="icon" />
         </span>
