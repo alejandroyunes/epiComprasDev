@@ -30,7 +30,7 @@ const handleEnter = () => {
     <nav class="nav-inner">
 
       <div class="nav-one">
-        <img alt="" class="nav-logo" src="@/assets/logo.svg" width="35" height="30" />
+        <img alt="" class="nav-logo" src="@/assets/logo.svg" width="45" height="45" />
         <InputV />
       </div>
 
@@ -38,7 +38,7 @@ const handleEnter = () => {
 
         <div class="nav-left">
           <div class="nav-logo-mobile">
-            <img alt="" src="@/assets/logo.svg" width="35" height="30" />
+            <img alt="" src="@/assets/logo.svg" width="45" height="45" />
           </div>
           <div>
             <LocationSlider/>
@@ -52,7 +52,7 @@ const handleEnter = () => {
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon moon" />
 
-          <MenuC />
+          <MenuC v-if="isLogged" />
 
           <button v-show="!isLogged" @click="handleEnter">enter</button>
         </div>

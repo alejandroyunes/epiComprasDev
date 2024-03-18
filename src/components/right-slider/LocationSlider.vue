@@ -33,9 +33,9 @@ const toggleSlider = () => {
       </div>
     </div>
     <div class="animation-exit" @click="toggleSlider()">
-      <ExitSvg />
+      <ExitSvg class="icon"/>
     </div>
   </div>
 
-  <div @click="toggleSlider()" :class="{ 'bg': showNotification }"></div>
+  <div @click="toggleSlider()" :class="{ 'outer-bg': showNotification }"></div>
 </template>

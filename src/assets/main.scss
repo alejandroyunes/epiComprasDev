@@ -23,4 +23,11 @@ a {
   #path-2 {
     fill: var(--color-background-oposite);
   }
+  #path-3 {
+    fill: var(--color-background);
+  }
+  #path-4 {
+    // fill: var(--color-background-oposite);
+    stroke: var(--color-background-oposite);
+  }
 }

@@ -9,18 +9,19 @@ import LogoutSvg from "../../icons/LogoutSvg.vue"
 
 import { ref } from 'vue'
 
-const open = ref(true)
+const showDropdown = ref(false)
 
 const toggleDropdown = () => {
-  open.value = !open.value
+  showDropdown.value = !showDropdown.value
 }
+
 </script>
 
 <template>
   <ProfileSvg class="icon profile" @click="toggleDropdown" />
 
   <div class="container">
-    <div v-if="open" class="dropdown">
+    <div v-if="showDropdown" class="dropdown">
       <a href="#" class="a">
         <span class="iconDropdown">
           <ProfileSvg class="icon" />
@@ -59,4 +60,6 @@ const toggleDropdown = () => {
       </span>
     </div>
   </div>
+  
+  <div @click="toggleDropdown" :class="{ 'outer-dropdown-bg': showDropdown }"></div>
 </template>
