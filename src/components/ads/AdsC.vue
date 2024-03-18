@@ -35,8 +35,8 @@ const handleFavorite = (adId: number) => {
         <div class="ad-info">
           <div class="ad-title">
             <h3>{{ ad.title }}</h3>
-            <HeartSvg v-show="!favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart" />
-            <HeartFillSvg v-show="favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+            <HeartSvg  class="ad-heart" />
+            <HeartFillSvg v-show="false" class="ad-heart-fill" />
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>
