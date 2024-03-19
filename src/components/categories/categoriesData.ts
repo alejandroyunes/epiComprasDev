@@ -1,4 +1,11 @@
-export const categories = [
+interface Category {
+  name: string
+  image: string
+  alt: string
+  url: string
+}
+
+export const categories: Category[] = [
   {
     name: 'Carros y Motos',
     image: '/categories/carros.webp',
