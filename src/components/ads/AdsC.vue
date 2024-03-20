@@ -1,25 +1,25 @@
 <script setup lang="ts">
 import './ads.scss'
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import { ads } from './data'
 import { RouterLink } from 'vue-router'
 import TitleC from '@/components/title/TitleC.vue'
 import HeartSvg from '@/components/icons/HeartSvg.vue'
 import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 
-const favorites = ref<string[]>([])
-const showFavorites = ref<boolean>(false)
+// const favorites = ref<string[]>([])
+// const showFavorites = ref<boolean>(false)
 
-const handleFavorite = (adId: number) => {
-  showFavorites.value = !showFavorites.value
+// const handleFavorite = (adId: number) => {
+//   showFavorites.value = !showFavorites.value
 
-  const adIdString = String(adId)
-  if (!favorites.value.includes(adIdString)) {
-    favorites.value.push(adIdString)
-  } else {
-    favorites.value = favorites.value.filter(id => id !== adIdString)
-  }
-}
+//   const adIdString = String(adId)
+//   if (!favorites.value.includes(adIdString)) {
+//     favorites.value.push(adIdString)
+//   } else {
+//     favorites.value = favorites.value.filter(id => id !== adIdString)
+//   }
+// }
 </script>
 
 
