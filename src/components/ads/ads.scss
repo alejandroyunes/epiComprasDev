@@ -4,6 +4,7 @@
   gap: 16px;
   margin: 20px 0;
   padding: 0;
+  outline: 1px solid red;
   @media (max-width: 1080px) and (min-width: 900px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -16,7 +17,7 @@
     grid-template-columns: 1fr;
   }
 
-  li {
+.item {
     position: relative;
     list-style-type: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
