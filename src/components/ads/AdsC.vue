@@ -29,10 +29,11 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 
     <ul class="ads-item">
       <li v-for="ad in ads" :key="ad.id">
+        <p>hello</p>
         <!-- <RouterLink :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink> -->
-        <router-link :to="ad.url">
+        <!-- <router-link :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </router-link>
         <div class="ad-info">
@@ -45,7 +46,7 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
           <p>{{ ad.price }}</p>
           <p>{{ ad.location }}</p>
           <p>{{ ad.date }}</p>
-        </div>
+        </div> -->
       </li>
     </ul>
   </section>
