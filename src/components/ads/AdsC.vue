@@ -21,7 +21,18 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 //   }
 // }
 
-const array = [
+interface ArrayType {
+  id: number
+  title: string
+  description: string
+  price: string
+  location: string
+  date: string
+  image: string
+  url: string
+}
+
+const array: ArrayType[] = [
   {
     id: 1,
     title: 'Bicicleta',
@@ -56,9 +67,6 @@ const array = [
 
 </script>
 
-
-
-
 <template>
   <section>
     <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
@@ -67,7 +75,7 @@ const array = [
     <ul class="ads-item">
       <!-- <li v-for="ad in array"> -->
         <li v-for="ad in array" :key="ad.id">
-        <p>hello</p>
+        <p>byebye</p>
         <!-- <RouterLink :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink> -->
