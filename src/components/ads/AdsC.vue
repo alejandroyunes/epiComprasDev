@@ -1,7 +1,7 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import './ads.scss'
-import TitleC from '@/components/title/TitleC.vue'
 import AdsList from '@/components/ads/AdsList.vue'
+import TitleC from '@/components/title/TitleC.vue'
 
 </script>
 
