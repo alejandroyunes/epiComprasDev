@@ -54,7 +54,7 @@ const array: ArrayType[] = [
 
     <ul>
         <li v-for="ad in array" :key="ad.id">
-        <p>byebye</p>
+        <p>{{ ad.date }}</p>
       </li>
     </ul>
   </section>
