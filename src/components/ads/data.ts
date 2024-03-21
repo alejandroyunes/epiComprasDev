@@ -1,4 +1,15 @@
-export const ads = [
+interface AdType {
+  id: number | string
+  title: string
+  description: string
+  image: string
+  price: number
+  location: string
+  date: string
+  url: string
+}
+
+export const ads: AdType[] = [
   {
     id: 1,
     title: 'Car for Sale',
