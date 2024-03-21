@@ -22,8 +22,8 @@ import TitleC from '@/components/title/TitleC.vue'
         <div class="ad-info">
           <div class="ad-title">
             <h3>{{ ad.title }}</h3>
-            <HeartSvg class="ad-heart" />
-            <HeartFillSvg v-show="false" class="ad-heart-fill" />
+            <!-- <HeartSvg class="ad-heart" />
+            <HeartFillSvg v-show="false" class="ad-heart-fill" /> -->
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>
