@@ -6,13 +6,14 @@ import TitleC from '@/components/title/TitleC.vue'
 </script>
 
 <template>
-  <section>
-    <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
+  <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
 
-    <ul class="ads-item">
+  <div class="ads-item">
+    <ul>
       <li v-for="ad in ads" :key="ad.id">
         <p>{{ ad.date }}</p>
+        <p>{{ ad.description }}</p>
       </li>
     </ul>
-  </section>
+  </div>
 </template>
