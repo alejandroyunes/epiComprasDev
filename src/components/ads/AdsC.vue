@@ -20,7 +20,43 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 //     favorites.value = favorites.value.filter(id => id !== adIdString)
 //   }
 // }
+
+const array = [
+  {
+    id: 1,
+    title: 'Bicicleta',
+    description: 'Bicicleta de montaña en buen estado',
+    price: '100€',
+    location: 'Madrid',
+    date: 'Hoy',
+    image: 'https://via.placeholder.com/300x165',
+    url: '/ad/1'
+  },
+  {
+    id: 2,
+    title: 'Móvil',
+    description: 'Móvil en buen estado',
+    price: '200€',
+    location: 'Barcelona',
+    date: 'Ayer',
+    image: 'https://via.placeholder.com/300x165',
+    url: '/ad/2'
+  },
+  {
+    id: 3,
+    title: 'Portátil',
+    description: 'Portátil en buen estado',
+    price: '300€',
+    location: 'Valencia',
+    date: 'Hace 2 días',
+    image: 'https://via.placeholder.com/300x165',
+    url: '/ad/3'
+  }
+]
+
 </script>
+
+
 
 
 <template>
@@ -29,7 +65,8 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
     <p>hello</p>
 
     <ul class="ads-item">
-      <li v-for="ad in ads" :key="ad.id">
+      <!-- <li v-for="ad in array"> -->
+        <li v-for="ad in array" :key="ad.id">
         <p>hello</p>
         <!-- <RouterLink :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
