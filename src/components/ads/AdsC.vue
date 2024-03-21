@@ -3,15 +3,13 @@ import './ads.scss'
 import { ads } from './data';
 import TitleC from '@/components/title/TitleC.vue'
 
-
 </script>
 
 <template>
   <section>
     <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
-    <p>hello</p>
 
-    <ul class="ads-item">
+    <ul>
       <li v-for="ad in ads" :key="ad.id">
         <p>{{ ad.date }}</p>
       </li>
