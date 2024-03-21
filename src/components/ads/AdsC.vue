@@ -8,7 +8,7 @@ import TitleC from '@/components/title/TitleC.vue'
 <template>
   <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
 
-  <div >
+  <div class="ads-item">
     <ul>
       <li v-for="ad in ads" :key="ad.id">
         <p>{{ ad.date }}</p>
