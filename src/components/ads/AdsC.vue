@@ -26,6 +26,7 @@ import HeartFillSvg from '@/components/icons/HeartFillSvg.vue'
 <template>
   <section>
     <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
+    <p>hello</p>
 
     <ul class="ads-item">
       <li v-for="ad in ads" :key="ad.id">
