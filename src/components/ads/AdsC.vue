@@ -16,9 +16,9 @@ import TitleC from '@/components/title/TitleC.vue'
         <!-- <RouterLink :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink> -->
-        <router-link :to="ad.url">
+        <!-- <router-link :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
-        </router-link>
+        </router-link> -->
         <div class="ad-info">
           <div class="ad-title">
             <h3>{{ ad.title }}</h3>
