@@ -2,7 +2,6 @@
 import './ads.scss'
 import { ads } from './data';
 import TitleC from '@/components/title/TitleC.vue'
-
 </script>
 
 <template>
