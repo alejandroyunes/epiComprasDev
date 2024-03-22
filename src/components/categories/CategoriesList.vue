@@ -6,7 +6,7 @@ import { categories } from './categoriesData'
 </script>
 
 <template>
-  <section class="list-inner">
+  <section class="category-list-container">
     <ul>
       <li v-for="category in categories" :key="category.name">
         <RouterLink :to="category.url">
