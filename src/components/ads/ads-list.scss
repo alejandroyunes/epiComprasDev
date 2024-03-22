@@ -6,9 +6,10 @@
     margin: 20px 0;
     padding: 0;
     list-style: none;
-    overflow-x: scroll;
+    // overflow-x: auto;
     overflow-y: hidden;
-    outline: 1px solid green;
+    outline: 10px solid green;
+    // scroll-snap-type: x mandatory; 
     &::-webkit-scrollbar {
       width: 8px;
       height: 8px;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import './ads.scss'
+import './ads-list.scss'
 import { ads } from './data'
 import HeartSvg from '../icons/HeartSvg.vue'
 import HeartFillSvg from '../icons/HeartFillSvg.vue'
