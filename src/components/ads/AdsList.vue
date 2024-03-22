@@ -7,12 +7,11 @@ import HeartFillSvg from '../icons/HeartFillSvg.vue'
 
 const favorites = ref<string[]>([])
 
-const handleFavorite = (adId: number) => {
-  const adIdString = String(adId)
-  if (!favorites.value.includes(adIdString)) {
-    favorites.value.push(adIdString)
+const handleFavorite = (adId: string) => {
+  if (!favorites.value.includes(adId)) {
+    favorites.value.push(adId)
   } else {
-    favorites.value = favorites.value.filter(id => id !== adIdString)
+    favorites.value = favorites.value.filter(id => id !== adId)
   }
 }
 </script>
@@ -27,9 +26,8 @@ const handleFavorite = (adId: number) => {
         <div class="ad-info">
           <div class="ad-title">
             <h3>{{ ad.title }}</h3>
-            <HeartSvg v-show="!favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)" class="ad-heart" />
-            <HeartFillSvg v-show="favorites.includes(String(ad.id))" @click="handleFavorite(ad.id)"
-              class="ad-heart-fill" />
+            <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart" />
+            <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>

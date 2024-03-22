@@ -1,5 +1,5 @@
 interface AdType {
-  id: number
+  id: string
   title: string
   description: string
   image: string
@@ -11,7 +11,7 @@ interface AdType {
 
 export const ads: AdType[] = [
   {
-    id: 1,
+    id: '1',
     title: 'Car for Sale',
     description: 'Well-maintained car available for sale. Low mileage and excellent condition.',
     image: '/ads/carro.jpg',
@@ -21,7 +21,7 @@ export const ads: AdType[] = [
     url: '/ads/car-for-sale'
   },
   {
-    id: 2,
+    id: '2',
     title: 'Spacious House for Rent',
     description: 'Beautiful house with multiple bedrooms and amenities. Ideal for families.',
     image: '/ads/casa.jpg',
@@ -31,7 +31,7 @@ export const ads: AdType[] = [
     url: '/ads/spacious-house-for-rent'
   },
   {
-    id: 3,
+    id: '3',
     title: 'Kitchen Stove for Sale',
     description: 'Brand new kitchen stove available at a discounted price. Limited stock!',
     image: '/ads/estufa.jpg',
@@ -41,7 +41,7 @@ export const ads: AdType[] = [
     url: '/ads/kitchen-stove-for-sale'
   },
   {
-    id: 4,
+    id: '4',
     title: 'Refurbished Laptop',
     description:
       'Powerful laptop with upgraded specifications. Perfect for work and entertainment.',
