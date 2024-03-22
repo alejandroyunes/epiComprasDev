@@ -26,8 +26,8 @@ const handleFavorite = (adId: string) => {
         <div class="ad-info">
           <div class="ad-title">
             <h3>{{ ad.title }}</h3>
-            <HeartSvg  @click="handleFavorite(ad.id)" class="ad-heart" />
-            <HeartFillSvg  @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+            <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)"/>
+            <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" />
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>
