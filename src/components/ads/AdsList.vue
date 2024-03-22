@@ -23,8 +23,8 @@ const handleFavorite = (adId: string) => {
         <RouterLink :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink>
-        <div class="ad-info">
-          <div class="ad-title">
+        <div class="ads-info-inner">
+          <div class="ads-title">
             <h3>{{ ad.title }}</h3>
             <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)"/>
             <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" />

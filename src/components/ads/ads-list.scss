@@ -8,7 +8,6 @@
     list-style: none;
     // overflow-x: auto;
     overflow-y: hidden;
-    outline: 10px solid green;
     // scroll-snap-type: x mandatory;
     &::-webkit-scrollbar {
       width: 8px;
@@ -47,7 +46,7 @@
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
       }
-      .ad-info {
+      .ads-info-inner {
         padding: 16px;
         h3 {
           font-size: 1.25rem;
@@ -60,7 +59,7 @@
           color: var(--color-text);
           margin-bottom: 8px;
         }
-        .ad-title {
+        .ads-title {
           display: flex;
           justify-content: space-between;
 
