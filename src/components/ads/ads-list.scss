@@ -1,12 +1,13 @@
 .ads-container {
   ul {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    justify-content: space-between;
+
     gap: 16px;
     margin: 20px 0;
     padding: 0;
     list-style: none;
-    // overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     // scroll-snap-type: x mandatory;
     &::-webkit-scrollbar {
@@ -19,17 +20,20 @@
       border-radius: 10px;
     }
 
-    @media (max-width: 1080px) and (min-width: 900px) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    // display: grid;
+    // grid-template-columns: repeat(4, minmax(0, 1fr));
 
-    @media (max-width: 900px) and (min-width: 768px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    // @media (max-width: 1080px) and (min-width: 900px) {
+    //   grid-template-columns: repeat(3, minmax(0, 1fr));
+    // }
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
+    // @media (max-width: 900px) and (min-width: 768px) {
+    //   grid-template-columns: repeat(2, minmax(0, 1fr));
+    // }
+
+    // @media (max-width: 768px) {
+    //   grid-template-columns: 1fr;
+    // }
 
     li {
       position: relative;
@@ -41,8 +45,8 @@
       border-bottom-right-radius: 12px;
       background-color: var(--color-background-mute);
       img {
-        width: 100%;
-        height: auto;
+        // width: 100%;
+        // height: auto;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
       }
