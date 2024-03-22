@@ -50,25 +50,25 @@ export const ads: AdType[] = [
     location: 'Houston, TX',
     date: '2021-01-04',
     url: '/ads/refurbished-laptop'
-  },
-  {
-    id: 5,
-    title: 'Electric Stove for Sale',
-    description: 'Modern electric stove available for sale. Energy-efficient and easy to use.',
-    image: '/ads/estufa.jpg',
-    price: 500,
-    location: 'Phoenix, AZ',
-    date: '2021-01-05',
-    url: '/ads/electric-stove-for-sale'
-  },
-  {
-    id: 6,
-    title: 'Gaming Laptop',
-    description: 'High-performance gaming laptop with advanced graphics capabilities.',
-    image: '/ads/laptop.jpg',
-    price: 600,
-    location: 'Philadelphia, PA',
-    date: '2021-01-06',
-    url: '/ads/gaming-laptop'
   }
+  // {
+  //   id: 5,
+  //   title: 'Electric Stove for Sale',
+  //   description: 'Modern electric stove available for sale. Energy-efficient and easy to use.',
+  //   image: '/ads/estufa.jpg',
+  //   price: 500,
+  //   location: 'Phoenix, AZ',
+  //   date: '2021-01-05',
+  //   url: '/ads/electric-stove-for-sale'
+  // },
+  // {
+  //   id: 6,
+  //   title: 'Gaming Laptop',
+  //   description: 'High-performance gaming laptop with advanced graphics capabilities.',
+  //   image: '/ads/laptop.jpg',
+  //   price: 600,
+  //   location: 'Philadelphia, PA',
+  //   date: '2021-01-06',
+  //   url: '/ads/gaming-laptop'
+  // }
 ]
