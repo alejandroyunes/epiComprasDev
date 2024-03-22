@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import './ads.scss'
 import { ads } from './data'
 
 </script>
@@ -15,3 +14,10 @@ import { ads } from './data'
 
   </section>
 </template>
+
+
+<style lang="scss">
+.ads-outer {
+  outline: 1px solid red;
+}
+</style>
