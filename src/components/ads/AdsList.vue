@@ -19,7 +19,7 @@ const handleFavorite = (adId: string) => {
 <template>
   <section class="ads-container">
     <ul>
-      <li v-for="ad in ads" :key="ad.id" class="ads-item-card">
+      <li v-for="ad in ads" :key="ad.id">
         <RouterLink :to="ad.url">
           <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink>
