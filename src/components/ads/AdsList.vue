@@ -4,8 +4,14 @@ import './ads-list.scss'
 import { ads } from './data'
 import HeartSvg from '../icons/HeartSvg.vue'
 import HeartFillSvg from '../icons/HeartFillSvg.vue'
+import AdsSkeleton from '../loaders/skeleton/AdsSkeleton.vue'
 
 const favorites = ref<string[]>([])
+const isLoading = ref(true)
+
+setTimeout(() => {
+  isLoading.value = false
+}, 2000)
 
 const handleFavorite = (adId: string) => {
   if (!favorites.value.includes(adId)) {
@@ -18,16 +24,16 @@ const handleFavorite = (adId: string) => {
 
 <template>
   <section class="ads-container">
-    <ul>
+    <ul v-if="!isLoading">
       <li v-for="ad in ads" :key="ad.id">
         <RouterLink :to="ad.url">
-          <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
+          <img v-if="!isLoading" class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink>
         <div class="ads-info-inner">
           <div class="ads-title">
             <h3>{{ ad.title }}</h3>
-            <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)"/>
-            <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" />
+            <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart" />
+            <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
           </div>
           <p>{{ ad.description }}</p>
           <p>{{ ad.price }}</p>
@@ -36,6 +42,14 @@ const handleFavorite = (adId: string) => {
         </div>
       </li>
     </ul>
-
   </section>
+
+  <section class="ads-skeleton">
+    <ul v-if="isLoading">
+      <li v-for="index in 5" :key="index">
+        <AdsSkeleton />
+      </li>
+    </ul>
+  </section>
+
 </template>

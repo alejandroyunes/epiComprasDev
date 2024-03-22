@@ -1,0 +1,152 @@
+.card-two {
+  width: 450px;
+  height: 180px;
+}
+.card-three {
+  width: 340px;
+  height: 90px;
+}
+.card-comment {
+  width: 450px;
+  height: 100px;
+  .card-body {
+    padding: 10px 30px;
+    .card-title {
+      &.skeleton {
+        // NOTICE THIS
+        min-height: 8px;
+        max-width: 90%;
+        margin: 20px 0;
+      }
+    }
+    .card-sub-title {
+      font-weight: 700;
+      &.skeleton {
+        // NOTICE THIS
+        min-height: 8px;
+        max-width: 80%;
+        margin: 6px 0;
+      }
+    }
+  }
+}
+.card-article {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 450px;
+  padding: 24px 0 12px;
+  height: auto;
+
+  .card-article-image {
+    span {
+      height: 75px;
+      width: 75px;
+      background-color: #e1e9ee;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+    }
+  }
+  .card-article-text {
+    .card-body {
+      padding-left: 0;
+      .card-title {
+        font-weight: 700;
+        &.skeleton {
+          min-height: 8px;
+          max-width: 184px;
+          margin: 0px 0;
+        }
+      }
+      .card-sub-title {
+        font-weight: 700;
+        &.skeleton {
+          min-height: 8px;
+          max-width: 152px;
+          margin: 6px 0;
+        }
+      }
+    }
+  }
+  .card-img {
+    padding-bottom: 26.25%;
+  }
+}
+.card-right {
+  display: grid;
+  grid-template-columns: 0.3fr 0.8fr;
+  margin: auto 0;
+  padding-top: 16px;
+
+  .card-article-image {
+    span {
+      height: 65px;
+      width: 65px;
+      background-color: #e1e9ee;
+      border-radius: 8%;
+      display: block;
+      margin: auto;
+    }
+  }
+  .card-article-text {
+    .card-body {
+      padding-left: 0;
+      .card-title {
+        font-weight: 700;
+        &.skeleton {
+          // NOTICE THIS
+          min-height: 8px;
+          max-width: 100px;
+          margin: 0;
+        }
+      }
+      .card-sub-title {
+        font-weight: 700;
+        &.skeleton {
+          // NOTICE THIS
+          min-height: 8px;
+          max-width: 152px;
+          margin: 6px 0;
+        }
+      }
+    }
+  }
+  .card-img {
+    padding-bottom: 26.25%;
+  }
+}
+.card-article-description {
+  padding: 0 30px 12px;
+
+  .card-body {
+    padding: 0;
+    .card-title {
+      &.skeleton {
+        // NOTICE THIS
+        color: rebeccapurple;
+        min-height: 8px;
+        max-width: 90%;
+        margin: 12px 0;
+      }
+    }
+    .card-sub-title {
+      font-weight: 700;
+      &.skeleton {
+        // NOTICE THIS
+        min-height: 8px;
+        max-width: 85%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.card-intro {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  &.skeleton {
+    // NOTICE THIS
+    min-height: 72px;
+    border-radius: 4px;
+  }
+}
