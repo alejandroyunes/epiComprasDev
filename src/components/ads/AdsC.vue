@@ -7,7 +7,5 @@ import TitleC from '@/components/title/TitleC.vue'
 
 <template>
   <TitleC :view="'ver más'" :title="'Anuncios Recientes'" :border="false" />
-
   <AdsList />
-
 </template>
