@@ -11,7 +11,7 @@ const isLoading = ref(true)
 
 setTimeout(() => {
   isLoading.value = false
-}, 2000)
+}, 3000)
 
 const handleFavorite = (adId: string) => {
   if (!favorites.value.includes(adId)) {
@@ -23,11 +23,11 @@ const handleFavorite = (adId: string) => {
 </script>
 
 <template>
-  <section class="ads-container">
-    <ul v-if="!isLoading">
+  <section v-if="!isLoading" class="ads-container">
+    <ul>
       <li v-for="ad in ads" :key="ad.id">
         <RouterLink :to="ad.url">
-          <img v-if="!isLoading" class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
+          <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
         </RouterLink>
         <div class="ads-info-inner">
           <div class="ads-title">
@@ -44,12 +44,6 @@ const handleFavorite = (adId: string) => {
     </ul>
   </section>
 
-  <section class="ads-skeleton">
-    <ul v-if="isLoading">
-      <li v-for="index in 5" :key="index">
-        <AdsSkeleton />
-      </li>
-    </ul>
-  </section>
+  <AdsSkeleton v-if="isLoading" />
 
 </template>
