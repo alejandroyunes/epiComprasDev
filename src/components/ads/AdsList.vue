@@ -6,7 +6,7 @@ import { ads } from './data'
 </script>
 
 <template>
-  <div class="ads-outer">
+  <div>
     <ul>
       <li v-for="category in ads" :key="category.id" class="item">
         <p>{{ category.description }}</p>
