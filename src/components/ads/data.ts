@@ -70,5 +70,25 @@ export const ads: AdType[] = [
     location: 'Philadelphia, PA',
     date: '2021-01-06',
     url: '/ads/gaming-laptop'
+  },
+  {
+    id: '7',
+    title: 'Mountain Bike for Sale',
+    description: 'Durable mountain bike available for sale. Suitable for off-road adventures.',
+    image: '/ads/casa.jpg',
+    price: 700,
+    location: 'San Antonio, TX',
+    date: '2021-01-07',
+    url: '/ads/mountain-bike-for-sale'
+  },
+  {
+    id: '8',
+    title: 'Beach House for Rent',
+    description: 'Luxurious beach house with stunning ocean views. Perfect for vacations.',
+    image: '/ads/casa.jpg',
+    price: 800,
+    location: 'San Diego, CA',
+    date: '2021-01-08',
+    url: '/ads/beach-house-for-rent'
   }
 ]
