@@ -6,7 +6,7 @@ import HeartSvg from '../icons/HeartSvg.vue'
 import HeartFillSvg from '../icons/HeartFillSvg.vue'
 
 const favorites = ref<string[]>([])
-console.log(favorites)
+
 const handleFavorite = (adId: number) => {
   const adIdString = String(adId)
   if (!favorites.value.includes(adIdString)) {
