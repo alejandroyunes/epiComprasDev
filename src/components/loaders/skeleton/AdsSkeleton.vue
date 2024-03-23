@@ -1,31 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import './ads-skeleton.scss'
-import { ads } from '@/components/ads/data';
-
-const favorites = ref<string[]>([])
-const isLoading = ref(true)
-
-setTimeout(() => {
-  isLoading.value = false
-}, 2000)
-
-const handleFavorite = (adId: string) => {
-  if (!favorites.value.includes(adId)) {
-    favorites.value.push(adId)
-  } else {
-    favorites.value = favorites.value.filter(id => id !== adId)
-  }
-}
-
-
 </script>
-
 <template>
 
   <section class="ads-skeleton">
     <ul>
-      <li v-for="ad in ads" :key="ad.id">
+      <li v-for="index in 5" :key="index">
         <div class="shine-line card-img">
           <span class="circle"></span>
         </div>

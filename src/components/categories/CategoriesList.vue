@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import './scss/categoriesList.scss'
+import './categoriesList.scss'
 import { RouterLink } from 'vue-router'
 import { categories } from './categoriesData'
 

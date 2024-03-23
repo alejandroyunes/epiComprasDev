@@ -1,4 +1,7 @@
-<body>
+<script>
+  import '../rest.scss'
+</script>
+<template>
   <div class="container">
     <div class="grid-wrapper">
       <div class="grid-one">
@@ -133,4 +136,4 @@
       </div>
     </div>
   </div>
-</body>
+</template>
