@@ -7,12 +7,6 @@ interface Category {
 
 export const categories: Category[] = [
   {
-    name: 'Carros y Motos',
-    image: '/categories/carros.webp',
-    alt: 'Carros y Motos Image',
-    url: '/carros-y-motos'
-  },
-  {
     name: 'Propiedades y Alquileres',
     image: '/categories/inmobilario.webp',
     alt: 'Propiedades y Alquileres Image',
@@ -29,6 +23,12 @@ export const categories: Category[] = [
     image: '/categories/home.webp',
     alt: 'Artículos del Hogar Image',
     url: '/articulos-del-hogar'
+  },
+  {
+    name: 'Carros y Motos',
+    image: '/categories/carros.webp',
+    alt: 'Carros y Motos Image',
+    url: '/carros-y-motos'
   },
   {
     name: 'Portátiles',
