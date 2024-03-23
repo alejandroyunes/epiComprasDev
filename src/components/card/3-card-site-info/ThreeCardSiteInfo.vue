@@ -7,7 +7,7 @@ import DealSvg from '../../icons/DealSvg.vue'
 </script>
 
 <template>
-  <div class="container">
+  <div class="site-info-container">
     <div class="column">
       <div class="icon">
         <AdsColorSvg />
