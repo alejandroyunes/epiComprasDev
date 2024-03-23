@@ -29,7 +29,6 @@ const handleFavorite = (adId: string) => {
         <div class="li-container">
 
           <div class="li-item">
-
             <RouterLink :to="ad.url">
               <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
             </RouterLink>
@@ -43,15 +42,11 @@ const handleFavorite = (adId: string) => {
               <p>{{ ad.price }}</p>
               <p>{{ ad.location }}</p>
               <p>{{ ad.date }}</p>
-
             </div>
-
 
           </div>
 
-
         </div>
-
       </li>
     </ul>
   </section>
