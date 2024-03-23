@@ -26,20 +26,32 @@ const handleFavorite = (adId: string) => {
   <section v-if="!isLoading" class="ads-container">
     <ul>
       <li v-for="ad in ads" :key="ad.id">
-        <RouterLink :to="ad.url">
-          <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
-        </RouterLink>
-        <div class="ads-info-inner">
-          <div class="ads-title">
-            <h3>{{ ad.title }}</h3>
-            <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart" />
-            <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+        <div class="li-container">
+
+          <div class="li-item">
+
+            <RouterLink :to="ad.url">
+              <img class="ad-image" :src="ad.image" alt="" width="300px" height="165px">
+            </RouterLink>
+            <div class="ads-info-inner">
+              <div class="ads-title">
+                <h3>{{ ad.title }}</h3>
+                <HeartSvg v-show="!favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart" />
+                <HeartFillSvg v-show="favorites.includes(ad.id)" @click="handleFavorite(ad.id)" class="ad-heart-fill" />
+              </div>
+              <p>{{ ad.description }}</p>
+              <p>{{ ad.price }}</p>
+              <p>{{ ad.location }}</p>
+              <p>{{ ad.date }}</p>
+
+            </div>
+
+
           </div>
-          <p>{{ ad.description }}</p>
-          <p>{{ ad.price }}</p>
-          <p>{{ ad.location }}</p>
-          <p>{{ ad.date }}</p>
+
+
         </div>
+
       </li>
     </ul>
   </section>
