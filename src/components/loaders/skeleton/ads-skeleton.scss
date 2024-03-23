@@ -18,9 +18,8 @@
   ul {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
     margin: 20px 0;
-    padding: 0 5px 12px;
+    padding-bottom: 12px;
     list-style: none;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -37,78 +36,84 @@
     }
 
     li {
-      position: relative;
-      scroll-snap-align: start;
-      list-style-type: none;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
-      background-color: var(--color-background-mute);
-      .card-img {
-        height: 165px;
-        width: 280px;
+      .li-container {
+        scroll-snap-align: start;
+      }
+      .li-item {
         position: relative;
-        background-color: var(--color-border-hover);
+        margin-left: 5px;
+        margin-right: 16px;
+        list-style-type: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
-        .circle {
-          height: 75px;
-          width: 75px;
-          background-color: var(--color-border);
-          border-radius: 50%;
-          display: inline-block;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          margin-left: auto;
-          margin-right: auto;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        background-color: var(--color-background-mute);
+        .card-img {
+          height: 165px;
+          width: 280px;
+          position: relative;
+          background-color: var(--color-border-hover);
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          .circle {
+            height: 75px;
+            width: 75px;
+            background-color: var(--color-border);
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: auto;
+            margin-right: auto;
+          }
         }
-      }
-      .ads-info-inner {
-        padding: 16px;
-        .card-title {
-          min-height: 18px;
-          max-width: 180px;
-          margin: 16px 0 20px;
-          border-radius: 8px;
-          background-color: var(--color-border);
-        }
-        .card-description-long {
-          min-height: 8px;
-          max-width: 230px;
-          border-radius: 8px;
-          background-color: var(--color-border);
-        }
-        .card-description-medium {
-          margin-top: 8px;
-          min-height: 8px;
-          max-width: 200px;
-          margin: 10px 0;
-          border-radius: 8px;
-          background-color: var(--color-border);
-        }
-        .card-description-short {
-          margin-top: 8px;
-          border-radius: 8px;
-          min-height: 8px;
-          max-width: 160px;
-          margin: 10px 0 36px;
-          background-color: var(--color-border);
-        }
-        .card-description-shorter {
-          margin-top: 8px;
-          min-height: 6px;
-          max-width: 128px;
-          margin: 10px 0;
-          border-radius: 8px;
-          background-color: var(--color-border);
+        .ads-info-inner {
+          padding: 16px;
+          .card-title {
+            min-height: 18px;
+            max-width: 180px;
+            margin: 16px 0 20px;
+            border-radius: 8px;
+            background-color: var(--color-border);
+          }
+          .card-description-long {
+            min-height: 8px;
+            max-width: 230px;
+            border-radius: 8px;
+            background-color: var(--color-border);
+          }
+          .card-description-medium {
+            margin-top: 8px;
+            min-height: 8px;
+            max-width: 200px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: var(--color-border);
+          }
+          .card-description-short {
+            margin-top: 8px;
+            border-radius: 8px;
+            min-height: 8px;
+            max-width: 160px;
+            margin: 10px 0 36px;
+            background-color: var(--color-border);
+          }
+          .card-description-shorter {
+            margin-top: 8px;
+            min-height: 6px;
+            max-width: 128px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: var(--color-border);
 
-          &.margin-top-24 {
-            margin-top: 24px;
+            &.margin-top-24 {
+              margin-top: 24px;
+            }
           }
         }
       }
