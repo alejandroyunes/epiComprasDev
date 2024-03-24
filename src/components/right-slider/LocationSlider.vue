@@ -24,6 +24,7 @@ const toggleSlider = () => {
   <div class="slider-outer" :class="{ 'open': showLocation }">
     
     <div class="slider-inner">
+      
       <div class="location-search">
         <p>
           ¿Dónde quieres buscar?
@@ -31,8 +32,8 @@ const toggleSlider = () => {
       </div>
 
       <div>
-
       </div>
+
     </div>
 
     <div class="animation-exit" @click="toggleSlider()">

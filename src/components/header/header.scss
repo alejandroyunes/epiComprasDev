@@ -1,76 +1,77 @@
 .nav-outer {
   width: 100%;
   padding: 20px 20px 0;
-}
 
-.nav-inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1280px;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 20px;
-    .nav-one {
-      order: 1;
-    }
-    .nav-two {
-      display: flex;
-    }
-  }
-}
-
-.nav-one {
-  display: flex;
-  flex: 0;
-  align-items: center;
-  .nav-logo {
-    flex: 0;
-    margin-right: 8px;
-    display: block;
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
-}
-
-.nav-two {
-  display: flex;
-  flex: 1;
-  align-items: center;
-
-  .nav-left {
+  .nav-inner {
     display: flex;
-    flex: 1;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    .nav-logo-mobile {
-      display: none;
-      @media (max-width: 1024px) {
+    margin: 0 auto;
+    max-width: 1280px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+      .nav-one {
+        order: 1;
+      }
+      .nav-two {
         display: flex;
-        margin-right: 8px;
       }
     }
   }
-  .nav-right {
+  .nav-one {
     display: flex;
+    flex: 0;
     align-items: center;
-    .sun,
-    .moon {
-      z-index: 101;
-      margin-right: 10px;
+    .nav-logo {
+      flex: 0;
+      margin-right: 8px;
+      display: block;
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
+  }
 
-    button {
-      padding: 2px 10px;
-      border-radius: 12px;
-      background-color: var(--primary);
-      color: var(--black-soft);
-      border: none;
-      cursor: pointer;
-      span {
-        font-size: 36px;
+  .nav-two {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    .nav-left {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      .nav-logo-mobile {
+        display: none;
+        @media (max-width: 1024px) {
+          display: flex;
+          margin-right: 8px;
+        }
+      }
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      .sun,
+      .moon {
+        z-index: 101;
+        margin-right: 10px;
+      }
+
+      button {
+        display: flex;
+        padding: 2px 10px;
+        height: 45px;
+        border-radius: 12px;
+        background-color: var(--primary);
+        color: var(--black-soft);
+        border: none;
+        cursor: pointer;
+        span {
+          font-size: 36px;
+        }
       }
     }
   }
