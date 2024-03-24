@@ -54,7 +54,7 @@ const handleEnter = () => {
 
           <MenuC v-if="isLogged" />
 
-          <button v-show="!isLogged" @click="handleEnter">enter</button>
+          <button v-show="!isLogged" @click="handleEnter">Publicar</button>
         </div>
 
       </div>

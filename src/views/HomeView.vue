@@ -8,8 +8,9 @@ import ThreeCardSiteInfo from '@/components/card/3-card-site-info/ThreeCardSiteI
 <template>
   <main class="home-outer">
     <CategoriesC />
-    <ThreeCardSiteInfo />
     <AdsC />
+    <ThreeCardSiteInfo />
+
   </main>
 </template>
 
