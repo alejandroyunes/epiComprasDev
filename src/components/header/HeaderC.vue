@@ -48,13 +48,12 @@ const handleEnter = () => {
         <div class="nav-right">
           <NotificationSlider v-if="isLogged" />
 
-
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon moon" />
 
           <MenuC v-if="isLogged" />
 
-          <button v-show="!isLogged" @click="handleEnter">Publicar</button>
+          <button v-show="!isLogged" @click="handleEnter"><span>+</span></button>
         </div>
 
       </div>

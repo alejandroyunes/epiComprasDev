@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import './styles.scss'
 import { ref } from 'vue'
-
 import NotificationBellSvg from '@/components/icons/NotificationBellSvg.vue'
 import NoNotificationBellSvg from '@/components/icons/NoNotificationBellSvg.vue'
 import ExitSvg from '@/components/icons/ExitSvg.vue'
@@ -21,16 +20,19 @@ const toggleNotification = () => {
 
 <template>
   <div @click="toggleSlider" class="notification-outer">
-    <div v-show="!notifications" class="notification-inner">
-      <NotificationBellSvg @click="toggleNotification" class="icon nav-bell-icon" />
+
+    <div  v-if="!notifications" class="notification-icon">
+      <NotificationBellSvg @click="toggleNotification" class="icon" />
     </div>
-    <NoNotificationBellSvg @click="toggleNotification" v-show="notifications" class=" icon nav-bell-icon" />
+
+    <NoNotificationBellSvg @click="toggleNotification" v-if="notifications" class="icon " />
 
   </div>
 
-  <div class="slider-container" :class="{ 'open': showNotification }">
-    <div class="animation-container">
-      <div class="animation-bell">
+  <div class="slider-outer" :class="{ 'open': showNotification }">
+    <div class="slider-inner">
+
+      <div class="notification-bell">
         <!-- <NotificationBellSvg /> -->
         <NoNotificationBellSvg />
       </div>
@@ -38,8 +40,9 @@ const toggleNotification = () => {
         <p>No hay notificaciones</p>
       </div>
     </div>
+
     <div class="animation-exit" @click="toggleSlider">
-      <ExitSvg class="icon"/>
+      <ExitSvg class="icon" />
     </div>
   </div>
 

@@ -12,7 +12,7 @@
       order: 1;
     }
   }
-  .city {
+  .location-city {
     font-size: 16px;
     color: var(--color-heading);
   }
@@ -22,16 +22,18 @@
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 10px;
 
-  .notification-inner {
+  .notification-icon {
     display: inline-flex;
     position: relative;
   }
-  .notification-inner::after {
+
+  .notification-icon::before {
     content: '';
     position: absolute;
     top: -5px;
-    right: 4px;
+    right: -4px;
     width: 8px;
     height: 8px;
     background-color: var(--primary);
@@ -42,13 +44,9 @@
     color: white;
     font-size: 10px;
   }
-
-  .nav-bell-icon {
-    margin-right: 10px;
-  }
 }
 
-.slider-container {
+.slider-outer {
   position: fixed;
   top: 0;
   right: -40vw;
@@ -62,19 +60,19 @@
     right: -70vw;
     width: 70vw;
   }
+
+  .slider-inner {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
 }
 
-.slider-container.open {
+.slider-outer.open {
   transform: translateX(-100%);
-}
-
-.animation-container {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
 }
 
 .animation-exit {
@@ -88,7 +86,7 @@
   padding: 4px;
 }
 
-.animation-bell {
+.notification-bell {
   background-color: var(--color-background-oposite);
   border-radius: 50%;
   display: flex;
