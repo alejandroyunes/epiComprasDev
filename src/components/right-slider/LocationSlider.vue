@@ -63,6 +63,7 @@ const cityBlocked = ref(false)
 const errorCity = ref(false)
 const loadingCity = ref(false)
 const searchResults = ref<string[]>([])
+const searchValue = ref('')
 
 const toggleSlider = () => {
   showLocation.value = !showLocation.value
@@ -113,16 +114,18 @@ const updateCurrentCity = (citySelected: string) => {
   city.value = citySelected
   localStorage.setItem('city', citySelected)
   showLocation.value = false
+  searchResults.value = []
+  searchValue.value = ''
 }
 
 const handleInputChange = (event: Event) => {
-  const newValue = (event.target as HTMLInputElement).value
+  searchValue.value = (event.target as HTMLInputElement).value
 
   searchResults.value = []
 
-  if (newValue.length > 0) {
+  if (searchValue.value.length > 0) {
     searchResults.value = colombiaCoordinates
-      .filter((city) => city.city.toLowerCase().includes(newValue.toLowerCase()))
+      .filter((city) => city.city.toLowerCase().includes(searchValue.value.toLowerCase()))
       .map((city) => city.city)
   }
 }
@@ -143,8 +146,6 @@ const handleInputChange = (event: Event) => {
   <div class="slider-outer" :class="{ 'open': showLocation }">
 
     <div class="slider-inner">
-
-
 
       <div class="location-current">
         <div class="location-title">
@@ -172,7 +173,7 @@ const handleInputChange = (event: Event) => {
 
         <form class="location-form">
           <SearchSvg class="search icon" />
-          <input class="location-input" type="text" placeholder="Buscar ciudad" @input="handleInputChange" />
+          <input class="location-input" type="text" placeholder="Buscar ciudad" :value="searchValue" @input="handleInputChange" />
 
           <ArrowRightSvg class="arrow icon" />
         </form>
