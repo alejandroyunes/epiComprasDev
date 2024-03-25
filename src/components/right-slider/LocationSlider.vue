@@ -8,23 +8,23 @@ import SearchSvg from '@/components/icons/SearchSvg.vue'
 import ArrowRightSvg from '@/components/icons/ArrowRightSvg.vue'
 import CircleLoader from '@/components/loaders/circle-icon/CircleLoader.vue'
 
-const showLocation = ref(false)
-const city = ref<string>()
-const cityBlocked = ref(false)
-const errorCity = ref(false)
-const loadingCity = ref(false)
-
-
-const toggleSlider = () => {
-  showLocation.value = !showLocation.value
-}
-
-interface LocationProps {
+interface LocationType {
   latitude: number
   longitude: number
 }
 
-const colombiaCoordinates: any = [
+interface ClosestCityType {
+  city: string
+  distance: number
+}
+
+interface LocationTypes {
+  city: string
+  latitude: number
+  longitude: number
+}
+
+const colombiaCoordinates: LocationTypes[] = [
   { city: 'Bogotá', latitude: 4.6097, longitude: -74.0817 },
   { city: 'Medellín', latitude: 6.1924, longitude: -75.5963 },
   { city: 'Cali', latitude: 3.4516, longitude: -76.5320 },
@@ -57,9 +57,19 @@ const colombiaCoordinates: any = [
   { city: 'Leticia', latitude: -4.2032, longitude: -69.9350 },
 ]
 
-const getLocationCity = ({ latitude, longitude }: LocationProps) => {
+const showLocation = ref(false)
+const city = ref<string>()
+const cityBlocked = ref(false)
+const errorCity = ref(false)
+const loadingCity = ref(false)
 
-  const closestCity = colombiaCoordinates.reduce((closest: any, current: any) => {
+const toggleSlider = () => {
+  showLocation.value = !showLocation.value
+}
+
+const getLocationCity = ({ latitude, longitude }: LocationType) => {
+
+  const closestCity = colombiaCoordinates.reduce((closest: ClosestCityType, current: LocationTypes) => {
     const distanceToCurrent = Math.sqrt(
       Math.pow(latitude - current.latitude, 2) +
       Math.pow(longitude - current.longitude, 2)
@@ -73,13 +83,12 @@ const getLocationCity = ({ latitude, longitude }: LocationProps) => {
   }, { city: '', distance: Number.MAX_VALUE })
 
   return closestCity.city
-
 }
-
 
 const handleGetLocation = () => {
   showLocation.value = false
   loadingCity.value = true
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
