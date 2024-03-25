@@ -8,10 +8,8 @@ import SunSvg from '@/components/icons/SunSvg.vue'
 import MoonSvg from '@/components/icons/MoonS.vue'
 import PlusSvg from '@/components/icons/PlusSvg.vue'
 import LocationSlider from '@/components/right-slider/LocationSlider.vue'
-import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
 
 const isDarkMode = ref<boolean>(localStorage.getItem('isDarkMode') === 'true')
-const isLogged = ref(false)
 
 setDarkMode(isDarkMode.value)
 
@@ -47,7 +45,7 @@ const handleAdPost = () => {
         </div>
 
         <div class="nav-right">
-          <NotificationSlider v-if="isLogged" />
+          
 
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon moon" />

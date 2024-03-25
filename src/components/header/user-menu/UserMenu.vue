@@ -8,6 +8,7 @@ import LogoutSvg from "../../icons/LogoutSvg.vue"
 import MessageSvg from "../../icons/MessagesSvg.vue"
 import AdsSvg from "../../icons/AdsSvg.vue"
 import HeartSvg from "../../icons/HeartSvg.vue"
+import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
 
 const showDropdown = ref(false)
 const logged = ref(false)
@@ -25,8 +26,9 @@ const handleLogin = () => {
 </script>
 
 <template>
-  <ProfileSvg class="icon user-icon" @click="toggleDropdown" />
+  <NotificationSlider v-if="logged" />
 
+  <ProfileSvg class="icon user-icon" @click="toggleDropdown" />
   <div class="user-menu-outer" v-if="showDropdown">
     <ul class="menu-dropdown">
 
