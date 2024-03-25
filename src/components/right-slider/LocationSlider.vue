@@ -115,7 +115,7 @@ const handleGetLocation = () => {
 }
 
 const handleChange = (event: InputEvent) => {
-  const newValue = (event.target as HTMLInputElement).value;
+  const newValue = (event.target as HTMLInputElement).value
 
   searchResults.value = []
 
@@ -125,6 +125,7 @@ const handleChange = (event: InputEvent) => {
       .map((city) => city.city)
   }
 }
+
 
 </script>
 
