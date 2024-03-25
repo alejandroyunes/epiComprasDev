@@ -86,11 +86,11 @@ const getLocationCity = ({ latitude, longitude }: LocationType) => {
   return closestCity.city
 }
 
-const handleGetLocation = () => {
+const getCurrentLocation = () => {
   showLocation.value = false
+  loadingCity.value = true
 
-  if (!city.value) {
-    loadingCity.value = true
+  const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -103,14 +103,23 @@ const handleGetLocation = () => {
         },
         () => {
           cityBlocked.value = true
-          errorCity.value = false; // Reset errorCity value in case it was previously set
         }
       )
     } else {
       errorCity.value = true
     }
-  } else {
-    console.info('city already selected')
+  }
+
+  if (navigator.permissions) {
+    navigator.permissions.query({ name: 'geolocation' }).then((PermissionStatus) => {
+      if (PermissionStatus.state === 'denied') {
+        getLocation()
+      }
+    })
+  }
+
+  if (!city.value) {
+    getLocation()
   }
 }
 
@@ -126,6 +135,12 @@ const handleChange = (event: Event) => {
   }
 }
 
+const updateCity = (citySelected: string) => {
+  city.value = citySelected
+  errorCity.value = false
+  localStorage.setItem('city', citySelected)
+  showLocation.value = false
+}
 
 </script>
 
@@ -158,7 +173,7 @@ const handleChange = (event: Event) => {
       </div>
 
       <div class="location-current">
-        <div class="location-current-inner" @click="handleGetLocation">
+        <div class="location-current-inner" @click="getCurrentLocation">
           <LocationSvg class="icon location-icon" />
 
           <p v-if="!errorCity && !cityBlocked">
@@ -177,7 +192,7 @@ const handleChange = (event: Event) => {
 
       <div class="location-cities">
         <ul v-if="searchResults.length > 0">
-          <li v-for="city in searchResults" :key="city">{{ city }}</li>
+          <li v-for="city in searchResults" :key="city" @click="updateCity(city)">{{ city }}</li>
         </ul>
       </div>
 
