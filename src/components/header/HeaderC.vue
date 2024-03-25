@@ -46,8 +46,8 @@ const handleAdPost = () => {
 
         <div class="nav-right">
 
-          <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon " />
-          <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon " />
+          <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon sun" />
+          <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon moon" />
 
           <UserMenu />
 
