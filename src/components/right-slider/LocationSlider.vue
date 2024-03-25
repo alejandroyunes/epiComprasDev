@@ -180,6 +180,7 @@ const handleChange = (event: Event) => {
           <li v-for="city in searchResults" :key="city">{{ city }}</li>
         </ul>
       </div>
+
     </div>
 
     <div class="slider-exit" @click="toggleSlider()">

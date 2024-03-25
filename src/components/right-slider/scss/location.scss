@@ -68,7 +68,7 @@
 }
 
 .location-current {
-  margin: 20px 20px 0;
+  margin-top: 20px;
   padding: 0 20px;
   width: 100%;
 
@@ -89,18 +89,17 @@
 
 .location-cities {
   width: 100%;
-  margin: 20px 20px 0;
   padding: 0 20px;
-  height: 100%;
-  overflow: hidden; /* Add this to prevent scrollbars from the container */
+  margin-top: 20px;
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     border: 1px solid var(--color-border-hover);
     border-radius: 12px;
-    height: 100%; /* Occupy 100% of the parent's height */
-    overflow-y: scroll; /* Add scrollbar for overflow */
+    overflow-y: auto;
+    max-height: 250px;
+
     li {
       padding: 10px 20px;
       cursor: pointer;
