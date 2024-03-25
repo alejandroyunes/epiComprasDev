@@ -5,7 +5,7 @@ import './footer.scss'
 <template>
   <footer class="footer-outer">
     <div class="footer-inner">
-      <p>© 2021 EpiCompras</p>
+      <p>© 2024 EpiCompras</p>
     </div>
   </footer>
 </template>
