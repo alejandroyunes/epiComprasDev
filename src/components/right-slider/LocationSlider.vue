@@ -17,7 +17,7 @@ const toggleSlider = () => {
 
 <template>
   <div @click="toggleSlider" class="location-outer">
-    <LocationSvg class="location-icon" />
+    <LocationSvg class="icon location-icon" />
 
     <div class="location-city">
       <p>Medellín</p>
@@ -41,9 +41,21 @@ const toggleSlider = () => {
       </div>
 
       <div class="location-current">
-        <p>
-          resultados
-        </p>
+        <div class="location-square">
+          <LocationSvg class="icon location-icon" />
+
+          <p>
+            Usar la ubicación actual
+          </p>
+
+          <!-- <p>
+            Hubo un error en la ubicación
+          </p>
+
+          <p>
+            Ubicación bloqueada. Verifique la configuración del navegador/teléfono
+          </p> -->
+        </div>
       </div>
 
     </div>
