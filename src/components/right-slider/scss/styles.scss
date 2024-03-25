@@ -10,6 +10,7 @@
   border-top-left-radius: 8px;
   background-color: var(--color-background-mute);
   transition: transform 0.5s ease;
+  z-index: 101;
   @media (max-width: 1024px) {
     right: -80vw;
     width: 80vw;
