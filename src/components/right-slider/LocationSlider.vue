@@ -113,6 +113,7 @@ const getCurrentLocation = () => {
 const updateCurrentCity = (citySelected: string) => {
   city.value = citySelected
   localStorage.setItem('city', citySelected)
+
   showLocation.value = false
   searchResults.value = []
   searchValue.value = ''
@@ -179,7 +180,7 @@ const handleInputChange = (event: Event) => {
         </form>
       </div>
 
-      <div class="location-cities">
+      <div class="location-result">
         <ul v-if="searchResults.length > 0">
           <li v-for="city in searchResults" :key="city" @click="updateCurrentCity(city)">{{ city }}</li>
         </ul>
