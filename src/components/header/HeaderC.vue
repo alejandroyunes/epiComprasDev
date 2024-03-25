@@ -45,7 +45,6 @@ const handleAdPost = () => {
         </div>
 
         <div class="nav-right">
-          
 
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon moon" />
