@@ -111,7 +111,6 @@ const handleGetLocation = () => {
   } else {
     console.info('city already selected')
   }
-
 }
 
 </script>

@@ -27,17 +27,25 @@
       }
     }
 
-    &:focus {
+    @keyframes shrinkWidth {
+      0% {
+        min-width: 250px;
+      }
+      100% {
+        min-width: 200px;
+      }
+    }
+    &.expand {
       outline: 1px solid var(--primary);
       animation: expandWidth 0.2s linear forwards;
     }
-
-    @media (max-width: 1024px) {
-      &:focus {
-        animation: 'none';
-      }
+  
+    &.shrink {
+      animation: shrinkWidth 0.2s linear forwards;
     }
   }
+
+
 
   .search {
     position: absolute;
