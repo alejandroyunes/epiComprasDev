@@ -1,7 +1,6 @@
 .notification-outer {
-  cursor: pointer;
   margin-right: 10px;
-
+  display: flex;
   .notification-bullet {
     display: inline-flex;
     position: relative;
