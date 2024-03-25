@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import './styles.scss'
+import './scss/styles.scss'
+import './scss/notification.scss'
 import { ref } from 'vue'
 import NotificationBellSvg from '@/components/icons/NotificationBellSvg.vue'
 import NoNotificationBellSvg from '@/components/icons/NoNotificationBellSvg.vue'
@@ -41,7 +42,7 @@ const toggleNotification = () => {
       </div>
     </div>
 
-    <div class="animation-exit" @click="toggleSlider">
+    <div class="slider-exit" @click="toggleSlider">
       <ExitSvg class="icon" />
     </div>
   </div>

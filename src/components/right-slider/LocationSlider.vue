@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import './styles.scss'
+import './scss/styles.scss'
+import './scss/location.scss'
 import { ref } from 'vue'
 import LocationSvg from '@/components/icons/LocationSvg.vue'
 import ExitSvg from '@/components/icons/ExitSvg.vue'
@@ -36,7 +37,7 @@ const toggleSlider = () => {
 
     </div>
 
-    <div class="animation-exit" @click="toggleSlider()">
+    <div class="slider-exit" @click="toggleSlider()">
       <ExitSvg class="icon" />
     </div>
 

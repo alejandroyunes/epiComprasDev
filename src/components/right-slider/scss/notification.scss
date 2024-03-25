@@ -1,0 +1,46 @@
+.notification-outer {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+
+  .notification-icon {
+    display: inline-flex;
+    position: relative;
+  }
+
+  .notification-icon::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+  }
+}
+
+.notification-bell {
+  background-color: var(--color-background-oposite);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+  #path-1 {
+    stroke: var(--color-background);
+  }
+}
+
+.notifications {
+  font-size: 16px;
+  color: var(--color-background-oposite);
+}
