@@ -58,7 +58,7 @@ const colombiaCoordinates: LocationTypes[] = [
 ]
 
 const showLocation = ref(false)
-const city = ref<string>()
+const city = ref<string>(localStorage.getItem('city') || '');
 const cityBlocked = ref(false)
 const errorCity = ref(false)
 const loadingCity = ref(false)
@@ -87,26 +87,31 @@ const getLocationCity = ({ latitude, longitude }: LocationType) => {
 
 const handleGetLocation = () => {
   showLocation.value = false
-  loadingCity.value = true
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords
-
-        const locationObject = { latitude, longitude }
-
-        const citySelected = getLocationCity(locationObject)
-        city.value = citySelected
-        loadingCity.value = false
-      },
-      () => {
-        cityBlocked.value = true
-      }
-    )
+  if (!city.value) {
+    loadingCity.value = true
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords
+          const locationObject = { latitude, longitude }
+          const citySelected = getLocationCity(locationObject)
+          city.value = citySelected
+          localStorage.setItem('city', citySelected)
+          loadingCity.value = false
+        },
+        () => {
+          cityBlocked.value = true
+          errorCity.value = false; // Reset errorCity value in case it was previously set
+        }
+      )
+    } else {
+      errorCity.value = true
+    }
   } else {
-    errorCity.value = true
+    console.info('city already selected')
   }
+
 }
 
 </script>
