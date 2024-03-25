@@ -62,6 +62,7 @@ const city = ref<string>(localStorage.getItem('city') || '');
 const cityBlocked = ref(false)
 const errorCity = ref(false)
 const loadingCity = ref(false)
+const searchResults = ref<string[]>([])
 
 const toggleSlider = () => {
   showLocation.value = !showLocation.value
@@ -113,6 +114,18 @@ const handleGetLocation = () => {
   }
 }
 
+const handleChange = (event: InputEvent) => {
+  const newValue = (event.target as HTMLInputElement).value;
+
+  searchResults.value = []
+
+  if (newValue.length > 0) {
+    searchResults.value = colombiaCoordinates
+      .filter((city) => city.city.toLowerCase().includes(newValue.toLowerCase()))
+      .map((city) => city.city)
+  }
+}
+
 </script>
 
 <template>
@@ -137,12 +150,13 @@ const handleGetLocation = () => {
 
         <form class="location-form">
           <SearchSvg class="search icon" />
-          <input class="location-input" type="text" placeholder="Buscar" />
+          <input class="location-input" type="text" placeholder="Buscar ciudad" @input="handleChange" />
+
           <ArrowRightSvg class="arrow icon" />
         </form>
       </div>
 
-      <div class="location-current-outer">
+      <div class="location-current">
         <div class="location-current-inner" @click="handleGetLocation">
           <LocationSvg class="icon location-icon" />
 
@@ -160,6 +174,11 @@ const handleGetLocation = () => {
         </div>
       </div>
 
+      <div class="location-cities">
+        <ul v-if="searchResults.length > 0">
+          <li v-for="city in searchResults" :key="city">{{ city }}</li>
+        </ul>
+      </div>
     </div>
 
     <div class="slider-exit" @click="toggleSlider()">

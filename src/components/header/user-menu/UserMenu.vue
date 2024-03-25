@@ -23,7 +23,6 @@ const handleLogin = () => {
   console.log('Login')
   showDropdown.value = false
   
-
   loadingProfile.value = true
   setTimeout(() => {
     loadingProfile.value = false

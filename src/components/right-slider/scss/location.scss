@@ -67,10 +67,11 @@
   }
 }
 
-.location-current-outer {
+.location-current {
   margin: 20px 20px 0;
   padding: 0 20px;
   width: 100%;
+
   .location-current-inner {
     width: 100%;
     display: flex;
@@ -80,7 +81,42 @@
     flex-direction: row;
     padding: 20px 10px;
     border: 1px solid var(--color-border-hover);
+    border-radius: 12px;
     cursor: pointer;
     color: var(--color-heading);
+  }
+}
+
+.location-cities {
+  width: 100%;
+  margin: 20px 20px 0;
+  padding: 0 20px;
+  height: 100%;
+  overflow: hidden; /* Add this to prevent scrollbars from the container */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--color-border-hover);
+    border-radius: 12px;
+    height: 100%; /* Occupy 100% of the parent's height */
+    overflow-y: scroll; /* Add scrollbar for overflow */
+    li {
+      padding: 10px 20px;
+      cursor: pointer;
+      width: 100%;
+      color: var(--color-heading);
+      &:hover {
+        background-color: var(--color-border-hover);
+        &:first-of-type {
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+        }
+        &:last-of-type {
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+      }
+    }
   }
 }
