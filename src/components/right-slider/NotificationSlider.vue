@@ -22,11 +22,11 @@ const toggleNotification = () => {
 <template>
   <div @click="toggleSlider" class="notification-outer">
 
-    <div  v-if="!notifications" class="notification-icon">
-      <NotificationBellSvg @click="toggleNotification" class="icon" />
+    <div v-if="!notifications" class="notification-bullet">
+      <NotificationBellSvg @click="toggleNotification"  class="icon" />
     </div>
 
-    <NoNotificationBellSvg @click="toggleNotification" v-if="notifications" class="icon " />
+    <NoNotificationBellSvg @click="toggleNotification" v-if="notifications" class="icon" />
 
   </div>
 
@@ -47,5 +47,5 @@ const toggleNotification = () => {
     </div>
   </div>
 
-  <div @click="toggleSlider" :class="{ 'outer-bg': showNotification }"></div>
+  <div @click="toggleSlider" :class="{ 'slider-bg': showNotification }"></div>
 </template>

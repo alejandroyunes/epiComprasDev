@@ -168,5 +168,5 @@ const handleGetLocation = () => {
 
   </div>
 
-  <div @click="toggleSlider()" :class="{ 'outer-bg': showLocation }"></div>
+  <div @click="toggleSlider()" :class="{ 'slider-bg': showLocation }"></div>
 </template>

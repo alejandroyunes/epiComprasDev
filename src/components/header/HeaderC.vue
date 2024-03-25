@@ -3,7 +3,7 @@ import './header.scss'
 import { ref } from 'vue'
 import { setDarkMode } from '../../utils/utils'
 import InputV from '@/components/header/input/InputV.vue'
-import MenuC from '@/components/header/profile/MenuC.vue'
+import UserMenu from '@/components/header/user-menu/UserMenu.vue'
 import SunSvg from '@/components/icons/SunSvg.vue'
 import MoonSvg from '@/components/icons/MoonS.vue'
 import PlusSvg from '@/components/icons/PlusSvg.vue'
@@ -20,8 +20,8 @@ const handleTheme = () => {
   setDarkMode(isDarkMode.value)
 }
 
-const handleEnter = () => {
-  isLogged.value = !isLogged.value
+const handleAdPost = () => {
+  console.log('Ad post')
 }
 
 </script>
@@ -52,9 +52,9 @@ const handleEnter = () => {
           <MoonSvg v-show="!isDarkMode" @click="handleTheme" class="icon sun" />
           <SunSvg v-show="isDarkMode" @click="handleTheme" class="icon moon" />
 
-          <MenuC v-if="isLogged" />
+          <UserMenu />
 
-          <PlusSvg v-show="!isLogged" @click="handleEnter" class="icon" />
+          <PlusSvg @click="handleAdPost" class="icon" />
         </div>
 
       </div>
