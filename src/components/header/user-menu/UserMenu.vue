@@ -9,9 +9,11 @@ import MessageSvg from "../../icons/MessagesSvg.vue"
 import AdsSvg from "../../icons/AdsSvg.vue"
 import HeartSvg from "../../icons/HeartSvg.vue"
 import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
+import CircleLoader from '@/components/loaders/circle-icon/CircleLoader.vue'
 
 const showDropdown = ref(false)
 const logged = ref(false)
+const loadingProfile = ref(false)
 
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value
@@ -20,15 +22,23 @@ const toggleDropdown = () => {
 const handleLogin = () => {
   console.log('Login')
   showDropdown.value = false
-  logged.value = !logged.value
+  
+
+  loadingProfile.value = true
+  setTimeout(() => {
+    loadingProfile.value = false
+    logged.value = !logged.value
+  }, 2000)
+
 }
 
 </script>
 
 <template>
   <NotificationSlider v-if="logged" />
+  <CircleLoader v-if="loadingProfile" class="profile-loader" />
+  <ProfileSvg v-else class="icon user-icon" @click="toggleDropdown" />
 
-  <ProfileSvg class="icon user-icon" @click="toggleDropdown" />
   <div class="user-menu-outer" v-if="showDropdown">
     <ul class="menu-dropdown">
 

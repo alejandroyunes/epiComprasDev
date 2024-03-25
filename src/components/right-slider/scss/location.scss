@@ -3,7 +3,7 @@
   align-items: center;
   cursor: pointer;
   .location-icon {
-    margin: 0 10px;
+    margin-right: 10px;
     @media (max-width: 1024px) {
       order: 1;
     }
@@ -11,6 +11,7 @@
   .location-city {
     font-size: 16px;
     color: var(--color-heading);
+    margin-right: 10px;
   }
 }
 
