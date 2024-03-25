@@ -18,7 +18,7 @@ export const ads: AdType[] = [
     price: 100,
     location: 'New York, NY',
     date: '2021-01-01',
-    url: '/ads/car-for-sale'
+    url: ''
   },
   {
     id: '2',
@@ -28,7 +28,7 @@ export const ads: AdType[] = [
     price: 200,
     location: 'Los Angeles, CA',
     date: '2021-01-02',
-    url: '/ads/spacious-house-for-rent'
+    url: ''
   },
   {
     id: '3',
@@ -38,7 +38,7 @@ export const ads: AdType[] = [
     price: 300,
     location: 'Chicago, IL',
     date: '2021-01-03',
-    url: '/ads/kitchen-stove-for-sale'
+    url: ''
   },
   {
     id: '4',
@@ -49,7 +49,7 @@ export const ads: AdType[] = [
     price: 400,
     location: 'Houston, TX',
     date: '2021-01-04',
-    url: '/ads/refurbished-laptop'
+    url: ''
   },
   {
     id: '5',
@@ -59,7 +59,7 @@ export const ads: AdType[] = [
     price: 500,
     location: 'Phoenix, AZ',
     date: '2021-01-05',
-    url: '/ads/electric-stove-for-sale'
+    url: ''
   },
   {
     id: '6',
@@ -69,7 +69,7 @@ export const ads: AdType[] = [
     price: 600,
     location: 'Philadelphia, PA',
     date: '2021-01-06',
-    url: '/ads/gaming-laptop'
+    url: ''
   },
   {
     id: '7',
@@ -79,7 +79,7 @@ export const ads: AdType[] = [
     price: 700,
     location: 'San Antonio, TX',
     date: '2021-01-07',
-    url: '/ads/mountain-bike-for-sale'
+    url: ''
   },
   {
     id: '8',
@@ -89,6 +89,6 @@ export const ads: AdType[] = [
     price: 800,
     location: 'San Diego, CA',
     date: '2021-01-08',
-    url: '/ads/beach-house-for-rent'
+    url: ''
   }
 ]
