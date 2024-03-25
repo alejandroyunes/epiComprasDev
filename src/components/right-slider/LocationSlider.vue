@@ -90,40 +90,32 @@ const getCurrentLocation = () => {
   showLocation.value = false
   loadingCity.value = true
 
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords
-          const locationObject = { latitude, longitude }
-          const citySelected = getLocationCity(locationObject)
-          city.value = citySelected
-          localStorage.setItem('city', citySelected)
-          loadingCity.value = false
-        },
-        () => {
-          cityBlocked.value = true
-        }
-      )
-    } else {
-      errorCity.value = true
-    }
-  }
-
-  if (navigator.permissions) {
-    navigator.permissions.query({ name: 'geolocation' }).then((PermissionStatus) => {
-      if (PermissionStatus.state === 'denied') {
-        getLocation()
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords
+        const locationObject = { latitude, longitude }
+        const citySelected = getLocationCity(locationObject)
+        city.value = citySelected
+        localStorage.setItem('city', citySelected)
+        loadingCity.value = false
+      },
+      () => {
+        cityBlocked.value = true
       }
-    })
-  }
-
-  if (!city.value) {
-    getLocation()
+    )
+  } else {
+    errorCity.value = true
   }
 }
 
-const handleChange = (event: Event) => {
+const updateCurrentCity = (citySelected: string) => {
+  city.value = citySelected
+  localStorage.setItem('city', citySelected)
+  showLocation.value = false
+}
+
+const handleInputChange = (event: Event) => {
   const newValue = (event.target as HTMLInputElement).value
 
   searchResults.value = []
@@ -133,13 +125,6 @@ const handleChange = (event: Event) => {
       .filter((city) => city.city.toLowerCase().includes(newValue.toLowerCase()))
       .map((city) => city.city)
   }
-}
-
-const updateCity = (citySelected: string) => {
-  city.value = citySelected
-  errorCity.value = false
-  localStorage.setItem('city', citySelected)
-  showLocation.value = false
 }
 
 </script>
@@ -166,7 +151,7 @@ const updateCity = (citySelected: string) => {
 
         <form class="location-form">
           <SearchSvg class="search icon" />
-          <input class="location-input" type="text" placeholder="Buscar ciudad" @input="handleChange" />
+          <input class="location-input" type="text" placeholder="Buscar ciudad" @input="handleInputChange" />
 
           <ArrowRightSvg class="arrow icon" />
         </form>
@@ -185,14 +170,14 @@ const updateCity = (citySelected: string) => {
           </p>
 
           <p v-if="cityBlocked">
-            Ubicación bloqueada. Verifique la configuración del navegador/teléfono.
+            Ubicación bloqueada. Verifique la configuración del navegador y actualice.
           </p>
         </div>
       </div>
 
       <div class="location-cities">
         <ul v-if="searchResults.length > 0">
-          <li v-for="city in searchResults" :key="city" @click="updateCity(city)">{{ city }}</li>
+          <li v-for="city in searchResults" :key="city" @click="updateCurrentCity(city)">{{ city }}</li>
         </ul>
       </div>
 
