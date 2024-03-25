@@ -59,24 +59,6 @@
         z-index: 101;
         margin-right: 10px;
       }
-
-      button {
-        display: flex;
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
-        height: 45px;
-        width: 45px;
-        border-radius: 12px;
-        background-color: var(--primary);
-        color: var(--black-soft);
-        border: none;
-        cursor: pointer;
-      }
-
-      button span {
-        font-size: 36px;
-        line-height: 36px;
-      }
     }
   }
 }

@@ -6,6 +6,7 @@ import InputV from '@/components/header/input/InputV.vue'
 import MenuC from '@/components/header/profile/MenuC.vue'
 import SunSvg from '@/components/icons/SunSvg.vue'
 import MoonSvg from '@/components/icons/MoonS.vue'
+import PlusSvg from '@/components/icons/PlusSvg.vue'
 import LocationSlider from '@/components/right-slider/LocationSlider.vue'
 import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
 
@@ -41,7 +42,7 @@ const handleEnter = () => {
             <img alt="" src="@/assets/logo.svg" width="45" height="45" />
           </div>
           <div>
-            <LocationSlider/>
+            <LocationSlider />
           </div>
         </div>
 
@@ -53,7 +54,7 @@ const handleEnter = () => {
 
           <MenuC v-if="isLogged" />
 
-          <button v-show="!isLogged" @click="handleEnter"><span>+</span></button>
+          <PlusSvg v-show="!isLogged" @click="handleEnter" class="icon" />
         </div>
 
       </div>
