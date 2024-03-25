@@ -10,7 +10,6 @@
   border-top-left-radius: 8px;
   background-color: var(--color-background-mute);
   transition: transform 0.5s ease;
-  z-index: 1000;
   @media (max-width: 1024px) {
     right: -80vw;
     width: 80vw;
@@ -28,6 +27,7 @@
 
 .slider-outer.open {
   transform: translateX(-100%);
+  z-index: 101;
 }
 
 .slider-exit {
@@ -46,7 +46,7 @@
   width: 100vw;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(20, 22, 27, 0.5);
   animation: fadeIn 0.5s forwards;
   z-index: 100;
