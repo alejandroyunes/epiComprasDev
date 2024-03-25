@@ -144,20 +144,13 @@ const handleInputChange = (event: Event) => {
 
     <div class="slider-inner">
 
-      <div class="location-search">
-        <p>
-          ¿Dónde quieres buscar?
-        </p>
 
-        <form class="location-form">
-          <SearchSvg class="search icon" />
-          <input class="location-input" type="text" placeholder="Buscar ciudad" @input="handleInputChange" />
-
-          <ArrowRightSvg class="arrow icon" />
-        </form>
-      </div>
 
       <div class="location-current">
+        <div class="location-title">
+          <p>¿Dónde quieres buscar?</p>
+        </div>
+
         <div class="location-current-inner" @click="getCurrentLocation">
           <LocationSvg class="icon location-icon" />
 
@@ -173,6 +166,16 @@ const handleInputChange = (event: Event) => {
             Ubicación bloqueada. Verifique la configuración del navegador y actualice.
           </p>
         </div>
+      </div>
+
+      <div class="location-search">
+
+        <form class="location-form">
+          <SearchSvg class="search icon" />
+          <input class="location-input" type="text" placeholder="Buscar ciudad" @input="handleInputChange" />
+
+          <ArrowRightSvg class="arrow icon" />
+        </form>
       </div>
 
       <div class="location-cities">
