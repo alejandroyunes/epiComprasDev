@@ -114,7 +114,7 @@ const handleGetLocation = () => {
   }
 }
 
-const handleChange = (event: InputEvent) => {
+const handleChange = (event: Event) => {
   const newValue = (event.target as HTMLInputElement).value
 
   searchResults.value = []
