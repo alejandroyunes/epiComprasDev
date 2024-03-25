@@ -1,72 +1,58 @@
-.form {
+.nav-form {
   position: relative;
   width: 100%;
   margin-right: 8px;
   @media (max-width: 1024px) {
     margin-right: 0;
   }
-}
 
-.search {
-  position: absolute;
-  top: 50%;
-  left: 8;
-  transform: translateY(-50%);
-  margin: 0 8px;
-  #path-1 {
-    stroke: var(--color-background-soft-oposite);
-  }
-  #path-2 {
-    fill: var(--color-background-oposite);
-  }
-}
+  .nav-input {
+    height: 40px;
+    border-radius: 12px;
+    padding: 8px 0px 8px 36px;
+    min-width: 200px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    outline: 1px solid var(--color-border-hover);
+    background-color: var(--color-background);
+    color: var(--color-heading);
 
-.input {
-  height: 40px;
-  border-radius: 12px;
-  padding: 8px 0px 8px 36px;
-  min-width: 200px;
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  outline: 1px solid var(--color-border-hover);
-  background-color: var(--color-background);
-  color: var(--color-heading);
-
-  @media (max-width: 1024px) {
-    min-width: 0;
-  }
-
-  @keyframes expandWidth {
-    0% {
-      min-width: 200px;
+    @keyframes expandWidth {
+      0% {
+        min-width: 200px;
+      }
+      100% {
+        min-width: 250px;
+      }
     }
-    100% {
-      min-width: 250px;
-    }
-  }
-  
-  &:focus {
-    outline: 1px solid var(--primary);
-    animation: expandWidth 0.2s linear forwards;  
-  }
 
-  @media (max-width: 1024px) {
     &:focus {
-      animation: 'none' 
+      outline: 1px solid var(--primary);
+      animation: expandWidth 0.2s linear forwards;
+    }
+
+    @media (max-width: 1024px) {
+      &:focus {
+        animation: 'none';
+      }
     }
   }
 
-}
+  .search {
+    position: absolute;
+    top: 50%;
+    left: 8;
+    transform: translateY(-50%);
+    margin: 0 8px;
+  }
 
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 2px;
-  margin-right: 8px;
-  transform: translateY(-50%);
-  #path-1 {
-    stroke: var(--color-background-oposite);
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    margin-right: 8px;
+    transform: translateY(-50%);
   }
 }

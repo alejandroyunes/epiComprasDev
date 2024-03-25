@@ -10,7 +10,6 @@ import ThreeCardSiteInfo from '@/components/card/3-card-site-info/ThreeCardSiteI
     <CategoriesC />
     <AdsC />
     <ThreeCardSiteInfo />
-
   </main>
 </template>
 

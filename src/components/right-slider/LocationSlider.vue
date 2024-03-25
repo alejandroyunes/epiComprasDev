@@ -4,6 +4,8 @@ import './scss/location.scss'
 import { ref } from 'vue'
 import LocationSvg from '@/components/icons/LocationSvg.vue'
 import ExitSvg from '@/components/icons/ExitSvg.vue'
+import SearchSvg from '@/components/icons/SearchSvg.vue'
+import ArrowRightSvg from '@/components/icons/ArrowRightSvg.vue'
 
 const showLocation = ref(false)
 
@@ -23,16 +25,25 @@ const toggleSlider = () => {
   </div>
 
   <div class="slider-outer" :class="{ 'open': showLocation }">
-    
+
     <div class="slider-inner">
-      
+
       <div class="location-search">
         <p>
           ¿Dónde quieres buscar?
         </p>
+
+        <form class="location-form">
+          <SearchSvg class="search icon" />
+          <input class="location-input" type="text" placeholder="Buscar" />
+          <ArrowRightSvg class="arrow icon" />
+        </form>
       </div>
 
-      <div>
+      <div class="location-current">
+        <p>
+          resultados
+        </p>
       </div>
 
     </div>
