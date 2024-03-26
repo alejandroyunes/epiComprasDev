@@ -58,7 +58,7 @@ const colombiaCoordinates: LocationTypes[] = [
 ]
 
 const showLocation = ref(false)
-const city = ref<string>(localStorage.getItem('city') || '');
+const city = ref<string>(localStorage.getItem('city') || '')
 const cityBlocked = ref(false)
 const errorCity = ref(false)
 const loadingCity = ref(false)

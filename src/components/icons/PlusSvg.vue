@@ -1,5 +1,5 @@
 <template>
-  <svg width="45px" height="45px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <svg width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
     <g id="path-2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" sketch:type="MSPage">
       <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-102.000000, -1037.000000)"

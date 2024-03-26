@@ -36,7 +36,7 @@
     border: none;
     font-size: 16px;
     outline: 1px solid var(--color-border-hover);
-    background-color: var(--color-background);
+    background-color: var(--color-hover);
     color: var(--color-heading);
 
     &:focus {
@@ -106,6 +106,16 @@
     border-radius: 12px;
     overflow-y: auto;
     max-height: 200px;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      display: block;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-border);
+      border-radius: 10px;
+    }
 
     li {
       padding: 10px 20px;

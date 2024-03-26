@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import './header.scss'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { setDarkMode } from '../../utils/utils'
 import InputV from '@/components/header/input/InputV.vue'
 import UserMenu from '@/components/header/user-menu/UserMenu.vue'
@@ -18,9 +19,7 @@ const handleTheme = () => {
   setDarkMode(isDarkMode.value)
 }
 
-const handleAdPost = () => {
-  console.log('Ad post')
-}
+const router = useRouter()
 
 </script>
 
@@ -29,7 +28,7 @@ const handleAdPost = () => {
     <nav class="nav-inner">
 
       <div class="nav-one">
-        <img alt="" class="nav-logo" src="@/assets/logo.svg" width="45" height="45" />
+        <img alt="" class="nav-logo" src="@/assets/logo.svg" @click="router.push('/')" width="40" height="40" />
         <InputV />
       </div>
 
@@ -37,7 +36,7 @@ const handleAdPost = () => {
 
         <div class="nav-left">
           <div class="nav-logo-mobile">
-            <img alt="" src="@/assets/logo.svg" width="45" height="45" />
+            <img alt="" src="@/assets/logo.svg" width="40" height="40" />
           </div>
           <div>
             <LocationSlider />
@@ -51,7 +50,7 @@ const handleAdPost = () => {
 
           <UserMenu />
 
-          <PlusSvg @click="handleAdPost" class="icon" />
+          <PlusSvg @click="router.push('/add-post')" class="icon" />
         </div>
 
       </div>
