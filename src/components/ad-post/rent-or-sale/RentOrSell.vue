@@ -2,6 +2,7 @@
 import './rent-or-sell.scss'
 import KeySvg from '@/components/icons/KeySvg.vue'
 import ContractSvg from '@/components/icons/ContractSvg.vue'
+
 </script>
 
 <template>

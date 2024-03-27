@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import AddForm from '@/components/addForm/AddForm.vue'
+import AdPost from '@/components/ad-post/AdPost.vue'
 </script>
 
 <template>
-  <section class="add-post-outer">
-    <div class="add-post-inner">
-      <AddForm />
+  <section class="ad-post-outer">
+    <div class="ad-post-inner">
+      <AdPost />
     </div>
   </section>
 </template>
 
 
 <style lang="scss">
-.add-post-outer {
+.ad-post-outer {
   width: 100%;
   padding: 0 20px;
 }
 
-.add-post-inner {
+.ad-post-inner {
   max-width: var(--max-width);
   margin: 0 auto;
 }

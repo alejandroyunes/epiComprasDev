@@ -1,7 +1,7 @@
-.add-form-outer {
+.ad-post {
   max-width: 1024px;
   margin: 0 auto;
-  .add-form-title {
+  .ad-post-title {
     font-size: 24px;
     margin-top: 44px;
     text-align: center;
@@ -10,7 +10,7 @@
       margin-top: 24px;
     }
   }
-  .add-form-services {
+  .ad-post-options {
     display: flex;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -23,7 +23,7 @@
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    .add-service-item {
+    .ad-post-item {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -31,7 +31,7 @@
         color: var(--color-text);
       }
     }
-    .add-service-svg {
+    .ad-post-svg {
       margin: 10px;
       width: 180px;
       height: 150px;

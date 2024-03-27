@@ -12,12 +12,12 @@ const router = createRouter({
     {
       path: '/publicar-anuncio',
       name: 'publish-ad',
-      component: () => import('../views/publish-ad/PublishView.vue')
+      component: () => import('../views/publish-ad/AdPostView.vue')
     },
     {
       path: '/publicar-anuncio/inmobiliaria',
       name: 'publish-ad-real-estate',
-      component: () => import('../views/publish-ad/real-estate/PublishRealEstate.vue')
+      component: () => import('../views/publish-ad/real-estate/RealEstate.vue')
     }
   ]
 })

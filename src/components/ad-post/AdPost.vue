@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import './add-form.scss'
+import './ad-post.scss'
 import CarServiceSvg from '@/components/icons/CarServiceSvg.vue'
 import GamePadSvg from '@/components/icons/GamePadSvg.vue'
 import HouseServiceSvg from '@/components/icons/HouseServiceSvg.vue'
@@ -7,35 +7,35 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
 </script>
 
 <template>
-  <section class="add-form-outer">
-    <h1 class="add-form-title">¡Hola! Cuéntanos, ¿qué vas a publicar?</h1>
+  <section class="ad-post">
+    <h1 class="ad-post-title">¡Hola! ¿qué vas a publicar?</h1>
 
-    <div class="add-form-services">
+    <div class="ad-post-options">
 
       <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
-        <div class="add-service-item">
+        <div class="ad-post-item">
           <p>Inmuebles</p>
-          <div class="add-service-svg">
+          <div class="ad-post-svg">
             <HouseServiceSvg />
           </div>
         </div>
       </RouterLink>
 
-      <div class="add-service-item">
+      <div class="ad-post-item">
         <p>Productos</p>
-        <div class="add-service-svg">
+        <div class="ad-post-svg">
           <ServicesSvg />
         </div>
       </div>
-      <div class="add-service-item">
+      <div class="ad-post-item">
         <p>Vehículos</p>
-        <div class="add-service-svg">
+        <div class="ad-post-svg">
           <CarServiceSvg />
         </div>
       </div>
-      <div class="add-service-item">
+      <div class="ad-post-item">
         <p>Servicios</p>
-        <div class="add-service-svg">
+        <div class="ad-post-svg">
           <GamePadSvg />
         </div>
       </div>

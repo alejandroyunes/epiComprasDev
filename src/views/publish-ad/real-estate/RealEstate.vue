@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import RentOrSell from '@/components/addForm/RentOrSellRealEstate/RentOrSell.vue'
+import RentOrSell from '@/components/ad-post/rent-or-sale/RentOrSell.vue'
 </script>
 
 <template>
-  <section class="add-post-outer">
-    <div class="add-post-inner">
+  <section class="real-estate-post-outer">
+    <div class="real-estate-post-inner">
       <RentOrSell />
     </div>
   </section>
@@ -12,12 +12,12 @@ import RentOrSell from '@/components/addForm/RentOrSellRealEstate/RentOrSell.vue
 
 
 <style lang="scss">
-.add-post-outer {
+.real-estate-post-outer {
   width: 100%;
   padding: 0 20px;
 }
 
-.add-post-inner {
+.real-estate-post-inner {
   max-width: var(--max-width);
   margin: 0 auto;
 }
