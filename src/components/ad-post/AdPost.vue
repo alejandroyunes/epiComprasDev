@@ -24,7 +24,7 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
       <div class="ad-post-item">
         <p>Productos</p>
         <div class="ad-post-svg">
-          <ServicesSvg />
+          <GamePadSvg />
         </div>
       </div>
       <div class="ad-post-item">
@@ -36,7 +36,7 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
       <div class="ad-post-item">
         <p>Servicios</p>
         <div class="ad-post-svg">
-          <GamePadSvg />
+          <ServicesSvg />
         </div>
       </div>
 

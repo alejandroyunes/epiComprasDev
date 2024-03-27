@@ -6,20 +6,20 @@ import ContractSvg from '@/components/icons/ContractSvg.vue'
 </script>
 
 <template>
-  <section class="add-form-outer">
-    <h1 class="add-form-title">¿Está buscando vender o arrendar su propiedad?</h1>
+  <section class="rent-or-sell">
+    <h1 class="rent-or-sell-title">¿Está buscando vender o arrendar su propiedad?</h1>
 
-    <div class="add-form-services">
+    <div class="rent-or-sell-options">
 
-      <div class="add-service-item">
-        <p>Arriendo</p>
-        <div class="add-service-svg">
+      <div class="rent-or-sell-item">
+        <p>Arrendar</p>
+        <div class="rent-or-sell-svg">
           <KeySvg />
         </div>
       </div>
-      <div class="add-service-item">
+      <div class="rent-or-sell-item">
         <p>Vender</p>
-        <div class="add-service-svg">
+        <div class="rent-or-sell-svg">
           <ContractSvg />
         </div>
       </div>
