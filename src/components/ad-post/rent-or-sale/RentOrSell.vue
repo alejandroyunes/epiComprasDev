@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import './rent-or-sell.scss'
-import KeySvg from '@/components/icons/KeySvg.vue'
-import ContractSvg from '@/components/icons/ContractSvg.vue'
-
+import HandWithKeySvg from '@/components/icons/HandWithKeySvg.vue'
+import ContractAgreeSvg from '@/components/icons/ContractAgreeSvg.vue'
 </script>
 
 <template>
@@ -14,13 +13,13 @@ import ContractSvg from '@/components/icons/ContractSvg.vue'
       <div class="rent-or-sell-item">
         <p>Arrendar</p>
         <div class="rent-or-sell-svg">
-          <KeySvg />
+          <HandWithKeySvg />
         </div>
       </div>
       <div class="rent-or-sell-item">
         <p>Vender</p>
         <div class="rent-or-sell-svg">
-          <ContractSvg />
+          <ContractAgreeSvg />
         </div>
       </div>
 
