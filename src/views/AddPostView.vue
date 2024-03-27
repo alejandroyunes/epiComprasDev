@@ -21,5 +21,6 @@ import AddForm from '@/components/addForm/AddForm.vue'
 .add-post-inner {
   max-width: var(--max-width);
   margin: 0 auto;
+
 }
 </style>

@@ -9,6 +9,7 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
 <template>
   <section class="add-form-outer">
     <h1 class="add-form-title">¡Hola! Cuéntanos, ¿qué vas a publicar?</h1>
+
     <div class="add-form-services">
 
       <div class="add-service-item">
@@ -37,5 +38,6 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
       </div>
 
     </div>
+    
   </section>
 </template>
