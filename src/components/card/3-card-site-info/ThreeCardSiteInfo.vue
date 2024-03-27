@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import './3-card-site-info.scss'
 import AdsColorSvg from '../../icons/AdsColorSvg.vue'
-import AnnouncementSvg from '../../icons/AnnouncementSvg.vue'
+import CommentSvg from '../../icons/CommentSvg.vue'
 import DealSvg from '../../icons/DealSvg.vue'
 
 </script>
@@ -14,7 +14,7 @@ import DealSvg from '../../icons/DealSvg.vue'
       <p>Con solo tu número puedes publicar un anuncio.</p>
     </div>
     <div class="column">
-      <AnnouncementSvg />
+      <CommentSvg />
       <h2>Ponerse en Contacto</h2>
       <p>Una vez que publiques tu anuncio, los clientes interesados podrán contactarte directamente para obtener más información.</p>
     </div>
