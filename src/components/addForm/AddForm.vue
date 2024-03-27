@@ -12,12 +12,15 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
 
     <div class="add-form-services">
 
-      <div class="add-service-item">
-        <p>Inmuebles</p>
-        <div class="add-service-svg">
-          <HouseServiceSvg />
+      <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
+        <div class="add-service-item">
+          <p>Inmuebles</p>
+          <div class="add-service-svg">
+            <HouseServiceSvg />
+          </div>
         </div>
-      </div>
+      </RouterLink>
+
       <div class="add-service-item">
         <p>Productos</p>
         <div class="add-service-svg">
@@ -38,6 +41,6 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
       </div>
 
     </div>
-    
+
   </section>
 </template>

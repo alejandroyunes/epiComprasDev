@@ -50,7 +50,7 @@ const router = useRouter()
 
           <UserMenu />
 
-          <PlusSvg @click="router.push('/add-post')" class="icon" />
+          <PlusSvg @click="router.push('/publicar-anuncio')" class="icon" />
         </div>
 
       </div>

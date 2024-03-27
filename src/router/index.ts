@@ -10,9 +10,14 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/add-post',
-      name: 'add-post',
-      component: () => import('../views/AddPostView.vue')
+      path: '/publicar-anuncio',
+      name: 'publish-ad',
+      component: () => import('../views/publish-ad/PublishView.vue')
+    },
+    {
+      path: '/publicar-anuncio/inmobiliaria',
+      name: 'publish-ad-real-estate',
+      component: () => import('../views/publish-ad/real-estate/PublishRealEstate.vue')
     }
   ]
 })
