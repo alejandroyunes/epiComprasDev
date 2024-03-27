@@ -2,7 +2,7 @@
 import './3-card-site-info.scss'
 import AdsColorSvg from '../../icons/AdsColorSvg.vue'
 import CommentSvg from '../../icons/CommentSvg.vue'
-import DealSvg from '../../icons/DealSvg.vue'
+import ThumbsUpSvg from '../../icons/ThumbsUpSvg.vue'
 
 </script>
 
@@ -19,7 +19,7 @@ import DealSvg from '../../icons/DealSvg.vue'
       <p>Una vez que publiques tu anuncio, los clientes interesados podrán contactarte directamente para obtener más información.</p>
     </div>
     <div class="column">
-      <DealSvg />
+      <ThumbsUpSvg />
       <h2>Cierra el Trato</h2>
       <p>En esta fase, podrás concretar la venta y cerrar el trato de manera segura y en un lugar confiable.</p>
     </div>

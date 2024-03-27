@@ -19,7 +19,7 @@
   .add-service-svg {
     margin: 10px;
     width: 180px;
-    height: 140px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +28,11 @@
     cursor: pointer;
     &:hover {
       background-color: var(--primary);
+    }
+    @media (max-width: 1024px) {
+      margin-top: 24px;
+      width: 140px;
+      height: 120px;
     }
   }
 }
