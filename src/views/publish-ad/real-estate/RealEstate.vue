@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RentOrSell from '@/components/ad-post/rent-or-sale/RentOrSell.vue'
+
 </script>
 
 <template>
@@ -14,7 +15,6 @@ import RentOrSell from '@/components/ad-post/rent-or-sale/RentOrSell.vue'
 <style lang="scss">
 .real-estate-post-outer {
   width: 100%;
-  padding: 0 20px;
 }
 
 .real-estate-post-inner {

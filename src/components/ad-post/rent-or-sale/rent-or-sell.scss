@@ -1,6 +1,5 @@
 .rent-or-sell {
-  max-width: 1024px;
-  margin: 0 auto;
+  padding: 0 20px;
   .rent-or-sell-title {
     font-size: 24px;
     margin-top: 44px;
@@ -41,6 +40,45 @@
       @media (max-width: 480px) {
         width: 120px;
         height: 100px;
+      }
+    }
+  }
+  .rent-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    .rent-option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border: 1px solid var(--color-border-hover);
+      cursor: pointer;
+      width: 100%;
+      padding: 10px;
+      background-color: var(--color-border);
+
+      &:hover {
+        background-color: var(--color-border-hover);
+      }
+      @media (max-width: 768px) {
+        padding: 4px;
+      }
+      .rent-option-svg {
+        cursor: pointer;
+        @media (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        padding-left: 10px;
+        color:  var(--color-heading);
       }
     }
   }

@@ -14,7 +14,6 @@ import AdPost from '@/components/ad-post/AdPost.vue'
 <style lang="scss">
 .ad-post-outer {
   width: 100%;
-  padding: 0 20px;
 }
 
 .ad-post-inner {
