@@ -10,21 +10,21 @@ import OfficeBriefSvg from '@/components/icons/OfficeBriefSvg.vue'
 
 
 const isRenting = ref<boolean>(false)
-const fisrstTime = ref<boolean>(true) 
+const fisrstTime = ref<boolean>(true)
 
 const rent = () => {
   isRenting.value = true
   fisrstTime.value = false
 }
 
-
 </script>
 
 <template>
-  <section class="rent-or-sell" v-if="fisrstTime">
-    <h1 class="rent-or-sell-title">¿Está buscando vender o arrendar su propiedad?</h1>
+  <section class="rent-or-sell">
 
-    <div class="rent-or-sell-options">
+    <h1 class="rent-or-sell-title" v-if="fisrstTime">¿Está buscando vender o arrendar su propiedad?</h1>
+
+    <div class="rent-or-sell-options" v-if="fisrstTime">
 
       <div class="rent-or-sell-item" @click="rent">
         <p>Arrendar</p>
@@ -41,9 +41,11 @@ const rent = () => {
 
     </div>
 
+    <h1 class="rent-or-sell-title" v-if="isRenting">¿Está buscando vender o arrendar su propiedad?</h1>
+
     <div class="rent-options" v-if="isRenting">
       <div class="rent-option">
-        <ApartmentSvg  class="icon rent-option-svg"/>
+        <ApartmentSvg class="icon rent-option-svg" />
         <p>apartments</p>
       </div>
       <div class="rent-option">
