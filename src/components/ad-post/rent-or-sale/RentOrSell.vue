@@ -6,7 +6,7 @@ import ContractAgreeSvg from '@/components/icons/ContractAgreeSvg.vue'
 import ApartmentSvg from '@/components/icons/ApartmentSvg.vue'
 import House2Svg from '@/components/icons/House2Svg.vue'
 import DomeSvg from '@/components/icons/DomeSvg.vue'
-import OfficeBriefSvg from '@/components/icons/OfficeBriefSvg.vue'
+import BriefCaseSvg from '@/components/icons/BriefCaseSvg.vue'
 
 
 const isRenting = ref<boolean>(false)
@@ -23,7 +23,6 @@ const rent = () => {
   <section class="rent-or-sell">
 
     <h1 class="rent-or-sell-title" v-if="fisrstTime">¿Está buscando vender o arrendar su propiedad?</h1>
-
     <div class="rent-or-sell-options" v-if="fisrstTime">
 
       <div class="rent-or-sell-item" @click="rent">
@@ -41,8 +40,8 @@ const rent = () => {
 
     </div>
 
-    <h1 class="rent-or-sell-title" v-if="isRenting">¿Está buscando vender o arrendar su propiedad?</h1>
 
+    <h1 class="rent-or-sell-title" v-if="isRenting">¿Qué tipo de inmueble es?</h1>
     <div class="rent-options" v-if="isRenting">
       <div class="rent-option">
         <ApartmentSvg class="icon rent-option-svg" />
@@ -57,7 +56,7 @@ const rent = () => {
         <p>Bodega</p>
       </div>
       <div class="rent-option">
-        <OfficeBriefSvg class="icon rent-option-svg" />
+        <BriefCaseSvg class="icon rent-option-svg"/>
         <p>Consultorio</p>
       </div>
     </div>

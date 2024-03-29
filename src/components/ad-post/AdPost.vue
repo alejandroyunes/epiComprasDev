@@ -12,6 +12,7 @@ import ServicesSvg from '@/components/icons/ServicesSvg.vue'
 
     <div class="ad-post-options">
 
+      <!-- RealEstate -->
       <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
         <div class="ad-post-item">
           <p>Inmuebles</p>
