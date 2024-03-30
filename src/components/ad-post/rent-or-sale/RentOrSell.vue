@@ -46,7 +46,6 @@ const rent = () => {
 
     <TitlePost v-if="isRenting" title="¿Qué tipo de inmueble es?" />
 
-
     <div class="rent-options" v-if="isRenting">
       <div class="rent-option">
         <p>Apartmentos</p>
