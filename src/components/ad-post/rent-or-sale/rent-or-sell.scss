@@ -24,10 +24,9 @@
       justify-content: center;
       border: 1px solid var(--primary);
       cursor: pointer;
-      @media (hover: hover){
+      @media (hover: hover) {
         a:hover {
-        background-color: var(--primary);
-
+          background-color: var(--primary);
         }
       }
       @media (max-width: 768px) {
@@ -74,6 +73,11 @@
         cursor: pointer;
         &:hover {
           background-color: var(--primary);
+        }
+        @media (hover: hover) {
+          a:hover {
+            background-color: var(--primary);
+          }
         }
         @media (max-width: 768px) {
           width: 140px;
