@@ -4,15 +4,16 @@ import CarServiceSvg from '@/components/icons/CarServiceSvg.vue'
 import GamePadSvg from '@/components/icons/GamePadSvg.vue'
 import HouseServiceSvg from '@/components/icons/HouseServiceSvg.vue'
 import ServicesSvg from '@/components/icons/ServicesSvg.vue'
+import TitlePost from '@/components/ad-post/title/TitlePost.vue'
+
 </script>
 
 <template>
   <section class="ad-post">
-    <h1 class="ad-post-title">¡Hola! ¿qué vas a publicar?</h1>
+    <TitlePost title="¡Hola! ¿qué vas a publicar?" />
 
     <div class="ad-post-options">
 
-      <!-- RealEstate -->
       <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
         <div class="ad-post-item">
           <p>Inmuebles</p>

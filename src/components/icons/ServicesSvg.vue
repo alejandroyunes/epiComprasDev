@@ -1,7 +1,7 @@
 
 <template>
   <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="70px" height="70px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+    width="80px" height="80px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
     <g>
       <g>
         <path fill="#F76D57" d="M43,2v22c0,2.209,1.791,4,4,4s4-1.791,4-4V2H43z" />

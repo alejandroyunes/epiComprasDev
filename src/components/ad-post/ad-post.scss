@@ -1,16 +1,7 @@
 .ad-post {
   padding: 0 20px;
-  .ad-post-title {
-    font-size: 24px;
-    margin-top: 44px;
-    text-align: center;
-    color: var(--color-heading);
-    @media (max-width: 1024px) {
-      margin-top: 24px;
-    }
-  }
+  margin: 0 auto;
   .ad-post-options {
-    display: flex;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 20px;

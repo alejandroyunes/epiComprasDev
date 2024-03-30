@@ -1,6 +1,6 @@
 <template>
   <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="70px" height="70px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+    width="80px" height="80px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
     <g>
       <path fill="#F9EBB2" d="M56,60c0,1.104-0.896,2-2,2H38V47c0-0.553-0.447-1-1-1H27c-0.553,0-1,0.447-1,1v15H10c-1.104,0-2-0.896-2-2
 		V31.411L32.009,7.403L56,31.394V60z" />

@@ -6,11 +6,10 @@ import ContractAgreeSvg from '@/components/icons/ContractAgreeSvg.vue'
 import ApartmentSvg from '@/components/icons/ApartmentSvg.vue'
 import House2Svg from '@/components/icons/House2Svg.vue'
 import DomeSvg from '@/components/icons/DomeSvg.vue'
-import OfficeSvg from '@/components/icons/OfficeSvg.vue'
+import BriefCaseSvg from '@/components/icons/BriefCaseSvg.vue'
 import ApartmentColorSvg from '@/components/icons/ApartmentColorSvg.vue'
 import TitlePost from '../title/TitlePost.vue'
-import HouseColorSvg from '@/components/icons/HouseColorSvg.vue'
-import WareHouseSvg from '@/components/icons/WareHouseSvg.vue'
+
 
 const isRenting = ref<boolean>(false)
 const fisrstTime = ref<boolean>(true)
@@ -57,19 +56,19 @@ const rent = () => {
       <div class="rent-option">
         <p>Casas</p>
         <div class="rent-option-svg">
-          <HouseColorSvg />
+          <House2Svg />
         </div>
       </div>
       <div class="rent-option">
         <p>Bodega</p>
-        <div class="rent-option-svg">
-          <WareHouseSvg />
+        <div>
+          <DomeSvg class="rent-option-svg" />
         </div>
       </div>
       <div class="rent-option">
         <p>Consultorio</p>
-        <div class="rent-option-svg">
-          <OfficeSvg />
+        <div>
+          <BriefCaseSvg class="rent-option-svg" />
         </div>
       </div>
     </div>
