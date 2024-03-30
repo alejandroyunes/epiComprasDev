@@ -23,6 +23,7 @@ const rent = () => {
   <section class="rent-or-sell">
 
     <h1 class="rent-or-sell-title" v-if="fisrstTime">¿Está buscando vender o arrendar su propiedad?</h1>
+
     <div class="rent-or-sell-options" v-if="fisrstTime">
 
       <div class="rent-or-sell-item" @click="rent">
@@ -42,22 +43,24 @@ const rent = () => {
 
 
     <h1 class="rent-or-sell-title" v-if="isRenting">¿Qué tipo de inmueble es?</h1>
+
     <div class="rent-options" v-if="isRenting">
       <div class="rent-option">
-        <ApartmentSvg class="icon rent-option-svg" />
         <p>apartments</p>
+        <ApartmentSvg class="icon rent-option-svg" />
       </div>
       <div class="rent-option">
-        <House2Svg class="icon rent-option-svg" />
         <p>Casas</p>
+        <House2Svg class="icon rent-option-svg" />
       </div>
       <div class="rent-option">
-        <DomeSvg class="icon rent-option-svg" />
         <p>Bodega</p>
+        <DomeSvg class="icon rent-option-svg" />
       </div>
       <div class="rent-option">
-        <BriefCaseSvg class="icon rent-option-svg"/>
         <p>Consultorio</p>
+
+        <BriefCaseSvg class="icon rent-option-svg" />
       </div>
     </div>
 
