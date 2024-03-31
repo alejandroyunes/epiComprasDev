@@ -16,14 +16,14 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 
     <div class="ad-post-options">
 
-      <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
+      <!-- <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
         <div class="ad-post-item">
           <p>Inmuebles</p>
           <div class="ad-post-svg">
             <HouseServiceSvg />
           </div>
         </div>
-      </RouterLink>
+      </RouterLink> -->
 
       <div class="ad-post-item">
         <p>Productos</p>
@@ -38,7 +38,7 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
           <CarServiceSvg />
         </div>
       </div>
-      
+
       <div class="ad-post-item">
         <p>Servicios</p>
         <div class="ad-post-svg">
