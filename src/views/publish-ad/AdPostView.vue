@@ -5,7 +5,6 @@ import AdPost from '@/components/ad-post/AdPost.vue'
 <template>
   <section class="ad-post-outer">
     <div class="ad-post-inner">
-      <h1>hello world</h1>
       <AdPost />
     </div>
   </section>
