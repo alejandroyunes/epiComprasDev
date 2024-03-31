@@ -2,70 +2,20 @@
   padding: 0 20px;
   margin: 0 auto;
 
-  .rent-or-sell-options {
-    display: flex;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 20px;
-    gap: 20px;
-
-    .rent-or-sell-item {
+  .rent-or-sell-wrapper {
+    .rent-or-sell-options {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .rent-or-sell-svg {
-      margin: 10px;
-      width: 180px;
-      height: 150px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--primary);
-      cursor: pointer;
-      @media (hover: hover) {
-        a:hover {
-          background-color: var(--primary);
-        }
-      }
-      @media (max-width: 768px) {
-        width: 140px;
-        height: 120px;
-      }
-      @media (max-width: 480px) {
-        width: 120px;
-        height: 100px;
-      }
-    }
-  }
-
-  .rent-options {
-    display: flex;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 20px;
-    gap: 20px;
-    @media (hover: hover) {
-      a:hover {
-        background-color: var(--primary);
-      }
-    }
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media (max-width: 768px) {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
-    }
-    .rent-option {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      p {
-        color: var(--color-text);
+      margin-top: 20px;
+      gap: 20px;
+
+      .rent-or-sell-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-      .rent-option-svg {
+      .rent-or-sell-svg {
         margin: 10px;
         width: 180px;
         height: 150px;
@@ -75,9 +25,6 @@
         justify-content: center;
         border: 1px solid var(--primary);
         cursor: pointer;
-        &:hover {
-          background-color: var(--primary);
-        }
         @media (hover: hover) {
           a:hover {
             background-color: var(--primary);
@@ -90,6 +37,63 @@
         @media (max-width: 480px) {
           width: 120px;
           height: 100px;
+        }
+      }
+    }
+  }
+
+  .rent-options-container {
+    .rent-options-wrapper {
+      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 20px;
+      gap: 20px;
+      @media (hover: hover) {
+        a:hover {
+          background-color: var(--primary);
+        }
+      }
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .rent-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: var(--color-text);
+        }
+        .rent-option-svg {
+          margin: 10px;
+          width: 180px;
+          height: 150px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--primary);
+          cursor: pointer;
+          &:hover {
+            background-color: var(--primary);
+          }
+          @media (hover: hover) {
+            a:hover {
+              background-color: var(--primary);
+            }
+          }
+          @media (max-width: 768px) {
+            width: 140px;
+            height: 120px;
+          }
+          @media (max-width: 480px) {
+            width: 120px;
+            height: 100px;
+          }
         }
       }
     }

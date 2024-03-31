@@ -16,6 +16,7 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 
     <div class="ad-post-container">
       <div class="ad-post-options">
+        
         <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
           <div class="ad-post-item">
             <p>Inmuebles</p>

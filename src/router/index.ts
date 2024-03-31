@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/publicar-anuncio/inmobiliaria',
       name: 'publish-ad-real-estate',
-      component: () => import('../views/publish-ad/real-estate/RealEstate.vue')
+      component: () => import('../views/publish-ad/real-estate/RealEstateView.vue')
     }
   ]
 })

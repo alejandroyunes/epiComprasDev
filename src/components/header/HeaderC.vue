@@ -36,7 +36,7 @@ const router = useRouter()
 
         <div class="nav-left">
           <div class="nav-logo-mobile">
-            <img alt="" src="@/assets/logo.svg" width="40" height="40" />
+            <img alt="" src="@/assets/logo.svg"  @click="router.push('/')" width="40" height="40" />
           </div>
           <div>
             <LocationSlider />
