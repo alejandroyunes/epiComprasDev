@@ -15,7 +15,7 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
     <TitlePost title="¡Hola! ¿qué vas a publicar?" />
 
     <div class="ad-post-options">
-
+      <h1>here in ad post</h1>
       <!-- <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
         <div class="ad-post-item">
           <p>Inmuebles</p>
@@ -25,7 +25,7 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
         </div>
       </RouterLink> -->
 
-      <div class="ad-post-item">
+      <!-- <div class="ad-post-item">
         <p>Productos</p>
         <div class="ad-post-svg">
           <GamePadSvg />
@@ -44,7 +44,7 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
         <div class="ad-post-svg">
           <ServicesSvg />
         </div>
-      </div>
+      </div> -->
 
     </div>
 
