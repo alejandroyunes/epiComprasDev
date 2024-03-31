@@ -11,7 +11,7 @@ import ShopColorSvg from '../icons/real-estate/type-of-property/ShopColorSvg.vue
 import BedColorSvg from '../icons/real-estate/type-of-property/BedColorSvg.vue'
 import HotelColorSvg from '../icons/real-estate/type-of-property/HotelColorSvg.vue'
 import FincaColorSvg from '../icons/real-estate/type-of-property/FincaColorSvg.vue'
-import ConsultorioColorSvg from '../icons/real-estate/type-of-property//ConsultorioColorSvg.vue'
+import ConsultorioColorSvg from '../icons/real-estate/type-of-property/ConsultorioColorSvg.vue'
 import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorSvg.vue'
 
 import TitlePost from '../title/TitlePost.vue'

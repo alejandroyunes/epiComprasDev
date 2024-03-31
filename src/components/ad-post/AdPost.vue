@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import './ad-post.scss'
-import HouseServiceSvg from '@/components/icons/ad-post/post/HouseServiceSvg.vue'
-import GamePadSvg from '@/components/icons/ad-post/post/GamePadSvg.vue'
-import CarServiceSvg from '@/components/icons/ad-post/post/CarServiceSvg.vue'
-import ServicesSvg from '@/components/icons/ad-post/post/ServicesSvg.vue'
+
+import GamePadSvg from './icons/ad-post/GamePadSvg.vue'
+import CarServiceSvg from './icons/ad-post/CarServiceSvg.vue'
+import ServicesSvg from './icons/ad-post/ServicesSvg.vue'
+import HouseServiceSvg from './icons/ad-post/HouseServiceSvg.vue'
 
 import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 
