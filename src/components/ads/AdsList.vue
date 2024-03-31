@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 import './ads-list.scss'
 import { ads } from './data'
-import HeartSvg from '../icons/HeartSvg.vue'
-import HeartFillSvg from '../icons/HeartFillSvg.vue'
+import HeartSvg from '@/components/icons/shared/HeartSvg.vue'
+import HeartFillSvg from '@/components/icons/shared/HeartFillSvg.vue'
 import AdsSkeleton from '../loaders/skeleton/AdsSkeleton.vue'
 
 const favorites = ref<string[]>([])

@@ -2,12 +2,12 @@
 import { ref } from 'vue'
 
 import './user-menu.scss'
-import ProfileSvg from "../../icons/ProfileSvg.vue"
-import HelpSvg from "../../icons//HelpSvg.vue"
-import LogoutSvg from "../../icons/LogoutSvg.vue"
-import MessageSvg from "../../icons/MessagesSvg.vue"
-import AdsSvg from "../../icons/AdsSvg.vue"
-import HeartSvg from "../../icons/HeartSvg.vue"
+import ProfileSvg from "../icons/menu/ProfileSvg.vue"
+import HelpSvg from "../icons/menu/HelpSvg.vue"
+import LogoutSvg from "../icons/menu/LogoutSvg.vue"
+import MessageSvg from "../icons/menu/MessagesSvg.vue"
+import AdsSvg from "../icons/menu/AdsSvg.vue"
+import HeartSvg from "@/components/icons/shared/HeartSvg.vue"
 import NotificationSlider from '@/components/right-slider/NotificationSlider.vue'
 import CircleLoader from '@/components/loaders/circle-icon/CircleLoader.vue'
 

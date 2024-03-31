@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import './input.scss'
-import SearchSvg from '../../icons/SearchSvg.vue'
-import ArrowRightSvg from '../../icons/ArrowRightSvg.vue'
+import SearchSvg from '@/components/icons/shared/SearchSvg.vue'
+import ArrowRightSvg from '@/components/icons/shared/ArrowRightSvg.vue'
 
 const inputText = ref('')
 const isInputFocused = ref<boolean | undefined>(undefined)

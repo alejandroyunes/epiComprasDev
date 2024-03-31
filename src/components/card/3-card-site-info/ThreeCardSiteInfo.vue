@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import './3-card-site-info.scss'
-import AdsColorSvg from '../../icons/AdsColorSvg.vue'
-import CommentSvg from '../../icons/CommentSvg.vue'
-import ThumbsUpSvg from '../../icons/ThumbsUpSvg.vue'
+import AdsColorSvg from '../icons/AdsColorSvg.vue'
+import CommentSvg from '../icons/CommentSvg.vue'
+import ThumbsUpSvg from '../icons/ThumbsUpSvg.vue'
 
 </script>
 

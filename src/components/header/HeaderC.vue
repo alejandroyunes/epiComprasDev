@@ -5,9 +5,9 @@ import { useRouter } from 'vue-router'
 import { setDarkMode } from '../../utils/utils'
 import InputV from '@/components/header/input/InputV.vue'
 import UserMenu from '@/components/header/user-menu/UserMenu.vue'
-import SunSvg from '@/components/icons/SunSvg.vue'
-import MoonSvg from '@/components/icons/MoonS.vue'
-import PlusSvg from '@/components/icons/PlusSvg.vue'
+import SunSvg from './icons/header/SunSvg.vue'
+import MoonSvg from './icons/header/MoonS.vue'
+import PlusSvg from './icons/header/PlusSvg.vue'
 import LocationSlider from '@/components/right-slider/LocationSlider.vue'
 
 const isDarkMode = ref<boolean>(localStorage.getItem('isDarkMode') === 'true')

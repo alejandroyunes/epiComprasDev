@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import './menu.scss'
-import ProfileSvg from "../../icons/ProfileSvg.vue"
-import MessageSvg from "../../icons/MessagesSvg.vue"
-import AdsSvg from "../../icons/AdsSvg.vue"
-import HeartSvg from "../../icons/HeartSvg.vue"
-import HelpSvg from "../../icons//HelpSvg.vue"
-import LogoutSvg from "../../icons/LogoutSvg.vue"
+import ProfileSvg from "../icons/menu/ProfileSvg.vue"
+import MessageSvg from "../icons/menu/MessagesSvg.vue"
+import AdsSvg from "../icons/menu/AdsSvg.vue"
+import HeartSvg from "../icons/menu/HeartSvg.vue"
+import HelpSvg from "../icons/menu/HelpSvg.vue"
+import LogoutSvg from "../icons/menu/LogoutSvg.vue"
 
 import { ref } from 'vue'
 
