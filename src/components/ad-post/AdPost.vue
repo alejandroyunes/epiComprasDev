@@ -11,41 +11,43 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 </script>
 
 <template>
-  <section >
+  <section>
     <TitlePost title="¡Hola! ¿qué vas a publicar?" />
 
-    <div class="ad-post-options">
-      <h1>here in ad post</h1>
-      <!-- <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
+    <div class="ad-post">
+      <div class="ad-post-options">
+        <h1>here in ad post</h1>
+        <RouterLink :to="'/publicar-anuncio/inmobiliaria'">
+          <div class="ad-post-item">
+            <p>Inmuebles</p>
+            <div class="ad-post-svg">
+              <HouseServiceSvg />
+            </div>
+          </div>
+        </RouterLink>
+
         <div class="ad-post-item">
-          <p>Inmuebles</p>
+          <p>Productos</p>
           <div class="ad-post-svg">
-            <HouseServiceSvg />
+            <GamePadSvg />
           </div>
         </div>
-      </RouterLink> -->
 
-      <!-- <div class="ad-post-item">
-        <p>Productos</p>
-        <div class="ad-post-svg">
-          <GamePadSvg />
+        <div class="ad-post-item">
+          <p>Vehículos</p>
+          <div class="ad-post-svg">
+            <CarServiceSvg />
+          </div>
         </div>
+
+        <div class="ad-post-item">
+          <p>Servicios</p>
+          <div class="ad-post-svg">
+            <ServicesSvg />
+          </div>
+        </div>
+
       </div>
-
-      <div class="ad-post-item">
-        <p>Vehículos</p>
-        <div class="ad-post-svg">
-          <CarServiceSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Servicios</p>
-        <div class="ad-post-svg">
-          <ServicesSvg />
-        </div>
-      </div> -->
-
     </div>
 
   </section>
