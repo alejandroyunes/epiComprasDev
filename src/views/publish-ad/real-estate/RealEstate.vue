@@ -6,7 +6,8 @@ import RentOrSell from '@/components/ad-post/rent-or-sale/RentOrSell.vue'
 <template>
   <section class="real-estate-post-outer">
     <div class="real-estate-post-inner">
-      <RentOrSell />
+      <!-- <RentOrSell /> -->
+      <h1>hello world</h1>
     </div>
   </section>
 </template>
