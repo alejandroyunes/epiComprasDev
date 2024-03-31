@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import './ad-post.scss'
 
+import HouseServiceSvg from './icons/ad-post/HouseServiceSvg.vue'
 import GamePadSvg from './icons/ad-post/GamePadSvg.vue'
 import CarServiceSvg from './icons/ad-post/CarServiceSvg.vue'
 import ServicesSvg from './icons/ad-post/ServicesSvg.vue'
-import HouseServiceSvg from './icons/ad-post/HouseServiceSvg.vue'
 
 import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 
@@ -31,12 +31,14 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
           <GamePadSvg />
         </div>
       </div>
+
       <div class="ad-post-item">
         <p>Vehículos</p>
         <div class="ad-post-svg">
           <CarServiceSvg />
         </div>
       </div>
+      
       <div class="ad-post-item">
         <p>Servicios</p>
         <div class="ad-post-svg">

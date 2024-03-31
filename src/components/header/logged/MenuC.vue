@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import './menu.scss'
+
 import ProfileSvg from "../icons/menu/ProfileSvg.vue"
 import MessageSvg from "../icons/menu/MessagesSvg.vue"
 import AdsSvg from "../icons/menu/AdsSvg.vue"

@@ -2,8 +2,8 @@
 import './scss/styles.scss'
 import './scss/notification.scss'
 import { ref } from 'vue'
-import NotificationBellSvg from '../icons/shared/NotificationBellSvg.vue'
-import NoNotificationBellSvg from '../icons/shared/NoNotificationBellSvg.vue'
+import NotificationBellSvg from '@/components/icons/shared/NotificationBellSvg.vue'
+import NoNotificationBellSvg from '@/components//icons/shared/NoNotificationBellSvg.vue'
 import ExitSvg from './icons/ExitSvg.vue'
 
 const showNotification = ref(false)
