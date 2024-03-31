@@ -31,7 +31,7 @@ const rent = () => {
 
     <TitlePost v-if="fisrstTime" title="¿Está buscando vender o arrendar su propiedad?" />
 
-    <div class="rent-or-sell-options" v-if="fisrstTime">
+    <!-- <div class="rent-or-sell-options" v-if="fisrstTime">
       <div class="rent-or-sell-item" @click="rent">
         <p>Arrendar</p>
         <div class="rent-or-sell-svg">
@@ -44,7 +44,7 @@ const rent = () => {
           <ContractAgreeSvg />
         </div>
       </div>
-    </div>
+    </div> -->
 
     <TitlePost v-if="isRenting" title="¿Qué tipo de inmueble es?" />
 <!-- 
