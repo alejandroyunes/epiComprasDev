@@ -27,7 +27,7 @@ const rent = () => {
 </script>
 
 <template>
-  <section class="rent-or-sell">
+  <section class="rent-or-sell-container">
 
     <TitlePost v-if="fisrstTime" title="¿Está buscando vender o arrendar su propiedad?" />
 
