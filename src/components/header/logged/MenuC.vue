@@ -3,7 +3,7 @@ import './menu.scss'
 import ProfileSvg from "../icons/menu/ProfileSvg.vue"
 import MessageSvg from "../icons/menu/MessagesSvg.vue"
 import AdsSvg from "../icons/menu/AdsSvg.vue"
-import HeartSvg from "../icons/menu/HeartSvg.vue"
+import HeartSvg from "@/components/icons/shared/HeartSvg.vue"
 import HelpSvg from "../icons/menu/HelpSvg.vue"
 import LogoutSvg from "../icons/menu/LogoutSvg.vue"
 
