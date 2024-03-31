@@ -13,7 +13,6 @@ import HotelColorSvg from '../icons/real-estate/type-of-property/HotelColorSvg.v
 import FincaColorSvg from '../icons/real-estate/type-of-property/FincaColorSvg.vue'
 import ConsultorioColorSvg from '../icons/real-estate/type-of-property//ConsultorioColorSvg.vue'
 import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorSvg.vue'
-import IconTest from '@/components/icons/KeySvg.vue'
 
 import TitlePost from '../title/TitlePost.vue'
 
@@ -36,7 +35,7 @@ const rent = () => {
       <div class="rent-or-sell-item" @click="rent">
         <p>Arrendar</p>
         <div class="rent-or-sell-svg">
-          <IconTest class="icon" />
+          <HandWithKeySvg />
         </div>
       </div>
       <div class="rent-or-sell-item" @click="rent">
