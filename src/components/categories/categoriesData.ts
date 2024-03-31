@@ -8,7 +8,7 @@ interface Category {
 export const categories: Category[] = [
   {
     name: 'Propiedades y Alquileres',
-    image: '/categories/inmobilario.webp',
+    image: '/categories/home.webp',
     alt: 'Propiedades y Alquileres Image',
     url: ''
   },
@@ -20,7 +20,7 @@ export const categories: Category[] = [
   },
   {
     name: 'Artículos del Hogar',
-    image: '/categories/home.webp',
+    image: '/categories/home-articles.webp',
     alt: 'Artículos del Hogar Image',
     url: ''
   },

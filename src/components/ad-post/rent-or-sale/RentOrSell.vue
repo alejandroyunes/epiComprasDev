@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
+import { ref } from 'vue'
 import './rent-or-sell.scss'
-import HandWithKeySvg from '@/components/icons/ad-post/real-estate/rental-or-sell/HandWithKeySvg.vue'
-import ContractAgreeSvg from '@/components/icons/ad-post/real-estate/rental-or-sell/ContractAgreeSvg.vue'
-import ApartmentSvg from '@/components/icons/ApartmentSvg.vue'
-import House2Svg from '@/components/icons/House2Svg.vue'
-import DomeSvg from '@/components/icons/DomeSvg.vue'
-import OfficeSvg from '@/components/icons/OfficeSvg.vue'
-import TitlePost from '../title/TitlePost.vue'
+import HandWithKeySvg from '../icons/real-estate/rental-or-sell/HandWithKeySvg.vue'
+import ContractAgreeSvg from '../icons/real-estate/rental-or-sell/ContractAgreeSvg.vue'
+import ApartmentColorSvg from '../icons/real-estate/type-of-property/ApartmentColorSvg.vue'
+import HouseColorSvg from '../icons/real-estate/type-of-property/HouseColorSvg.vue'
+import WareHouseSvg from '../icons/real-estate/type-of-property/WareHouseSvg.vue'
+import BuildingColorSvg from '../icons/real-estate/type-of-property/BuildingColorSvg.vue'
+import ShopColorSvg from '../icons/real-estate/type-of-property/ShopColorSvg.vue'
+import BedColorSvg from '../icons/real-estate/type-of-property/BedColorSvg.vue'
+import HotelColorSvg from '../icons/real-estate/type-of-property/HotelColorSvg.vue'
+import FincaColorSvg from '../icons/real-estate/type-of-property/FincaColorSvg.vue'
+import ConsultorioColorSvg from '../icons/real-estate/type-of-property//ConsultorioColorSvg.vue'
+import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorSvg.vue'
+import IconTest from '@/components/icons/KeySvg.vue'
 
-import ApartmentColorSvg from '@/components/icons/ad-post/real-estate/type-of-property/ApartmentColorSvg.vue'
-import HouseColorSvg from '@/components/icons/ad-post/real-estate/type-of-property/HouseColorSvg.vue'
-import WareHouseSvg from '@/components/icons/ad-post/real-estate/type-of-property/WareHouseSvg.vue'
-import BuildingColorSvg from '@/components/icons/ad-post/real-estate/type-of-property/BuildingColorSvg.vue'
-import ShopColorSvg from '@/components/icons/ad-post/real-estate/type-of-property/ShopColorSvg.vue'
-import BedColorSvg from '@/components/icons/ad-post/real-estate/type-of-property/BedColorSvg.vue'
-import HotelColorSvg from '@/components/icons/ad-post/real-estate/type-of-property//HotelColorSvg.vue'
-import FincaColorSvg from '@/components/icons/ad-post/real-estate/type-of-property//FincaColorSvg.vue'
-import ConsultorioColorSvg from '@/components/icons/ad-post/real-estate/type-of-property//ConsultorioColorSvg.vue'
-import TerrenoColorSvg from '@/components/icons/ad-post/real-estate/type-of-property//TerrenoColorSvg.vue'
+import TitlePost from '../title/TitlePost.vue'
 
 const isRenting = ref<boolean>(false)
 const fisrstTime = ref<boolean>(true)
@@ -39,7 +36,7 @@ const rent = () => {
       <div class="rent-or-sell-item" @click="rent">
         <p>Arrendar</p>
         <div class="rent-or-sell-svg">
-          <HandWithKeySvg />
+          <IconTest class="icon" />
         </div>
       </div>
       <div class="rent-or-sell-item" @click="rent">
