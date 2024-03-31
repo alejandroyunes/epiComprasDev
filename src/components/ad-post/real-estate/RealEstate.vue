@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import './rent-or-sell.scss'
+import './real-estate.scss'
 import HandWithKeySvg from '../icons/real-estate/rental-or-sell/HandWithKeySvg.vue'
 import ContractAgreeSvg from '../icons/real-estate/rental-or-sell/ContractAgreeSvg.vue'
 import ApartmentColorSvg from '../icons/real-estate/type-of-property/ApartmentColorSvg.vue'
@@ -49,7 +49,7 @@ const rent = () => {
 
     </div>
 
-    <div class="rent-options-container" v-if="isRenting">
+    <div class="rent-options-wrapper" v-if="isRenting">
       <TitlePost title="¿Qué tipo de inmueble es?" />
 
       <div class="rent-options-wrapper">

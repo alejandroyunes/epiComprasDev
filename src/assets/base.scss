@@ -2,7 +2,7 @@
   --primary: #fdae4b;
   --indigo: #2c3e50;
 
-  --tablet: 1024px;
+
 
   --white: #ffffff;
   --white-soft: #f8f8f8;
@@ -27,7 +27,8 @@
   --text-dark-2: rgba(235, 235, 235, 0.64);
 
   --max-width: 1280px;
-  --tablet-width: 768px;
+  --tablet-width: 1024px;
+  --mobile-width: 768px;
 }
 
 :root[data-color-scheme='light'] {
