@@ -12,7 +12,7 @@ import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 
 <template>
   <section class="ad-post">
-    <TitlePost title="¡Hola! ¿qué vas a publicar?" />
+    <!-- <TitlePost title="¡Hola! ¿qué vas a publicar?" /> -->
 
     <div class="ad-post-options">
       <h1>here in ad post</h1>
