@@ -35,7 +35,7 @@
         background-color: var(--primary);
       }
       @media (hover: hover) {
-        a:hover {
+        &:hover {
           background-color: var(--primary);
         }
       }
