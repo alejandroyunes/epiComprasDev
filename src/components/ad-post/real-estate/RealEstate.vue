@@ -15,6 +15,8 @@ import ConsultorioColorSvg from '../icons/real-estate/type-of-property/Consultor
 import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorSvg.vue'
 
 import TitlePost from '../title/TitlePost.vue'
+import GoBack from '@/components/ad-post/go-back/GoBack.vue'
+
 
 const isRenting = ref<boolean>(false)
 const fisrstTime = ref<boolean>(true)
@@ -27,11 +29,11 @@ const rent = () => {
 </script>
 
 <template>
-  <section class="rent-or-sell-container">
+  <section>
 
     <div class="rent-or-sell-wrapper" v-if="fisrstTime">
       <TitlePost title="¿Está buscando vender o arrendar su propiedad?" />
-
+      <GoBack />
       <div class="rent-or-sell-options">
         <div class="rent-or-sell-item" @click="rent">
           <p>Arrendar</p>
@@ -46,7 +48,6 @@ const rent = () => {
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="rent-options-wrapper" v-if="isRenting">

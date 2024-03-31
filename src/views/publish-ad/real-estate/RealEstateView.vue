@@ -20,5 +20,6 @@ import RealEstate from '@/components/ad-post/real-estate/RealEstate.vue'
 .real-estate-post-inner {
   max-width: var(--tablet-width);
   margin: 0 auto;
+  padding: 0 20px;
 }
 </style>
