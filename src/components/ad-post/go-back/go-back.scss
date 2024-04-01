@@ -1,15 +1,18 @@
-.go-back {
-  display: inline-flex;
-  align-items: center;
-  width: auto;
-  cursor: pointer;
+.go-back-wrapper {
   margin-top: 16px;
-  @media (max-width: 1024px) {
+  display: flex;
+
+  .go-back {
     display: flex;
-    justify-content: flex-end;
+    width: auto;
+    align-items: center;
+    cursor: pointer;
+    .icon {
+      margin-right: 8px;
+      transform: rotate(180deg);
+    }
   }
-  .icon {
-    margin-right: 8px;
-    transform: rotate(180deg);
+  @media (max-width: 1024px) {
+    justify-content: flex-end;
   }
 }

@@ -13,8 +13,10 @@ const { goBack } = defineProps<{
 </script>
 
 <template>
-  <div class="go-back" @click="goBack ? goBack() : router.back()">
-    <ArrowRightSvg class="icon" />
-    <p>Volver</p>
-  </div>
+  <section class="go-back-wrapper">
+    <div class="go-back" @click="goBack ? goBack() : router.back()">
+      <ArrowRightSvg class="icon" />
+      <p>Volver</p>
+    </div>
+  </section>
 </template>
