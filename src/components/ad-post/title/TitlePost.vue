@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import './title-post.scss'
-const { title } = defineProps({ title: String })
+const { title } = defineProps<{ title: String }>()
 
 </script>
 

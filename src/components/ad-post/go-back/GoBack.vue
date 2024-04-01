@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import './go-back.scss'
 import ArrowRightSvg from '@/components/icons/shared/ArrowRightSvg.vue'
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
+
+const { goBack } = defineProps<{
+  goBack?: () => void
+}>()
+
+
 </script>
 
 <template>
-  <div class="go-back" @click="router.back">
+  <div class="go-back" @click="goBack ? goBack() : router.back()">
     <ArrowRightSvg class="icon" />
     <p>Volver</p>
   </div>

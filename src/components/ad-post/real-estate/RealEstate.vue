@@ -18,13 +18,17 @@ import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorS
 import TitlePost from '../title/TitlePost.vue'
 import GoBack from '@/components/ad-post/go-back/GoBack.vue'
 
-
 const isRenting = ref<boolean>(false)
 const fisrstTime = ref<boolean>(true)
 
 const rent = () => {
   isRenting.value = true
   fisrstTime.value = false
+}
+
+const goBack = () => {
+  isRenting.value = false
+  fisrstTime.value = true
 }
 
 </script>
@@ -54,7 +58,7 @@ const rent = () => {
 
   <section v-if="isRenting">
     <TitlePost title="¿Qué tipo de inmueble es?" />
-    <GoBack />
+    <GoBack :goBack="goBack" />
 
     <div class="rent-options-wrapper">
       <div class="ad-post-item">
