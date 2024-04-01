@@ -32,7 +32,7 @@
   border: 1px solid var(--primary);
   cursor: pointer;
   @media (hover: hover) {
-    a:hover {
+    &:hover {
       background-color: var(--primary);
     }
   }
