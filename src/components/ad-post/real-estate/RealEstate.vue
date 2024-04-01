@@ -35,7 +35,7 @@ const rent = () => {
     <TitlePost title="¿Está buscando vender o arrendar su propiedad?" />
     <GoBack />
 
-    <div class="rent-or-sell-options">
+    <div class="rent-or-sell-wrapper">
       <div class="ad-post-item" @click="rent">
         <p>Arrendar</p>
         <div class="ad-post-svg">

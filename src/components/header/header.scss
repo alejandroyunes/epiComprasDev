@@ -17,47 +17,48 @@
         display: flex;
       }
     }
-  }
-  .nav-one {
-    display: flex;
-    flex: 0;
-    align-items: center;
-    .nav-logo {
-      flex: 0;
-      margin-right: 8px;
-      display: block;
-      cursor: pointer;
-      @media (max-width: 1024px) {
-        display: none;
-      }
-    }
-  }
 
-  .nav-two {
-    display: flex;
-    flex: 1;
-    align-items: center;
-
-    .nav-left {
+    .nav-one {
       display: flex;
-      flex: 1;
-      justify-content: space-between;
+      flex: 0;
       align-items: center;
-      .nav-logo-mobile {
-        display: none;
+      .nav-logo {
+        flex: 0;
+        margin-right: 8px;
+        display: block;
+        cursor: pointer;
         @media (max-width: 1024px) {
-          display: flex;
-          margin-right: 8px;
+          display: none;
         }
       }
     }
-    .nav-right {
+
+    .nav-two {
       display: flex;
+      flex: 1;
       align-items: center;
-      justify-content: center;
-      .sun,
-      .moon {
-        margin-right: 10px;
+
+      .nav-left {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        .nav-logo-mobile {
+          display: none;
+          @media (max-width: 1024px) {
+            display: flex;
+            margin-right: 8px;
+          }
+        }
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sun,
+        .moon {
+          margin-right: 10px;
+        }
       }
     }
   }
