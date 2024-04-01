@@ -13,9 +13,8 @@ import GoBack from '@/components/ad-post/go-back/GoBack.vue'
 <template>
   <section>
     <TitlePost title="¡Hola! ¿qué vas a publicar?" />
-
     <GoBack />
-    
+
     <div class="ad-post-container">
 
       <RouterLink :to="'/publicar-anuncio/inmobiliaria'">

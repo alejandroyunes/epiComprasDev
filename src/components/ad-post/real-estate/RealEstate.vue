@@ -29,104 +29,105 @@ const rent = () => {
 </script>
 
 <template>
-  <section>
 
-    <div class="rent-or-sell-wrapper" v-if="fisrstTime">
-      <TitlePost title="¿Está buscando vender o arrendar su propiedad?" />
-      <GoBack />
-      <div class="rent-or-sell-options">
-        <div class="rent-or-sell-item" @click="rent">
-          <p>Arrendar</p>
-          <div class="rent-or-sell-svg">
-            <HandWithKeySvg />
-          </div>
+  <section v-if="fisrstTime">
+    <TitlePost title="¿Está buscando vender o arrendar su propiedad?" />
+    <GoBack />
+
+    <div class="rent-or-sell-options">
+      <div class="rent-or-sell-item" @click="rent">
+        <p>Arrendar</p>
+        <div class="rent-or-sell-svg">
+          <HandWithKeySvg />
         </div>
-        <div class="rent-or-sell-item" @click="rent">
-          <p>Vender</p>
-          <div class="rent-or-sell-svg">
-            <ContractAgreeSvg />
-          </div>
+      </div>
+      <div class="rent-or-sell-item" @click="rent">
+        <p>Vender</p>
+        <div class="rent-or-sell-svg">
+          <ContractAgreeSvg />
         </div>
       </div>
     </div>
 
-    <div class="rent-options-wrapper" v-if="isRenting">
-      <TitlePost title="¿Qué tipo de inmueble es?" />
+  </section>
 
-      <div class="rent-options-wrapper">
-        <div class="rent-option">
-          <p>Apartmentos</p>
-          <div class="rent-option-svg">
-            <ApartmentColorSvg />
-          </div>
+  <section v-if="isRenting">
+    <TitlePost title="¿Qué tipo de inmueble es?" />
+    <GoBack />
+
+    <div class="rent-options-wrapper">
+      <div class="rent-option">
+        <p>Apartmentos</p>
+        <div class="rent-option-svg">
+          <ApartmentColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Casas</p>
-          <div class="rent-option-svg">
-            <HouseColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Casas</p>
+        <div class="rent-option-svg">
+          <HouseColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Bodega</p>
-          <div class="rent-option-svg">
-            <WareHouseSvg />
-          </div>
+      <div class="rent-option">
+        <p>Bodega</p>
+        <div class="rent-option-svg">
+          <WareHouseSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Locales</p>
-          <div class="rent-option-svg">
-            <ShopColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Locales</p>
+        <div class="rent-option-svg">
+          <ShopColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Edificio</p>
-          <div class="rent-option-svg">
-            <BuildingColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Edificio</p>
+        <div class="rent-option-svg">
+          <BuildingColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Habitaciones</p>
-          <div class="rent-option-svg">
-            <BedColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Habitaciones</p>
+        <div class="rent-option-svg">
+          <BedColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Hoteles</p>
-          <div class="rent-option-svg">
-            <HotelColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Hoteles</p>
+        <div class="rent-option-svg">
+          <HotelColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Fincas</p>
-          <div class="rent-option-svg">
-            <FincaColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Fincas</p>
+        <div class="rent-option-svg">
+          <FincaColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Consultorios</p>
-          <div class="rent-option-svg">
-            <ConsultorioColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Consultorios</p>
+        <div class="rent-option-svg">
+          <ConsultorioColorSvg />
         </div>
+      </div>
 
-        <div class="rent-option">
-          <p>Terrenos y Lotes</p>
-          <div class="rent-option-svg">
-            <TerrenoColorSvg />
-          </div>
+      <div class="rent-option">
+        <p>Terrenos y Lotes</p>
+        <div class="rent-option-svg">
+          <TerrenoColorSvg />
         </div>
-
       </div>
 
     </div>
 
   </section>
+
 </template>
