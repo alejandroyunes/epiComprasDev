@@ -18,7 +18,7 @@ import AdPost from '@/components/ad-post/AdPost.vue'
 
 .ad-post-inner {
   max-width: var(--tablet-width);
-  margin: 0 auto;
   padding: 0 20px;
+  margin: 0 auto;
 }
 </style>

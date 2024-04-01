@@ -18,8 +18,9 @@ import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorS
 import TitlePost from '../title/TitlePost.vue'
 import GoBack from '@/components/ad-post/go-back/GoBack.vue'
 
-const isRenting = ref<boolean>(false)
 const fisrstTime = ref<boolean>(true)
+const isRenting = ref<boolean>(false)
+const address = ref<boolean>(false)
 
 const rent = () => {
   isRenting.value = true
@@ -29,6 +30,12 @@ const rent = () => {
 const goBack = () => {
   isRenting.value = false
   fisrstTime.value = true
+}
+
+const addressCollection = () => {
+  isRenting.value = false
+  fisrstTime.value = false
+  address.value = true
 }
 
 </script>
@@ -60,7 +67,7 @@ const goBack = () => {
     <TitlePost title="¿Qué tipo de inmueble es?" />
     <GoBack :goBack="goBack" />
 
-    <div class="rent-options-wrapper">
+    <div class="rent-options-wrapper" @click="addressCollection">
       <div class="ad-post-item">
         <p>Apartmentos</p>
         <div class="ad-post-svg">
@@ -133,6 +140,16 @@ const goBack = () => {
 
     </div>
 
+  </section>
+
+  <section v-if="address">
+    <TitlePost title="Empezemos describiendo el inmueble" />
+    <GoBack />
+    <div class="real-estate-input-data">
+      <label for="address">Dirección</label>
+      <input class="real-estate-address" type="text" name="address"
+        placeholder="Incluye calle, número, comuna y ciudad." />
+    </div>
   </section>
 
 </template>

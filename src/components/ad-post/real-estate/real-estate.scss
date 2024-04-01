@@ -1,5 +1,4 @@
 .rent-or-sell-wrapper {
-  display: flex;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 20px;
@@ -7,7 +6,6 @@
 }
 
 .rent-options-wrapper {
-  display: flex;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 20px;
@@ -22,5 +20,29 @@
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.real-estate-input-data {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  .real-estate-address {
+    margin-top: 6px;
+    padding: 10px;
+    border: none;
+    outline: 1px solid var(--color-border-hover);;
+    border-radius: 5px;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-heading);
+
+    &:focus {
+      outline: 1px solid var(--primary);
+    }
+    &::placeholder {
+      color: var(--color-text);
+    }
   }
 }
