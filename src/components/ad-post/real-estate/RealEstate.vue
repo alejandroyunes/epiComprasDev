@@ -46,7 +46,7 @@ const addressCollection = () => {
     <TitlePost title="¿Está buscando vender o arrendar su propiedad?" />
     <GoBack />
 
-    <div class="rent-or-sell-wrapper">
+    <div class="rent-or-sell">
       <div class="ad-post-item" @click="rent">
         <p>Arrendar</p>
         <div class="ad-post-svg">
@@ -67,7 +67,7 @@ const addressCollection = () => {
     <TitlePost title="¿Qué tipo de inmueble es?" />
     <GoBack :goBack="goBack" />
 
-    <div class="rent-options-wrapper" @click="addressCollection">
+    <div class="real-estate-options" @click="addressCollection">
       <div class="ad-post-item">
         <p>Apartmentos</p>
         <div class="ad-post-svg">
@@ -145,10 +145,29 @@ const addressCollection = () => {
   <section v-if="address">
     <TitlePost title="Empezemos describiendo el inmueble" />
     <GoBack />
-    <div class="real-estate-input-data">
-      <label for="address">Dirección</label>
-      <input class="real-estate-address" type="text" name="address"
-        placeholder="Incluye calle, número, comuna y ciudad." />
+    <div class="real-estate-info">
+
+      <div>
+        <label class="label" for="full-address">Dirección</label>
+        <input class="" type="text" name="full-address"
+          placeholder="Incluye calle, número, comuna y ciudad." />
+      </div>
+
+      <div class="city-and-state">
+        <div class="">
+          <label class="label" for="state">Departamento</label>
+          <input class="" type="text" name="state"
+            placeholder="Antioquia" />
+        </div>
+
+        <div>
+          <label class="label" for="city">Dirección</label>
+          <input class="" type="text" name="city"
+            placeholder="Medellín" />
+        </div>
+
+      </div>
+
     </div>
   </section>
 
