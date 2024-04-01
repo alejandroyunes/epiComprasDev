@@ -161,7 +161,7 @@ const addressCollection = () => {
         </div>
 
         <div>
-          <label class="label" for="city">Dirección</label>
+          <label class="label" for="city">Municipio o ciudad</label>
           <input class="" type="text" name="city"
             placeholder="Medellín" />
         </div>

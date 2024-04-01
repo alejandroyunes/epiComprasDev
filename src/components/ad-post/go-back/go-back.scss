@@ -7,8 +7,12 @@
     width: auto;
     align-items: center;
     cursor: pointer;
+    color: var(--color-heading);
+    border-radius: 10px;
+    padding: 6px 10px;
+    border: 1px solid var(--color-border-hover);
     .icon {
-      margin-right: 8px;
+      margin-right: 6px;
       transform: rotate(180deg);
     }
   }
