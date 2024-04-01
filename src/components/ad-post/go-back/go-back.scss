@@ -1,10 +1,13 @@
 .go-back {
   display: inline-flex;
   align-items: center;
-  padding: 4px 0;
   width: auto;
   cursor: pointer;
-  margin: 16px 0 0;
+  margin-top: 16px;
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: flex-end;
+  }
   .icon {
     margin-right: 8px;
     transform: rotate(180deg);
