@@ -31,12 +31,13 @@
   margin-top: 20px;
   border: 1px solid var(--primary);
   cursor: pointer;
-  :hover {
+  &:hover {
     background-color: var(--primary);
   }
   @media (hover: hover) {
-    :hover {
+    &:hover {
       background-color: var(--primary);
+
     }
   }
 
