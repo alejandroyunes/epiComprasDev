@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import './ad-post.scss'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 import HouseServiceSvg from './icons/ad-post/HouseServiceSvg.vue'
 import GamePadSvg from './icons/ad-post/GamePadSvg.vue'
@@ -8,12 +11,17 @@ import ServicesSvg from './icons/ad-post/ServicesSvg.vue'
 
 import TitlePost from '@/components/ad-post/title/TitlePost.vue'
 import GoBack from '@/components/ad-post/go-back/GoBack.vue'
+
+const goBack = () => {
+  router.push('/')
+}
+
 </script>
 
 <template>
   <section>
     <TitlePost title="¡Hola! ¿qué vas a publicar?" />
-    <GoBack />
+    <GoBack :goBack="goBack"  />
 
     <div class="ad-post-container">
 
