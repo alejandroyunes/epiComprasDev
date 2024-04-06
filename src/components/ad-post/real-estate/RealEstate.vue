@@ -21,6 +21,7 @@ import GoBack from '@/components/ad-post/go-back/GoBack.vue'
 const isRentingOrSelling = ref(true)
 const propertyOptionsSection = ref(false)
 const propertyDetails = ref(false)
+const isFormSubmitting = ref(false)
 
 const typeOfPost = ref<'isRenting' | 'isSelling' | undefined>(undefined)
 const selectedPropertyType = ref<string | undefined>(undefined)
@@ -65,6 +66,20 @@ const getPropertyIcon = (property: string | number) => {
   }[property] || null
 }
 
+const submitHandler = async (form: any) => {
+  console.log('submit', form)
+
+  try {
+    isFormSubmitting.value = true
+    console.log('submit', form)
+  } catch (error) {
+    console.log('error', error)
+  } finally {
+    isFormSubmitting.value = false
+    console.log('submit', form)
+  }
+}
+
 </script>
 
 <template>
@@ -80,7 +95,7 @@ const getPropertyIcon = (property: string | number) => {
           <HandWithKeySvg />
         </div>
       </div>
-      
+
       <div class="ad-post-item" @click="selectPostType('isSelling')">
         <p>Vender</p>
         <div class="ad-post-svg">
@@ -113,23 +128,59 @@ const getPropertyIcon = (property: string | number) => {
 
     <div class="real-estate-info">
 
-      <div>
-        <label class="label" for="full-address">Dirección</label>
-        <input class="" type="text" name="full-address" placeholder="Incluye calle, número, comuna y ciudad." />
-      </div>
+      <FormKit type="form" id="property-form" #default="{ value, state }" @submit="submitHandler">
+        <pre>{{ value }}</pre>
+        <FormKit type="group" name="property-address">
 
-      <div class="city-and-state">
-        <div class="">
-          <label class="label" for="state">Departamento</label>
-          <input class="" type="text" name="state" placeholder="Antioquia" />
+          <div class="grid-column">
+
+            <div>
+              <label class="label" for="full-address">Dirección</label>
+              <FormKit type="text" name="full-address" validation="required"
+                placeholder="Incluye calle, número, comuna y ciudad." />
+            </div>
+
+            <div>
+              <label class="label" for="city">Barrio</label>
+              <FormKit class="" type="text" name="city" validation="required" placeholder="Belén" />
+            </div>
+
+          </div>
+
+
+          <div class="grid-column">
+
+            <div>
+              <label class="label" for="state">Departamento</label>
+              <FormKit class="" type="text" name="state" validation="required" placeholder="Antioquia" />
+            </div>
+
+            <div>
+              <label class="label" for="city">Municipio o ciudad</label>
+              <FormKit class="" type="text" name="city" validation="required" placeholder="Medellín" />
+            </div>
+
+          </div>
+          
+        </FormKit>
+
+        <div class="form-action-buttons">
+
+          <button class="btn-custom btn-cancel-previous" type="button">
+            Atrás
+          </button>
+
+          <button class="btn-custom btn-next-submit" :class="{ 'btn-disabled': false }" type="button">
+            Siguiente
+          </button>
+
+          <button class="btn-custom btn-next-submit" :class="{ 'btn-disabled': !state.valid }"
+            type="submit" :disabled="isFormSubmitting">
+            Enviar
+          </button>
         </div>
 
-        <div>
-          <label class="label" for="city">Municipio o ciudad</label>
-          <input class="" type="text" name="city" placeholder="Medellín" />
-        </div>
-
-      </div>
+      </FormKit>
 
     </div>
   </section>
