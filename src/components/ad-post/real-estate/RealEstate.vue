@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 import './real-estate.scss'
 import '../ad-post.scss'
 import HandWithKeySvg from '../icons/real-estate/rental-or-sell/HandWithKeySvg.vue'
@@ -22,6 +23,10 @@ const isRentingOrSelling = ref(true)
 const propertyOptionsSection = ref(false)
 const propertyDetails = ref(false)
 const isFormSubmitting = ref(false)
+const next = ref(false)
+const totalSteps = 6
+let currentStep = ref(1)
+
 
 const typeOfPost = ref<'isRenting' | 'isSelling' | undefined>(undefined)
 const selectedPropertyType = ref<string | undefined>(undefined)
@@ -69,16 +74,31 @@ const getPropertyIcon = (property: string | number) => {
 const submitHandler = async (form: any) => {
   console.log('submit', form)
 
-  try {
-    isFormSubmitting.value = true
-    console.log('submit', form)
-  } catch (error) {
-    console.log('error', error)
-  } finally {
-    isFormSubmitting.value = false
-    console.log('submit', form)
+  // try {
+  //   isFormSubmitting.value = true
+  //   console.log('submit', form)
+  // } catch (error) {
+  //   console.log('error', error)
+  // } finally {
+  //   isFormSubmitting.value = false
+  //   console.log('submit', form)
+  // }
+}
+
+const nextStep = (value: any) => {
+  console.log('value', value)
+  if (currentStep.value < totalSteps) {
+    currentStep.value++
   }
 }
+
+const previousStep = () => {
+  if (currentStep.value > 1) {
+    next.value = true
+    currentStep.value--
+  }
+}
+
 
 </script>
 
@@ -127,11 +147,9 @@ const submitHandler = async (form: any) => {
     <GoBack :goBack="goBack" />
 
     <div class="real-estate-info">
-
       <FormKit type="form" id="property-form" #default="{ value, state }" @submit="submitHandler">
-        <pre>{{ value }}</pre>
-        <FormKit type="group" name="property-address">
 
+        <FormKit type="group" name="property-address" v-show="currentStep === 1">
           <div class="grid-column">
 
             <div>
@@ -161,21 +179,20 @@ const submitHandler = async (form: any) => {
             </div>
 
           </div>
-          
         </FormKit>
 
         <div class="form-action-buttons">
-
-          <button class="btn-custom btn-cancel-previous" type="button">
+          <button class="btn-custom btn-cancel-previous" type="button" @click="previousStep" v-show="currentStep > 1">
             Atrás
           </button>
 
-          <button class="btn-custom btn-next-submit" :class="{ 'btn-disabled': false }" type="button">
+          <button class="btn-custom btn-next-submit" @click="nextStep(value)" :class="{ 'btn-disabled': !next }"
+            type="button">
             Siguiente
           </button>
 
           <button class="btn-custom btn-next-submit" :class="{ 'btn-disabled': !state.valid }"
-            type="submit" :disabled="isFormSubmitting">
+            v-show="currentStep === totalSteps" type="submit" :disabled="isFormSubmitting">
             Enviar
           </button>
         </div>
