@@ -26,8 +26,6 @@ const typeOfPost = ref<'isRenting' | 'isSelling' | undefined>(undefined)
 const propertyTypes = ref(['Apartmentos', 'Casas', 'Bodega', 'Locales', 'Edificio', 'Habitaciones', 'Hoteles', 'Fincas', 'Consultorios', 'Terrenos y Lotes'])
 const selectedPropertyType = ref<string | undefined>(undefined)
 
-
-
 const selectPostType = (selection: 'isRenting' | 'isSelling') => {
   typeOfPost.value = selection
   isRentingOrSelling.value = false
@@ -41,8 +39,13 @@ const handlePropertySelection = (propertyType: string) => {
 }
 
 const goBack = () => {
-  isRentingOrSelling.value = true
-  typeOfPost.value = ''
+  if (propertyOptionsSection.value) {
+    isRentingOrSelling.value = true
+    propertyOptionsSection.value = false
+  } else if (propertyDetails.value) {
+    propertyOptionsSection.value = true
+    propertyDetails.value = false
+  }
 }
 
 const getPropertyIcon = (property: string | number) => {
@@ -61,8 +64,6 @@ const getPropertyIcon = (property: string | number) => {
 
   }[property] || null
 }
-
-
 
 </script>
 
