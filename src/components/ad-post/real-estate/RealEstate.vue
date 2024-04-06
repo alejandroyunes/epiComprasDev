@@ -23,8 +23,8 @@ const propertyOptionsSection = ref(false)
 const propertyDetails = ref(false)
 
 const typeOfPost = ref<'isRenting' | 'isSelling' | undefined>(undefined)
-const propertyTypes = ref(['Apartmentos', 'Casas', 'Bodega', 'Locales', 'Edificio', 'Habitaciones', 'Hoteles', 'Fincas', 'Consultorios', 'Terrenos y Lotes'])
 const selectedPropertyType = ref<string | undefined>(undefined)
+const propertyTypes = ref(['Apartmentos', 'Casas', 'Bodega', 'Locales', 'Edificio', 'Habitaciones', 'Hoteles', 'Fincas', 'Consultorios', 'Terrenos y Lotes'])
 
 const selectPostType = (selection: 'isRenting' | 'isSelling') => {
   typeOfPost.value = selection
@@ -80,6 +80,7 @@ const getPropertyIcon = (property: string | number) => {
           <HandWithKeySvg />
         </div>
       </div>
+      
       <div class="ad-post-item" @click="selectPostType('isSelling')">
         <p>Vender</p>
         <div class="ad-post-svg">
