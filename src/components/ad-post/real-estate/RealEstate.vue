@@ -18,42 +18,68 @@ import TerrenoColorSvg from '../icons/real-estate/type-of-property/TerrenoColorS
 import TitlePost from '../title/TitlePost.vue'
 import GoBack from '@/components/ad-post/go-back/GoBack.vue'
 
-const fisrstTime = ref<boolean>(true)
-const isRenting = ref<boolean>(false)
-const address = ref<boolean>(false)
+const isRentingOrSelling = ref(true)
+const propertyOptionsSection = ref(false)
+const propertyDetails = ref(false)
 
-const rent = () => {
-  isRenting.value = true
-  fisrstTime.value = false
+const typeOfPost = ref<'isRenting' | 'isSelling' | undefined>(undefined)
+const propertyTypes = ref(['Apartmentos', 'Casas', 'Bodega', 'Locales', 'Edificio', 'Habitaciones', 'Hoteles', 'Fincas', 'Consultorios', 'Terrenos y Lotes'])
+const selectedPropertyType = ref<string | undefined>(undefined)
+
+
+
+const selectPostType = (selection: 'isRenting' | 'isSelling') => {
+  typeOfPost.value = selection
+  isRentingOrSelling.value = false
+  propertyOptionsSection.value = true
+}
+
+const handlePropertySelection = (propertyType: string) => {
+  selectedPropertyType.value = propertyType
+  propertyOptionsSection.value = false
+  propertyDetails.value = true
 }
 
 const goBack = () => {
-  isRenting.value = false
-  fisrstTime.value = true
+  isRentingOrSelling.value = true
+  typeOfPost.value = ''
 }
 
-const addressCollection = () => {
-  isRenting.value = false
-  fisrstTime.value = false
-  address.value = true
+const getPropertyIcon = (property: string | number) => {
+
+  return {
+    'Apartmentos': ApartmentColorSvg,
+    'Casas': HouseColorSvg,
+    'Bodega': WareHouseSvg,
+    'Locales': ShopColorSvg,
+    'Edificio': BuildingColorSvg,
+    'Habitaciones': BedColorSvg,
+    'Hoteles': HotelColorSvg,
+    'Fincas': FincaColorSvg,
+    'Consultorios': ConsultorioColorSvg,
+    'Terrenos y Lotes': TerrenoColorSvg
+
+  }[property] || null
 }
+
+
 
 </script>
 
 <template>
 
-  <section v-if="fisrstTime">
+  <section v-if="isRentingOrSelling">
     <TitlePost title="¿Está buscando vender o arrendar su propiedad?" />
     <GoBack />
 
     <div class="rent-or-sell">
-      <div class="ad-post-item" @click="rent">
+      <div class="ad-post-item" @click="selectPostType('isRenting')">
         <p>Arrendar</p>
         <div class="ad-post-svg">
           <HandWithKeySvg />
         </div>
       </div>
-      <div class="ad-post-item" @click="rent">
+      <div class="ad-post-item" @click="selectPostType('isSelling')">
         <p>Vender</p>
         <div class="ad-post-svg">
           <ContractAgreeSvg />
@@ -63,107 +89,42 @@ const addressCollection = () => {
 
   </section>
 
-  <section v-if="isRenting">
+  <section v-if="propertyOptionsSection">
     <TitlePost title="¿Qué tipo de inmueble es?" />
     <GoBack :goBack="goBack" />
 
-    <div class="real-estate-options" @click="addressCollection">
-      <div class="ad-post-item">
-        <p>Apartmentos</p>
+    <div class="real-estate-options">
+      <div v-for="property in propertyTypes" :key="property" class="ad-post-item"
+        @click="handlePropertySelection(property)">
+        <p>{{ property }}</p>
         <div class="ad-post-svg">
-          <ApartmentColorSvg />
+          <component :is="getPropertyIcon(property)" />
         </div>
       </div>
-
-      <div class="ad-post-item">
-        <p>Casas</p>
-        <div class="ad-post-svg">
-          <HouseColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Bodega</p>
-        <div class="ad-post-svg">
-          <WareHouseSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Locales</p>
-        <div class="ad-post-svg">
-          <ShopColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Edificio</p>
-        <div class="ad-post-svg">
-          <BuildingColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Habitaciones</p>
-        <div class="ad-post-svg">
-          <BedColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Hoteles</p>
-        <div class="ad-post-svg">
-          <HotelColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Fincas</p>
-        <div class="ad-post-svg">
-          <FincaColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Consultorios</p>
-        <div class="ad-post-svg">
-          <ConsultorioColorSvg />
-        </div>
-      </div>
-
-      <div class="ad-post-item">
-        <p>Terrenos y Lotes</p>
-        <div class="ad-post-svg">
-          <TerrenoColorSvg />
-        </div>
-      </div>
-
     </div>
 
   </section>
 
-  <section v-if="address">
+  <section v-if="propertyDetails">
     <TitlePost title="Empezemos describiendo el inmueble" />
-    <GoBack />
+    <GoBack :goBack="goBack" />
+
     <div class="real-estate-info">
 
       <div>
         <label class="label" for="full-address">Dirección</label>
-        <input class="" type="text" name="full-address"
-          placeholder="Incluye calle, número, comuna y ciudad." />
+        <input class="" type="text" name="full-address" placeholder="Incluye calle, número, comuna y ciudad." />
       </div>
 
       <div class="city-and-state">
         <div class="">
           <label class="label" for="state">Departamento</label>
-          <input class="" type="text" name="state"
-            placeholder="Antioquia" />
+          <input class="" type="text" name="state" placeholder="Antioquia" />
         </div>
 
         <div>
           <label class="label" for="city">Municipio o ciudad</label>
-          <input class="" type="text" name="city"
-            placeholder="Medellín" />
+          <input class="" type="text" name="city" placeholder="Medellín" />
         </div>
 
       </div>
