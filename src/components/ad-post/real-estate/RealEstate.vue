@@ -3,6 +3,8 @@ import { ref } from 'vue'
 
 import './real-estate.scss'
 import '../ad-post.scss'
+import type { RealEstateTypes } from '../types/RealEstate'
+
 import HandWithKeySvg from '../icons/real-estate/rental-or-sell/HandWithKeySvg.vue'
 import ContractAgreeSvg from '../icons/real-estate/rental-or-sell/ContractAgreeSvg.vue'
 import ApartmentColorSvg from '../icons/real-estate/type-of-property/ApartmentColorSvg.vue'
@@ -85,7 +87,7 @@ const submitHandler = async (form: any) => {
   // }
 }
 
-const nextStep = (value: any) => {
+const nextStep = (value: RealEstateTypes) => {
   console.log('value', value)
   if (currentStep.value < totalSteps) {
     currentStep.value++
@@ -98,7 +100,6 @@ const previousStep = () => {
     currentStep.value--
   }
 }
-
 
 </script>
 
@@ -149,19 +150,19 @@ const previousStep = () => {
     <div class="real-estate-info">
       <FormKit type="form" id="property-form" #default="{ value, state }" @submit="submitHandler">
 
-        <FormKit type="group" name="property-address" v-show="currentStep === 1">
+        <FormKit type="group" name="propertyDetails" v-if="currentStep === 1">
 
           <div class="grid-column">
 
             <div class="option">
-              <label class="label" for="full-address">Dirección</label>
-              <FormKit type="text" name="full-address" validation="required"
+              <label class="label" for="propertyAddress">Dirección</label>
+              <FormKit type="text" name="propertyAddress" validation="required"
                 placeholder="Incluye calle, número, comuna y ciudad." />
             </div>
 
             <div class="option">
-              <label class="label" for="town">Barrio</label>
-              <FormKit class="" type="text" name="town" validation="required" placeholder="Belén" />
+              <label class="label" for="propertyTown">Barrio</label>
+              <FormKit type="text" name="propertyTown" validation="required" placeholder="Belén" />
             </div>
 
           </div>
@@ -169,13 +170,13 @@ const previousStep = () => {
           <div class="grid-column">
 
             <div class="option">
-              <label class="label" for="state">Departamento</label>
-              <FormKit class="" type="text" name="state" validation="required" placeholder="Antioquia" />
+              <label class="label" for="propertyState">Departamento</label>
+              <FormKit type="text" name="propertyState" validation="required" placeholder="Antioquia" />
             </div>
 
             <div class="option">
-              <label class="label" for="city">Municipio o ciudad</label>
-              <FormKit class="" type="text" name="city" validation="required" placeholder="Medellín" />
+              <label class="label" for="propertyCity">Municipio o ciudad</label>
+              <FormKit type="text" name="propertyCity" validation="required" placeholder="Medellín" />
             </div>
 
           </div>
@@ -187,7 +188,7 @@ const previousStep = () => {
             Atrás
           </button>
 
-          <button class="btn-custom btn-next-submit" @click="nextStep(value)" v-show="currentStep < totalSteps"
+            <button class="btn-custom btn-next-submit" @click="nextStep(value as RealEstateTypes)" v-show="currentStep < totalSteps"
             :class="{ 'btn-disabled': !next }" type="button">
             Siguiente
           </button>
