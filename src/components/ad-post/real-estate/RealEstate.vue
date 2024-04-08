@@ -150,35 +150,36 @@ const previousStep = () => {
       <FormKit type="form" id="property-form" #default="{ value, state }" @submit="submitHandler">
 
         <FormKit type="group" name="property-address" v-show="currentStep === 1">
+
           <div class="grid-column">
 
-            <div>
+            <div class="option">
               <label class="label" for="full-address">Dirección</label>
               <FormKit type="text" name="full-address" validation="required"
                 placeholder="Incluye calle, número, comuna y ciudad." />
             </div>
 
-            <div>
-              <label class="label" for="city">Barrio</label>
-              <FormKit class="" type="text" name="city" validation="required" placeholder="Belén" />
+            <div class="option">
+              <label class="label" for="town">Barrio</label>
+              <FormKit class="" type="text" name="town" validation="required" placeholder="Belén" />
             </div>
 
           </div>
 
-
           <div class="grid-column">
 
-            <div>
+            <div class="option">
               <label class="label" for="state">Departamento</label>
               <FormKit class="" type="text" name="state" validation="required" placeholder="Antioquia" />
             </div>
 
-            <div>
+            <div class="option">
               <label class="label" for="city">Municipio o ciudad</label>
               <FormKit class="" type="text" name="city" validation="required" placeholder="Medellín" />
             </div>
 
           </div>
+
         </FormKit>
 
         <div class="form-action-buttons">
@@ -186,8 +187,8 @@ const previousStep = () => {
             Atrás
           </button>
 
-          <button class="btn-custom btn-next-submit" @click="nextStep(value)" :class="{ 'btn-disabled': !next }"
-            type="button">
+          <button class="btn-custom btn-next-submit" @click="nextStep(value)" v-show="currentStep < totalSteps"
+            :class="{ 'btn-disabled': !next }" type="button">
             Siguiente
           </button>
 
