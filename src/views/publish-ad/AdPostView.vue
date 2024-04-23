@@ -3,22 +3,15 @@ import AdPost from '@/components/ad-post/AdPost.vue'
 </script>
 
 <template>
-  <section class="ad-post-outer">
-    <div class="ad-post-inner">
-      <AdPost />
-    </div>
+  <section class="ad-post-inner">
+    <AdPost />
   </section>
 </template>
 
 
 <style lang="scss">
-.ad-post-outer {
-  width: 100%;
-}
-
 .ad-post-inner {
   max-width: var(--tablet-width);
-  padding: 0 20px;
   margin: 0 auto;
 }
 </style>

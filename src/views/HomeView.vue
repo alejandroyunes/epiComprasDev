@@ -6,19 +6,10 @@ import ThreeCardSiteInfo from '@/components/card/3-card-site-info/ThreeCardSiteI
 </script>
 
 <template>
-  <main class="home-outer">
+  <main>
     <CategoriesC />
     <AdsC />
     <ThreeCardSiteInfo />
   </main>
 </template>
 
-
-<style lang="scss">
-.home-outer {
-  width: 100%;
-  padding: 0 20px;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-</style>

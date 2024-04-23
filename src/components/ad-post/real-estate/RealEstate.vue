@@ -87,8 +87,34 @@ const submitHandler = async (form: any) => {
   // }
 }
 
+
+
+const onGetStepName = () => {
+  switch (currentStep.value) {
+    case 1:
+      return 'propertyDetails'
+    case 2:
+      return 'propertyDimensions'
+    case 3:
+      return 'propertyFeatures'
+    default:
+      return ''
+  }
+}
+
+
+const objectCompleted = (object: RealEstateTypes): boolean => {
+  if (!object) return false
+  console.log('object', object)
+  return true
+}
+
 const nextStep = (value: RealEstateTypes) => {
-  console.log('value', value)
+  // if (!objectCompleted(value[onGetStepName()])) {
+  //   next.value = false
+  //   return
+  // }
+
   if (currentStep.value < totalSteps) {
     currentStep.value++
   }
@@ -188,8 +214,8 @@ const previousStep = () => {
             Atrás
           </button>
 
-            <button class="btn-custom btn-next-submit" @click="nextStep(value as RealEstateTypes)" v-show="currentStep < totalSteps"
-            :class="{ 'btn-disabled': !next }" type="button">
+          <button class="btn-custom btn-next-submit" @click="nextStep(value as RealEstateTypes)"
+            v-show="currentStep < totalSteps" :class="{ 'btn-disabled': !next }" type="button">
             Siguiente
           </button>
 
