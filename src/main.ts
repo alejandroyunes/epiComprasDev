@@ -18,7 +18,7 @@ app.mount('#app')
 
 app.use(
   createGtm({
-    id: 'GTM-MH2FQW5F',
+    id: 'GTM-4V447XMDMN',
     defer: false,
     compatibility: false,
     // nonce: '1234',
